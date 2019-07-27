@@ -1,0 +1,2 @@
+class HerokuDeploymentTestController < ApplicationController
+end

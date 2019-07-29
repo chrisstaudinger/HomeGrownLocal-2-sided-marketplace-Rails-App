@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :city, :through => :location
-  has_many :state, :through => :city
+  has_one :state, :through => :city
         
   has_many :received_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewee_id'
   has_many :sent_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewer_id'

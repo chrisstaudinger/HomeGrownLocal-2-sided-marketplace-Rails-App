@@ -14,4 +14,5 @@ class User < ApplicationRecord
   has_one :watchlist
   has_many :items
   has_many :orders
+  belongs_to :role
 end

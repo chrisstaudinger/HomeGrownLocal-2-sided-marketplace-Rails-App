@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :charges
+
   resources :requests
   resources :watch_items
   resources :orders

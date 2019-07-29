@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @watch_item.item %>
+</p>
+
+<p>
+  <strong>Watchlist:</strong>
+  <%= @watch_item.watchlist %>
+</p>
+
+<%= link_to 'Edit', edit_watch_item_path(@watch_item) %> |
+<%= link_to 'Back', watch_items_path %>

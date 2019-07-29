@@ -10,9 +10,137 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_07_28_230203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "cities", force: :cascade do |t|
+    t.string "city"
+    t.bigint "state_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state_id"], name: "index_cities_on_state_id"
+  end
+
+  create_table "item_categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.bigint "item_category_id"
+    t.bigint "user_id"
+    t.string "name"
+    t.string "description"
+    t.float "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_category_id"], name: "index_items_on_item_category_id"
+    t.index ["user_id"], name: "index_items_on_user_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.integer "postcode"
+    t.string "suburb"
+    t.bigint "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_locations_on_city_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "order_id"
+    t.string "message"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_requests_on_item_id"
+    t.index ["order_id"], name: "index_requests_on_order_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.string "privilege"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_ratings", force: :cascade do |t|
+    t.bigint "reviewee_id"
+    t.bigint "reviewer_id"
+    t.float "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reviewee_id"], name: "index_user_ratings_on_reviewee_id"
+    t.index ["reviewer_id"], name: "index_user_ratings_on_reviewer_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.bigint "role_id"
+    t.bigint "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["location_id"], name: "index_users_on_location_id"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
+  end
+
+  create_table "watch_items", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "watchlist_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_watch_items_on_item_id"
+    t.index ["watchlist_id"], name: "index_watch_items_on_watchlist_id"
+  end
+
+  create_table "watchlists", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_watchlists_on_user_id"
+  end
+
+  add_foreign_key "cities", "states"
+  add_foreign_key "items", "item_categories"
+  add_foreign_key "items", "users"
+  add_foreign_key "locations", "cities"
+  add_foreign_key "orders", "users"
+  add_foreign_key "profiles", "users"
+  add_foreign_key "requests", "items"
+  add_foreign_key "requests", "orders"
+  add_foreign_key "watch_items", "items"
+  add_foreign_key "watch_items", "watchlists"
+  add_foreign_key "watchlists", "users"
 end

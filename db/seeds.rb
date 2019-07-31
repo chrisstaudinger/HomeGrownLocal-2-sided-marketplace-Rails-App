@@ -119,8 +119,129 @@ end
 
 roles = [
     {
-        name: "standard",
-        privilege: "",
-        description: ""
+        privilege: "standard",
+        description: "standard user. free account."
+    },
+    {
+        privilege: "premium",
+        description: "paid tier. benefit TBD"
     }
 ]
+
+roles.each do |role|
+    Role.create(role)
+end
+
+users = [
+    {
+        role_id: 1,
+        location_id: 1,
+        email: "adam@gmail.com",
+        encrypted_password: "12345"
+    },
+    {
+        role_id: 1,
+        location_id: 2,
+        email: "belinda@gmail.com",
+        encrypted_password: "12345"
+    },
+    {
+        role_id: 1,
+        location_id: 3,
+        email: "charlie@gmail.com",
+        encrypted_password: "12345"
+    },
+    {
+        role_id: 1,
+        location_id: 4,
+        email: "dylan@gmail.com",
+        encrypted_password: "12345"
+    },
+    {
+        role_id: 1,
+        location_id: 5,
+        email: "elise@gmail.com",
+        encrypted_password: "12345"
+    },
+    {
+        role_id: 1,
+        location_id: 6,
+        email: "frank@gmail.com",
+        encrypted_password: "12345"
+    },
+    {
+        role_id: 1,
+        location_id: 7,
+        email: "geoff@gmail.com",
+        encrypted_password: "12345"
+    },
+    {
+        role_id: 1,
+        location_id: 8,
+        email: "harmony@gmail.com",
+        encrypted_password: "12345"
+    }
+]
+
+users.each do |user|
+    User.create(user)
+end
+
+profiles = [
+    {
+        user_id: 1,
+        name: "Adam Ascot"
+    },
+    {
+        user_id: 2,
+        name: "Belinda Bisk"
+    },
+    {
+        user_id: 3,
+        name: "Charlie Camp"
+    },
+    {
+        user_id: 4,
+        name: "Dylan Delta"
+    },
+    {
+        user_id: 5,
+        name: "Elise Etto"
+    },
+    {
+        user_id: 6,
+        name: "Frank Fuller"
+    },
+    {
+        user_id: 7,
+        name: "Geoff Goon"
+    },
+    {
+        user_id: 8,
+        name: "Harmony Hattich"
+    }
+]
+
+userRating = [
+    {
+        reviewee_id: 1,
+        reviewer_id: 2,
+        rating: 5
+    },
+    {
+        reviewee_id: 1,
+        reviewer_id: 3,
+        rating: 3
+    },
+    {
+        reviewee_id: 2,
+        reviewer_id: 1,
+        rating: 4
+    },
+    {
+        reviewee_id: 3,
+        reviewer_id: 8,
+        rating: 5
+    }
+]
+

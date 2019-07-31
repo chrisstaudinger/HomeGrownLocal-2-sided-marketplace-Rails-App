@@ -72,47 +72,55 @@ end
 
 locations = [
     {
-        postcode: 3141,
+        postcode: "3141",
         suburb: "South Yarra",
         city_id: 1
     },
     {
-        postcode: 4169,
+        postcode: "4169",
         suburb: "Kangaroo Point",
         city_id: 2
     },
     {
-        postcode: 2026,
+        postcode: "2026",
         suburb: "Bondi",
         city_id: 3
     },
     {
-        postcode: 6153,
+        postcode: "6153",
         suburb: "Applecross",
         city_id: 4
     },
     {
-        postcode: 5015,
+        postcode: "5015",
         suburb: "Port Adelaide",
         city_id: 5
     },
     {
-        postcode: 0810,
+        postcode: "0810",
         suburb: "Coconut Grove",
         city_id: 6
     },
     {
-        postcode: "Hobart",
-        suburb: "South Yarra",
-        city_id: "1"
+        postcode: "7005",
+        suburb: "Sandy Bay",
+        city_id: 7
     },
     {
-        postcode: "Canberra",
-        suburb: "South Yarra",
-        city_id: "1"
+        postcode: "2601",
+        suburb: "Acton",
+        city_id: 8
     }
 ]
 
 locations.each do |location|
     Location.create(location)
 end
+
+roles = [
+    {
+        name: "standard",
+        privilege: "",
+        description: ""
+    }
+]

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_31_023323) do
+ActiveRecord::Schema.define(version: 2019_07_31_024032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,7 +58,9 @@ ActiveRecord::Schema.define(version: 2019_07_31_023323) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "measurement_id"
     t.index ["item_category_id"], name: "index_items_on_item_category_id"
+    t.index ["measurement_id"], name: "index_items_on_measurement_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -162,6 +164,7 @@ ActiveRecord::Schema.define(version: 2019_07_31_023323) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "cities", "states"
   add_foreign_key "items", "item_categories"
+  add_foreign_key "items", "measurements"
   add_foreign_key "items", "users"
   add_foreign_key "locations", "cities"
   add_foreign_key "orders", "users"

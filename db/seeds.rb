@@ -222,7 +222,11 @@ profiles = [
     }
 ]
 
-userRating = [
+profiles.each do |profile|
+    Profile.create(profile)
+end
+
+user_ratings = [
     {
         reviewee_id: 1,
         reviewer_id: 2,
@@ -244,4 +248,123 @@ userRating = [
         rating: 5
     }
 ]
+
+user_ratings.each do |user_rating|
+    UserRating.create(user_rating)
+end
+
+
+item_categories = [
+    {
+        name: "Fruits"
+    },
+    {
+        name: "Vegetables"
+    },
+    {
+        name: "Relishes"
+    },
+    {
+        name: "Home Made Goods"
+    },
+    {
+        name: "Herbs & Spices"
+    },
+    {
+        name: "Eggs"
+    }
+]
+
+item_categories.each do |item_category|
+    ItemCategory.create(item_category)
+end
+
+measurements = [
+    {
+        unit: "Kilograms"
+    },
+    {
+        unit: "Grams"
+    },
+    {
+        unit: "Pieces"
+    },
+    {
+        unit: "Litres"
+    },
+    {
+        unit: "Millilitres"
+    }
+]
+
+measurements.each do |measurement|
+    Measurement.create(measurement)
+end
+
+
+items = [
+    {
+        category_id: 1,
+        user_id: 1,
+        name: "Mt Fuji Apples",
+        description: "Organic apples from my garden. No pesticides",
+        price: 1.0,
+        measurement_id: 5 
+    },
+    {
+        category_id: 2,
+        user_id: 2,
+        name: "Beetroot",
+        description: "Organic fresh beetroot. No pesticides or sprays.",
+        price: 8.5,
+        measurement_id: 1 
+    },
+    {
+        category_id: 3,
+        user_id: 3,
+        name: "Chilli Jam 100g Jars",
+        description: "Try my famous Chilli Jam. The family recipe has been passed down three generations. 100mg jars.",
+        price: 7.99,
+        measurement_id: 3 
+    },
+    {
+        category_id: 4,
+        user_id: 4,
+        name: "Almond Milk",
+        description: "Made from organic almonds. No perservatives added.",
+        price: 4.99,
+        measurement_id: 4
+    },
+    {
+        category_id: 5,
+        user_id: 5,
+        name: "Coriander Bunches",
+        description: "Grown in my veggie patch.",
+        price: 3.99,
+        measurement_id: 3
+    },
+    {
+        category_id: 6,
+        user_id: 6,
+        name: "Free Range Eggs",
+        description: "The eggs our hens lay usually weigh in at around 700g per dozen. They roam free range in our backyard. They are food scraps and grain.",
+        price: 0.5,
+        measurement_id: 3
+    }
+]
+
+items.each do |item|
+    Item.create(item)
+end
+
+item_reviews = [
+    {
+
+    }
+]
+
+item_reviews.each do |item_review|
+    ItemReview.create(item)
+end
+
 

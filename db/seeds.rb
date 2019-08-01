@@ -35,40 +35,40 @@ states = [
     }
 ]
 
-states.each do |state|
-    State.create(state)
-end
-
 cities = [
     {
         city: "Melbourne",
+        state_id: 1
     },
     {
         city: "Brisbane",
+        state_id: 2
     },
     {
-        city: "Sydney"
+        city: "Sydney",
+        state_id: 3
     },
     {
-        city: "Perth"
+        city: "Perth",
+        state_id: 4
     },
     {
-        city: "Adelaide"
+        city: "Adelaide",
+        state_id: 5
     },
     {
-        city: "Darwin"
+        city: "Darwin",
+        state_id: 6
     },
     {
-        city: "Hobart"
+        city: "Hobart",
+        state_id: 7
     },
     {
-        city: "Canberra"
+        city: "Canberra",
+        state_id: 8
     }
 ]
-
-cities.each do |city|
-    City.create(city)
-end
 
 locations = [
     {
@@ -113,10 +113,6 @@ locations = [
     }
 ]
 
-locations.each do |location|
-    Location.create(location)
-end
-
 roles = [
     {
         privilege: "standard",
@@ -128,64 +124,56 @@ roles = [
     }
 ]
 
-roles.each do |role|
-    Role.create(role)
-end
-
 users = [
     {
         role_id: 1,
         location_id: 1,
         email: "adam@gmail.com",
-        encrypted_password: "12345"
+        password: "123456"
     },
     {
         role_id: 1,
         location_id: 2,
         email: "belinda@gmail.com",
-        encrypted_password: "12345"
+        password: "123456"
     },
     {
         role_id: 1,
         location_id: 3,
         email: "charlie@gmail.com",
-        encrypted_password: "12345"
+        password: "123456"
     },
     {
         role_id: 1,
         location_id: 4,
         email: "dylan@gmail.com",
-        encrypted_password: "12345"
+        password: "123456"
     },
     {
         role_id: 1,
         location_id: 5,
         email: "elise@gmail.com",
-        encrypted_password: "12345"
+        password: "123456"
     },
     {
         role_id: 1,
         location_id: 6,
         email: "frank@gmail.com",
-        encrypted_password: "12345"
+        password: "123456"
     },
     {
         role_id: 1,
         location_id: 7,
         email: "geoff@gmail.com",
-        encrypted_password: "12345"
+        password: "123456"
     },
     {
         role_id: 1,
         location_id: 8,
         email: "harmony@gmail.com",
-        encrypted_password: "12345"
+        password: "123456"
     }
 ]
-
-users.each do |user|
-    User.create(user)
-end
 
 profiles = [
     {
@@ -222,10 +210,6 @@ profiles = [
     }
 ]
 
-profiles.each do |profile|
-    Profile.create(profile)
-end
-
 user_ratings = [
     {
         reviewee_id: 1,
@@ -249,11 +233,6 @@ user_ratings = [
     }
 ]
 
-user_ratings.each do |user_rating|
-    UserRating.create(user_rating)
-end
-
-
 item_categories = [
     {
         name: "Fruits"
@@ -275,10 +254,6 @@ item_categories = [
     }
 ]
 
-item_categories.each do |item_category|
-    ItemCategory.create(item_category)
-end
-
 measurements = [
     {
         unit: "Kilograms"
@@ -297,14 +272,9 @@ measurements = [
     }
 ]
 
-measurements.each do |measurement|
-    Measurement.create(measurement)
-end
-
-
 items = [
     {
-        category_id: 1,
+        item_category_id: 1,
         user_id: 1,
         name: "Mt Fuji Apples",
         description: "Organic apples from my garden. No pesticides",
@@ -312,7 +282,7 @@ items = [
         measurement_id: 3 
     },
     {
-        category_id: 2,
+        item_category_id: 2,
         user_id: 2,
         name: "Beetroot",
         description: "Organic fresh beetroot. No pesticides or sprays.",
@@ -320,7 +290,7 @@ items = [
         measurement_id: 1 
     },
     {
-        category_id: 3,
+        item_category_id: 3,
         user_id: 3,
         name: "Chilli Jam 100g Jars",
         description: "Try my famous Chilli Jam. The family recipe has been passed down three generations. 100mg jars.",
@@ -328,7 +298,7 @@ items = [
         measurement_id: 3 
     },
     {
-        category_id: 4,
+        item_category_id: 4,
         user_id: 4,
         name: "Almond Milk",
         description: "Made from organic almonds. No perservatives added.",
@@ -336,7 +306,7 @@ items = [
         measurement_id: 4
     },
     {
-        category_id: 5,
+        item_category_id: 5,
         user_id: 5,
         name: "Coriander Bunches",
         description: "Grown in my veggie patch.",
@@ -344,7 +314,7 @@ items = [
         measurement_id: 3
     },
     {
-        category_id: 6,
+        item_category_id: 6,
         user_id: 6,
         name: "Free Range Eggs",
         description: "The eggs our hens lay usually weigh in at around 700g per dozen. They roam free range in our backyard. They are food scraps and grain.",
@@ -352,10 +322,6 @@ items = [
         measurement_id: 3
     }
 ]
-
-items.each do |item|
-    Item.create(item)
-end
 
 item_reviews = [
     {
@@ -390,10 +356,6 @@ item_reviews = [
     }
 ]
 
-item_reviews.each do |item_review|
-    ItemReview.create(item_review)
-end
-
 watchlists = [
     {
         user_id: 1
@@ -414,10 +376,6 @@ watchlists = [
         user_id: 6
     }
 ]
-
-watchlists.each do |watchlist|
-    Watchlist.create(watchlist)
-end
 
 watchitems = [
     {
@@ -446,11 +404,6 @@ watchitems = [
     }
 ]
 
-watchitems.each do |watchitem|
-    Watchitem.create(watchitem)
-end
-
-
 orders = [
     {
         user_id: 1
@@ -471,11 +424,6 @@ orders = [
         user_id: 6
     }
 ]
-
-orders.each do |order|
-    Order.create(order)
-end
-
 
 requests = [
 {
@@ -510,6 +458,79 @@ requests = [
 }
 ]
 
-requests.each do |request|
-Request.create(request)
+
+states.each do |state|
+    a = State.create(state)
+    a.save!
 end
+
+cities.each do |city|
+    a = City.create(city)
+    a.save!
+end
+
+locations.each do |location|
+    a = Location.create(location)
+    a.save!
+end
+
+roles.each do |role|
+    a = Role.create(role)
+    a.save!
+end
+
+users.each do |user|
+    a = User.create(user)
+    a.save!
+end
+
+profiles.each do |profile|
+    a = Profile.create(profile)
+    a.save!
+end
+
+user_ratings.each do |user_rating|
+    a = UserRating.create(user_rating)
+    a.save!
+end
+
+item_categories.each do |item_category|
+    a = ItemCategory.create(item_category)
+    a.save!
+end
+
+measurements.each do |measurement|
+    a = Measurement.create(measurement)
+    a.save!
+end
+
+items.each do |item|
+    a = Item.create(item)
+    a.save!
+end
+
+item_reviews.each do |item_review|
+    a = ItemReview.create(item_review)
+    a.save!
+end
+
+watchlists.each do |watchlist|
+    a = Watchlist.create(watchlist)
+    a.save!
+end
+
+watchitems.each do |watchitem|
+    a = WatchItem.create(watchitem)
+    a.save!
+end
+
+orders.each do |order|
+    a = Order.create(order)
+    a.save!
+end
+
+requests.each do |request|
+    a = Request.create(request)
+    a.save!
+end
+

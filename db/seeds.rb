@@ -124,89 +124,89 @@ roles = [
     }
 ]
 
+profiles = [
+    {
+        name: "Adam Ascot"
+    },
+    {
+        name: "Belinda Bisk"
+    },
+    {
+        name: "Charlie Camp"
+    },
+    {
+        name: "Dylan Delta"
+    },
+    {
+        name: "Elise Etto"
+    },
+    {
+        name: "Frank Fuller"
+    },
+    {
+        name: "Geoff Goon"
+    },
+    {
+        name: "Harmony Hattich"
+    }
+]
+
 users = [
     {
         role_id: 1,
         location_id: 1,
         email: "adam@gmail.com",
-        password: "123456"
+        password: "123456",
+        profile_id: 1
     },
     {
         role_id: 1,
         location_id: 2,
         email: "belinda@gmail.com",
-        password: "123456"
+        password: "123456",
+        profile_id: 2
     },
     {
         role_id: 1,
         location_id: 3,
         email: "charlie@gmail.com",
-        password: "123456"
+        password: "123456",
+        profile_id: 3
     },
     {
         role_id: 1,
         location_id: 4,
         email: "dylan@gmail.com",
-        password: "123456"
+        password: "123456",
+        profile_id: 4
     },
     {
         role_id: 1,
         location_id: 5,
         email: "elise@gmail.com",
-        password: "123456"
+        password: "123456",
+        profile_id: 5
     },
     {
         role_id: 1,
         location_id: 6,
         email: "frank@gmail.com",
-        password: "123456"
+        password: "123456",
+        profile_id: 6
     },
     {
         role_id: 1,
         location_id: 7,
         email: "geoff@gmail.com",
-        password: "123456"
+        password: "123456",
+        profile_id: 7
     },
     {
         role_id: 1,
         location_id: 8,
         email: "harmony@gmail.com",
-        password: "123456"
-    }
-]
-
-profiles = [
-    {
-        user_id: 1,
-        name: "Adam Ascot"
-    },
-    {
-        user_id: 2,
-        name: "Belinda Bisk"
-    },
-    {
-        user_id: 3,
-        name: "Charlie Camp"
-    },
-    {
-        user_id: 4,
-        name: "Dylan Delta"
-    },
-    {
-        user_id: 5,
-        name: "Elise Etto"
-    },
-    {
-        user_id: 6,
-        name: "Frank Fuller"
-    },
-    {
-        user_id: 7,
-        name: "Geoff Goon"
-    },
-    {
-        user_id: 8,
-        name: "Harmony Hattich"
+        password: "123456",
+        profile_id: 8
     }
 ]
 
@@ -479,13 +479,13 @@ roles.each do |role|
     a.save!
 end
 
-users.each do |user|
-    a = User.create(user)
+profiles.each do |profile|
+    a = Profile.create(profile)
     a.save!
 end
 
-profiles.each do |profile|
-    a = Profile.create(profile)
+users.each do |user|
+    a = User.create(user)
     a.save!
 end
 

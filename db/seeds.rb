@@ -230,22 +230,22 @@ user_ratings = [
     {
         reviewee_id: 1,
         reviewer_id: 2,
-        rating: 5
+        rating: 5.0
     },
     {
         reviewee_id: 1,
         reviewer_id: 3,
-        rating: 3
+        rating: 3.0
     },
     {
         reviewee_id: 2,
         reviewer_id: 1,
-        rating: 4
+        rating: 4.0
     },
     {
         reviewee_id: 3,
         reviewer_id: 8,
-        rating: 5
+        rating: 5.0
     }
 ]
 
@@ -309,7 +309,7 @@ items = [
         name: "Mt Fuji Apples",
         description: "Organic apples from my garden. No pesticides",
         price: 1.0,
-        measurement_id: 5 
+        measurement_id: 3 
     },
     {
         category_id: 2,
@@ -362,36 +362,154 @@ item_reviews = [
         item_id: 1,
         reviewer_id: 2,
         message: "Deliciously sweet and crunchy. Will definitely be buying again!",
-        rating: 5
+        rating: 5.0
     },
     {
         item_id: 2,
         reviewer_id: 3,
         message: "Nice to get that are organic without having to pay a small fortune. I Recommend this product and seller.",
-        rating: 4
+        rating: 4.0
     },
     {
         item_id: 3,
         reviewer_id: 4,
         message: "Charlie's Chilli Jam is amazing!! It's explosive with tones of sweetness and spice.",
-        rating: 5
+        rating: 5.0
     },
     {
         item_id: 4,
         reviewer_id: 5,
         message: "Will be buying again. The strength is so much more than Woolworths and Coles. Once you trying home made almond milk you really see the differnce.",
-        rating: 5
+        rating: 5.0
     },
     {
         item_id: 1,
         reviewer_id: 6,
         message: "Decent apples. Crunchy and sweet",
-        rating: 4
+        rating: 4.0
     }
 ]
 
 item_reviews.each do |item_review|
-    ItemReview.create(item)
+    ItemReview.create(item_review)
+end
+
+watchlists = [
+    {
+        user_id: 1
+    },
+    {
+        user_id: 2
+    },
+    {
+        user_id: 3
+    },
+    {
+        user_id: 4
+    },
+    {
+        user_id: 5
+    },
+    {
+        user_id: 6
+    }
+]
+
+watchlists.each do |watchlist|
+    Watchlist.create(watchlist)
+end
+
+watchitems = [
+    {
+        item_id: 1,
+        watchlist_id: 2
+    },
+    {
+        item_id: 2,
+        watchlist_id: 3
+    },
+    {
+        item_id: 3,
+        watchlist_id: 4
+    },
+    {
+        item_id: 4,
+        watchlist_id: 5
+    },
+    {
+        item_id: 4,
+        watchlist_id: 6
+    },
+    {
+        item_id: 5,
+        watchlist_id: 6
+    }
+]
+
+watchitems.each do |watchitem|
+    Watchitem.create(watchitem)
 end
 
 
+orders = [
+    {
+        user_id: 1
+    },
+    {
+        user_id: 2
+    },
+    {
+        user_id: 3
+    },
+    {
+        user_id: 4
+    },
+    {
+        user_id: 5
+    },
+    {
+        user_id: 6
+    }
+]
+
+orders.each do |order|
+    Order.create(order)
+end
+
+
+requests = [
+{
+    item_id: 1,
+    order_id: 2,
+    quantity: 10.0
+},
+{
+    item_id: 2,
+    order_id: 3,
+    quantity: 0.5
+},
+{
+    item_id: 3,
+    order_id: 4,
+    quantity: 1.0
+},
+{
+    item_id: 4,
+    order_id: 5,
+    quantity: 0.5
+},
+{
+    item_id: 4,
+    order_id: 6,
+    quantity: 2.0
+},
+{
+    item_id: 5,
+    order_id: 6,
+    quantity: 1.0
+}
+]
+
+requests.each do |request|
+Request.create(request)
+end

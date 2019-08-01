@@ -359,7 +359,34 @@ end
 
 item_reviews = [
     {
-
+        item_id: 1,
+        reviewer_id: 2,
+        message: "Deliciously sweet and crunchy. Will definitely be buying again!",
+        rating: 5
+    },
+    {
+        item_id: 2,
+        reviewer_id: 3,
+        message: "Nice to get that are organic without having to pay a small fortune. I Recommend this product and seller.",
+        rating: 4
+    },
+    {
+        item_id: 3,
+        reviewer_id: 4,
+        message: "Charlie's Chilli Jam is amazing!! It's explosive with tones of sweetness and spice.",
+        rating: 5
+    },
+    {
+        item_id: 4,
+        reviewer_id: 5,
+        message: "Will be buying again. The strength is so much more than Woolworths and Coles. Once you trying home made almond milk you really see the differnce.",
+        rating: 5
+    },
+    {
+        item_id: 1,
+        reviewer_id: 6,
+        message: "Decent apples. Crunchy and sweet",
+        rating: 4
     }
 ]
 

@@ -15,4 +15,6 @@ class User < ApplicationRecord
   has_many :items
   has_many :orders
   belongs_to :role
+
+  has_many :sent_item_reviews, :class_name => 'ItemReview', :foreign_key => 'reviewer_id'
 end

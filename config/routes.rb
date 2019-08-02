@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :item_reviews
   resources :measurements
   resources :charges
 

@@ -183,7 +183,7 @@ ActiveRecord::Schema.define(version: 2019_08_01_063339) do
   add_foreign_key "requests", "items"
   add_foreign_key "requests", "orders"
   add_foreign_key "users", "profiles"
-    add_foreign_key "watch_items", "items"
+  add_foreign_key "watch_items", "items"
   add_foreign_key "watch_items", "watchlists"
   add_foreign_key "watchlists", "users"
 end

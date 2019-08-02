@@ -260,7 +260,8 @@ items = [
         name: "Mt Fuji Apples",
         description: "Organic apples from my garden. No pesticides",
         price: 1.0,
-        measurement_id: 3
+        measurement_id: 3,
+        quantity: 5.0
     },
     {
         item_category_id: 2,
@@ -268,7 +269,8 @@ items = [
         name: "Beetroot",
         description: "Organic fresh beetroot. No pesticides or sprays.",
         price: 8.5,
-        measurement_id: 1
+        measurement_id: 1,
+        quantity: 3000.0
     },
     {
         item_category_id: 3,
@@ -276,15 +278,17 @@ items = [
         name: "Chilli Jam 100g Jars",
         description: "Try my famous Chilli Jam. The family recipe has been passed down three generations. 100mg jars.",
         price: 7.99,
-        measurement_id: 3
+        measurement_id: 3,
+        quantity: 15.0
     },
     {
         item_category_id: 4,
         user_id: 4,
         name: "Almond Milk",
-        description: "Made from organic almonds. No perservatives added.",
+        description: "Made from organic almonds. No perservatives added. 1L bottles.",
         price: 4.99,
-        measurement_id: 4
+        measurement_id: 4,
+        quantity: 5.0
     },
     {
         item_category_id: 5,
@@ -292,7 +296,8 @@ items = [
         name: "Coriander Bunches",
         description: "Grown in my veggie patch.",
         price: 3.99,
-        measurement_id: 3
+        measurement_id: 3,
+        quantity: 5.0
     },
     {
         item_category_id: 6,
@@ -300,7 +305,8 @@ items = [
         name: "Free Range Eggs",
         description: "The eggs our hens lay usually weigh in at around 700g per dozen. They roam free range in our backyard. They are food scraps and grain.",
         price: 0.5,
-        measurement_id: 3
+        measurement_id: 3,
+        quantity: 60.0
     }
 ]
 item_reviews = [

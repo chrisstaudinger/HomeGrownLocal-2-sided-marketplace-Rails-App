@@ -13,5 +13,102 @@
       <li><%= link_to "Watchlist", "/" %></li>
       <li><%= link_to "Sale", "/" %></li>
     </ul>
+    <div id="item-grid">
+      <div class="item">
+        <div class="item-image">
+          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
+          <div class="item-price">
+            <p class="price-notation">$</p>
+            <p><%= Item.find(1).price %></p>
+            <p class="price-notation">/<%= Item.find(1).measurement.unit  %></p>
+          </div>
+        </div>
+
+        <p><%= Item.find(1).name %></p>
+        <div class="item-location">
+          <%= image_tag("logo2v2.png", :alt => "pin") %>
+          <p><%= Item.find(1).user.location.city.city %></p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
+          <div class="item-price">
+            <p class="price-notation">$</p>
+            <p><%= Item.find(2).price %></p>
+            <p class="price-notation">/<%= Item.find(2).measurement.unit  %></p>
+          </div>
+        </div>
+
+        <p><%= Item.find(2).name %></p>
+        <div class="item-location">
+          <%= image_tag("logo2v2.png", :alt => "pin") %>
+          <p><%= Item.find(2).user.location.city.city %></p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
+          <div class="item-price">
+            <p class="price-notation">$</p>
+            <p><%= Item.find(3).price %></p>
+            <p class="price-notation">/<%= Item.find(3).measurement.unit  %></p>
+          </div>
+        </div>
+
+        <p><%= Item.find(3).name %></p>
+        <div class="item-location">
+          <%= image_tag("logo2v2.png", :alt => "pin") %>
+          <p><%= Item.find(3).user.location.city.city %></p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
+          <div class="item-price">
+            <p class="price-notation">$</p>
+            <p><%= Item.find(4).price %></p>
+            <p class="price-notation">/<%= Item.find(4).measurement.unit  %></p>
+          </div>
+        </div>
+
+        <p><%= Item.find(4).name %></p>
+        <div class="item-location">
+          <%= image_tag("logo2v2.png", :alt => "pin") %>
+          <p><%= Item.find(4).user.location.city.city %></p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
+          <div class="item-price">
+            <p class="price-notation">$</p>
+            <p><%= Item.find(5).price %></p>
+            <p class="price-notation">/<%= Item.find(5).measurement.unit  %></p>
+          </div>
+        </div>
+        <p><%= Item.find(5).name %></p>
+        <div class="item-location">
+          <%= image_tag("logo2v2.png", :alt => "pin") %>
+          <p><%= Item.find(5).user.location.city.city %></p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
+          <div class="item-price">
+            <p class="price-notation">$</p>
+            <p><%= Item.find(6).price %></p>
+            <p class="price-notation">/<%= Item.find(6).measurement.unit  %></p>
+          </div>
+        </div>
+
+        <p><%= Item.find(6).name %></p>
+        <div class="item-location">
+          <%= image_tag("logo2v2.png", :alt => "pin") %>
+          <p><%= Item.find(6).user.location.city.city %></p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,9 +1,17 @@
 <div class="welcome">
+  <link rel="stylesheet" href="./stylesheets/welcome">
   <div class="booke-image">
     <div id="searchbar">
       <div id="search-container">
       </div>
     </div>
   </div>
-  <link rel="stylesheet" href="./stylesheets/welcome">
+  <div id="featured-items">
+    <ul id="filter-list">
+      <li><%= link_to "Fresh", "/" %></li>
+      <li><%= link_to "Popular", "/" %></li>
+      <li><%= link_to "Watchlist", "/" %></li>
+      <li><%= link_to "Sale", "/" %></li>
+    </ul>
+  </div>
 </div>

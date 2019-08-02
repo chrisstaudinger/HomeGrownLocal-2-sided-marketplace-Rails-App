@@ -45,10 +45,12 @@ header {
       list-style: none;
       color: $primarygreen;
       a{
+        white-space: nowrap;
         color: $offwhite1;
         font-size: 1vw;
         text-decoration: none;
         &:hover {
+          @include underlinehover($accentyellow);
           color: $accentyellow;
           background-color: $primarygreen;
         }

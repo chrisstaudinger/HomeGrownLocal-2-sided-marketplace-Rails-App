@@ -10,7 +10,6 @@ body {
 .welcome {
   height: 70vh;
   width: 100vw;
-
   .booke-image {
     background-position-y: 70%;
     background-image: url("brusselspout");
@@ -35,6 +34,32 @@ body {
         height: 12vh;
         width: 65vw;
         border-radius: 5px;
+      }
+    }
+  }
+  #featured-items {
+    width: 100vw;
+    height: 60vh;
+    background-color: $offwhite1;
+    #filter-list {
+      @include leftrightmargin();
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 60vw;
+      list-style: none;
+      li {
+        margin-top: 5vh;
+        @include montserrat();
+        font-size: 36px;
+        a{
+          color: $primarygreen;
+          text-decoration: none;
+          &:hover {
+            background-color: $offwhite1;
+            @include underlinehover($primarygreen);
+          }
+        }
       }
     }
   }

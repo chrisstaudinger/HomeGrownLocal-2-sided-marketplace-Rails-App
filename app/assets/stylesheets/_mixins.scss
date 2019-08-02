@@ -1,3 +1,21 @@
 @mixin librefranklin {
   font-family: 'Libre Franklin', sans-serif;
 }
+
+@mixin montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin overpass {
+  font-family: 'Overpass', sans-serif;
+}
+
+@mixin underlinehover($color){
+  box-shadow: 0px 2px 0px 0px $color;
+  transition: box-shadow 1s;
+}
+
+@mixin leftrightmargin{
+  margin-left: 20vw;
+  margin-right: 20vw;
+}

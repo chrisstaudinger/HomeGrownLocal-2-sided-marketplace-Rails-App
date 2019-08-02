@@ -11,14 +11,13 @@
     </div>
   <% end %>
 
+  <#div class="field">
+    <%#= form.hidden_field :user_id, value: current_user.id %>
+  <#/div>
+
   <div class="field">
     <%= form.label :item_category_id %>
     <%= form.text_field :item_category_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
   </div>
 
   <div class="field">
@@ -28,12 +27,22 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_area :description %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
     <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measurement_id %>
+    <%= form.text_field :measurement_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity %>
   </div>
 
   <div class="field">

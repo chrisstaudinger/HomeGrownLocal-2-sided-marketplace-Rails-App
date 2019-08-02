@@ -1,13 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-
 states = [
     {
         state: "Victoria",
@@ -34,7 +24,6 @@ states = [
         state: "Australain Capital Territory"
     }
 ]
-
 cities = [
     {
         city: "Melbourne",
@@ -69,7 +58,6 @@ cities = [
         state_id: 8
     }
 ]
-
 locations = [
     {
         postcode: "3141",
@@ -112,7 +100,6 @@ locations = [
         city_id: 8
     }
 ]
-
 roles = [
     {
         privilege: "standard",
@@ -123,7 +110,6 @@ roles = [
         description: "paid tier. benefit TBD"
     }
 ]
-
 profiles = [
     {
         name: "Adam Ascot"
@@ -150,7 +136,6 @@ profiles = [
         name: "Harmony Hattich"
     }
 ]
-
 users = [
     {
         role_id: 1,
@@ -209,7 +194,6 @@ users = [
         profile_id: 8
     }
 ]
-
 user_ratings = [
     {
         reviewee_id: 1,
@@ -232,7 +216,6 @@ user_ratings = [
         rating: 5.0
     }
 ]
-
 item_categories = [
     {
         name: "Fruits"
@@ -253,7 +236,6 @@ item_categories = [
         name: "Eggs"
     }
 ]
-
 measurements = [
     {
         unit: "Kilograms"
@@ -271,7 +253,6 @@ measurements = [
         unit: "Millilitres"
     }
 ]
-
 items = [
     {
         item_category_id: 1,
@@ -279,7 +260,7 @@ items = [
         name: "Mt Fuji Apples",
         description: "Organic apples from my garden. No pesticides",
         price: 1.0,
-        measurement_id: 3 
+        measurement_id: 3
     },
     {
         item_category_id: 2,
@@ -287,7 +268,7 @@ items = [
         name: "Beetroot",
         description: "Organic fresh beetroot. No pesticides or sprays.",
         price: 8.5,
-        measurement_id: 1 
+        measurement_id: 1
     },
     {
         item_category_id: 3,
@@ -295,7 +276,7 @@ items = [
         name: "Chilli Jam 100g Jars",
         description: "Try my famous Chilli Jam. The family recipe has been passed down three generations. 100mg jars.",
         price: 7.99,
-        measurement_id: 3 
+        measurement_id: 3
     },
     {
         item_category_id: 4,
@@ -322,7 +303,6 @@ items = [
         measurement_id: 3
     }
 ]
-
 item_reviews = [
     {
         item_id: 1,
@@ -355,7 +335,6 @@ item_reviews = [
         rating: 4.0
     }
 ]
-
 watchlists = [
     {
         user_id: 1
@@ -376,7 +355,6 @@ watchlists = [
         user_id: 6
     }
 ]
-
 watchitems = [
     {
         item_id: 1,
@@ -403,7 +381,6 @@ watchitems = [
         watchlist_id: 6
     }
 ]
-
 orders = [
     {
         user_id: 1
@@ -424,7 +401,6 @@ orders = [
         user_id: 6
     }
 ]
-
 requests = [
 {
     item_id: 1,
@@ -457,80 +433,63 @@ requests = [
     quantity: 1.0
 }
 ]
-
-
 states.each do |state|
     a = State.create(state)
     a.save!
 end
-
 cities.each do |city|
     a = City.create(city)
     a.save!
 end
-
 locations.each do |location|
     a = Location.create(location)
     a.save!
 end
-
 roles.each do |role|
     a = Role.create(role)
     a.save!
 end
-
 profiles.each do |profile|
     a = Profile.create(profile)
     a.save!
 end
-
 users.each do |user|
     a = User.create(user)
     a.save!
 end
-
 user_ratings.each do |user_rating|
     a = UserRating.create(user_rating)
     a.save!
 end
-
 item_categories.each do |item_category|
     a = ItemCategory.create(item_category)
     a.save!
 end
-
 measurements.each do |measurement|
     a = Measurement.create(measurement)
     a.save!
 end
-
 items.each do |item|
     a = Item.create(item)
     a.save!
 end
-
 item_reviews.each do |item_review|
     a = ItemReview.create(item_review)
     a.save!
 end
-
 watchlists.each do |watchlist|
     a = Watchlist.create(watchlist)
     a.save!
 end
-
 watchitems.each do |watchitem|
     a = WatchItem.create(watchitem)
     a.save!
 end
-
 orders.each do |order|
     a = Order.create(order)
     a.save!
 end
-
 requests.each do |request|
     a = Request.create(request)
     a.save!
 end
-

@@ -14,12 +14,14 @@ header {
   justify-content: space-between;
   justify-items: center;
   width: 100vw;
-  height: 10vh;
+  height: 8vh;
 }
 
 .logo {
-  margin-top: 1vh;
   margin-left: 3.5vw;
+  img {
+    height: 6.5vh;
+  }
 }
 
 .simple-navbar {
@@ -44,8 +46,7 @@ header {
       color: $primarygreen;
       a{
         color: $offwhite1;
-        font-size: 18px;
-        padding: 5px;
+        font-size: 1vw;
         text-decoration: none;
         &:hover {
           color: $accentyellow;

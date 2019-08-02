@@ -1,1 +1,25 @@
-/* No CSS *//*# sourceMappingURL=welcome.css.map */
+body {
+  margin: 0;
+}
+
+.welcome {
+  height: 70vh;
+  width: 100vw;
+}
+
+.welcome .booke-image {
+  background-position-y: 70%;
+  background-image: url("brusselspout");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.welcome .booke-image img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=welcome.css.map */

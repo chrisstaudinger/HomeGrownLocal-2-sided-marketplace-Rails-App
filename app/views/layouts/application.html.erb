@@ -2,11 +2,9 @@
 <html>
 
 <head>
-  <title>Marketplace</title>
+  <title>Home Grown Local</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -22,10 +20,17 @@
       <ul>
         <li><a href="">Category</a></li>
         <li><a href="">About us</a></li>
-        <li><a href="">Login</a></li>
-        <li><a href="">Sign up</a></li>
+        <% if !current_user %>
+          <li><%= link_to "Log In", new_user_session_path %></li>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <% else %>
+          <li><%= link_to "Sign Out", destroy_user_session_path, {method: :delete} %></li>
+          <li><%= link_to "Account", "profiles/#{current_user.id}" %></li>
+        <% end %>
       </ul>
     </div>
+    <div class="navbar-wrapper">
+</div>
   </header>
   <link rel="stylesheet" href="./stylesheets/body">
   <%= yield %>

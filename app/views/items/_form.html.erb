@@ -17,9 +17,7 @@
 
   <div class="field">
     <%= form.label :item_category_id %>
-    <%= form.select :item_category_name, @category_options, :prompt => 'Select One' %>
-    <%= form.hidden_field :item_category_id, value: return_item_id_from_item_name(:item_category_name) %>
-    <%#= form.text_field :item_category_id %>
+    <%= collection_select(:item, :item_category_id, ItemCategory.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
@@ -34,7 +32,7 @@
 
   <div class="field">
     <%= form.label :measurement_id %>
-    <%= form.select :measurement_id, @measurement_options, :prompt => 'Select One' %>
+    <%= collection_select(:item, :measurement_id, Measurement.all, :id, :unit, prompt: true) %>
   </div>
 
   <div class="field">

@@ -28,6 +28,18 @@ class ItemsController < ApplicationController
       @category_options << category.name
     end
 
+    # def return_item_id_from_item_name(item_category_name)
+    #   selected_category = nil
+    #   ItemCategory.all.each do |category|
+    #     if (category.name == item_category_name)
+    #       selected_category = category.id
+    #     end
+    #   end
+    #   return selected_category
+    # end
+
+    # @selected_item_category_id = return_item_id_from_item_name(params[:item_category_id])
+
   end
 
   # GET /items/1/edit
@@ -84,6 +96,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:item_category_id, :user_id, :name, :description, :price, :image)
+      params.require(:item).permit(:item_category_id, :user_id, :name, :description, :measurement_id, :price, :image)
     end
 end

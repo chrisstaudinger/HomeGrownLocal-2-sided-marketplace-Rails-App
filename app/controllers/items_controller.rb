@@ -16,6 +16,18 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @user = current_user
+    # @item.item_category_id = params[:item_category_id]
+    
+    @measurement_options = []
+    Measurement.all.each do |measurement|
+      @measurement_options << measurement.unit
+    end
+
+    @category_options = []
+    ItemCategory.all.each do |category|
+      @category_options << category.name
+    end
+
   end
 
   # GET /items/1/edit
@@ -26,6 +38,8 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
+
+    puts @item
 
     respond_to do |format|
       if @item.save

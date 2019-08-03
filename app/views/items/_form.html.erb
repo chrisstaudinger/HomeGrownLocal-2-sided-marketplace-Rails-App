@@ -11,13 +11,15 @@
     </div>
   <% end %>
 
-  <#div class="field">
-    <%#= form.hidden_field :user_id, value: current_user.id %>
-  <#/div>
+  <div class="field">
+    <%= form.hidden_field :user_id, value: current_user.id %>
+  </div>
 
   <div class="field">
     <%= form.label :item_category_id %>
-    <%= form.text_field :item_category_id %>
+    <%= form.select :item_category_name, @category_options, :prompt => 'Select One' %>
+    <%= form.hidden_field :item_category_id, value: return_item_id_from_item_name(:item_category_name) %>
+    <%#= form.text_field :item_category_id %>
   </div>
 
   <div class="field">
@@ -31,18 +33,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="field">
     <%= form.label :measurement_id %>
-    <%= form.text_field :measurement_id %>
+    <%= form.select :measurement_id, @measurement_options, :prompt => 'Select One' %>
   </div>
 
   <div class="field">
     <%= form.label :quantity %>
     <%= form.text_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
   </div>
 
   <div class="field">

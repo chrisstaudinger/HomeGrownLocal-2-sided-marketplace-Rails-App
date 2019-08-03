@@ -27,19 +27,6 @@ class ItemsController < ApplicationController
     ItemCategory.all.each do |category|
       @category_options << category.name
     end
-
-    # def return_item_id_from_item_name(item_category_name)
-    #   selected_category = nil
-    #   ItemCategory.all.each do |category|
-    #     if (category.name == item_category_name)
-    #       selected_category = category.id
-    #     end
-    #   end
-    #   return selected_category
-    # end
-
-    # @selected_item_category_id = return_item_id_from_item_name(params[:item_category_id])
-
   end
 
   # GET /items/1/edit
@@ -50,8 +37,6 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
-
-    puts @item
 
     respond_to do |format|
       if @item.save

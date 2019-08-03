@@ -6,6 +6,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+@mixin montserrat-alt {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
 @mixin overpass {
   font-family: 'Overpass', sans-serif;
 }

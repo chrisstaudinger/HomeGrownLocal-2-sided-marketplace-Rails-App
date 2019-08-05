@@ -7,4 +7,6 @@ class Item < ApplicationRecord
   has_many :requests
   has_many :orders, :through => :requests
   has_many :item_reviews
+
+  has_one_attached :image
 end

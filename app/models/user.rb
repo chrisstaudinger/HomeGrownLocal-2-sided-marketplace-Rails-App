@@ -4,12 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :location
+  belongs_to :location, optional: :true
         
   has_many :received_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewee_id'
   has_many :sent_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewer_id'
 
-  belongs_to :profile
+  belongs_to :profile, optional: :true
   has_one :watchlist
   has_many :items
   has_many :orders

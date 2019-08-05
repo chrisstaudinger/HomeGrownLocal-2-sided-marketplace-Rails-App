@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Marketplace</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <link rel="stylesheet" href="./stylesheets/nav">
+    <div class="logo">
+      <%= image_tag("typefacelogo.png", :alt => "logo") %>
+    </div>
+    <div class="simple-navbar">
+      <ul>
+        <li><a href="">PostanAd</a></li>
+        <li><a href="">About us</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="">Sign up</a></li>
+      </ul>
+    </div>
+  </header>
+  <link rel="stylesheet" href="./stylesheets/body">
+  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+  <%= yield %>
+</body>
+
+</html>

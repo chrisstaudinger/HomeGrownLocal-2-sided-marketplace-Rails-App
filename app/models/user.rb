@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :received_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewee_id'
   has_many :sent_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewer_id'
 
-  belongs_to :profile, optional: :true
+  belongs_to :profile
   has_one :watchlist
   has_many :items
   has_many :orders
@@ -17,8 +17,19 @@ class User < ApplicationRecord
 
   has_many :sent_item_reviews, :class_name => 'ItemReview', :foreign_key => 'reviewer_id'
 
+
   after_initialize :set_default_role, :if => :new_record?
+  before_save :assign_profile 
+
   def set_default_role
     self.role = Role.find(1)
+    self.profile = assign_profile
+  end
+
+  def assign_profile
+    new_profile = Profile.new
+    new_profile.name = nil
+    new_profile.save!
+    return new_profile
   end
 end

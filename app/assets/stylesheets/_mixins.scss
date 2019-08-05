@@ -28,3 +28,18 @@
   padding-left: $var;
   padding-right: $var;
 }
+
+@mixin leftrightmarginvar($margin){
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin topdownmarginvar($margin){
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+@mixin topdownmargin{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}

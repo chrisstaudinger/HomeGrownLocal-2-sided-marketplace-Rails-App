@@ -20,6 +20,7 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
       </script>
+      <%= render :partial => "/item_categories/category_select" %>
       <input type="text" id="item-search" placeholder="Enter Item name" />
       <input type="text" id="searchTextField" placeholder="Enter a location" autocomplete="on" />
       <button type="submit">

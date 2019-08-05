@@ -1,0 +1,84 @@
+@import 'variables';
+@import 'mixins';
+
+h2 {
+  @include leftrightmargin();
+  @include topdownmargin();
+  @include montserrat();
+  font-weight: 600;
+  color: $darkgreen;
+  font-size: 64px;
+}
+
+.form {
+  @include leftrightmargin();
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 2.5vh;
+  background-color: $formblack;
+  label {
+    @include topdownmarginvar(2.5vh);
+    @include leftrightmarginvar(3vw);
+    @include montserrat();
+    font-size: 40px;
+    color: $offwhite1;
+  }
+  input {
+    @include leftrightmarginvar(8vw);
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+    font-size: 32px;
+    width: 40vw;
+    height: 5vh;
+  }
+  .actions{
+    @include topdownmarginvar(2.5vh);
+    display: flex;
+    justify-content: center;
+    input {
+      @include montserrat();
+      background-color: $darkgreen;
+      color: $offwhite1;
+      border-style: none;
+      height: 10vh;
+      width: 20vw;
+      font-size: 40px;
+      font-weight: 600;
+      border-radius: 5px;
+      border-style: solid;
+      border-width: 5px;
+      border-color: $darkgreen;
+      &:hover{
+        background-color: $formblack;
+        color: $offwhite1;
+        transition: all 0.5s;
+      }
+    }
+  }
+  a {
+    @include montserrat();
+    font-size: 32px;
+    color: $offwhite2;
+    text-decoration: none;
+    padding: 1vh;
+    &:hover{
+      background-color: $formblack;
+      color: $accentyellow;
+    }
+    &:visited{
+      color: $offwhite2;
+    }
+    &:visited:hover{
+      color: $accentyellow;
+    }
+  }
+  em {
+    display: none;
+  }
+}

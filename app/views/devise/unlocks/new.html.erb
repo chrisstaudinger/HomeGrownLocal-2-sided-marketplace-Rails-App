@@ -1,6 +1,7 @@
 <h2>Resend unlock instructions</h2>
-
-<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+<link rel="stylesheet" href="./stylesheets/forms">
+<div class="form">
+  <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -11,6 +12,7 @@
   <div class="actions">
     <%= f.submit "Resend unlock instructions" %>
   </div>
-<% end %>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>

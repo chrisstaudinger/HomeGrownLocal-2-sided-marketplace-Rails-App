@@ -20,7 +20,7 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
       </script>
-      <%= render :partial => "/item_categories/category_select" %>
+      <%= collection_select(:item, :item_category_id, ItemCategory.all, :id, :name, :prompt => "All Categories") %>
       <input type="text" id="item-search" placeholder="Enter Item name" />
       <input type="text" id="searchTextField" placeholder="Enter a location" autocomplete="on" />
       <button type="submit">

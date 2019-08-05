@@ -45,7 +45,7 @@ body {
         width: 15vw;
         border: none;
         background-color: #E9E9E9;
-        box-shadow:inset 0px 0px 0px 2px $primarygreen;
+        box-shadow:inset 0px 0px 0px 0.1vw $primarygreen;
         &:hover {
           background-color: $offwhite1;
           transition: all 0.5s;
@@ -57,9 +57,30 @@ body {
         background-color: $primarygreen;
         border: none;
         z-index: 9;
+        img {
+          width: 4vw;
+          height: 8vh;
+        }
         &:hover {
           background-color: $darkgreen;
           transition: all 0.5s;
+        }
+      }
+      select {
+        @include overpass();
+        @include leftrightpaddingvar(1vw);
+        z-index: 9;
+        width: 15vw;
+        font-size: 1vw;
+        background-color: $primarygreen;
+        color: $offwhite1;
+        font-weight: 500;
+        box-shadow:inset 0px 0px 0px 0.1vw $primarygreen;
+        appearance: none;
+        &:hover{
+          background-color: $offwhite1;
+          color: $darkgreen;
+          transition: all 0.25s;
         }
       }
       #item-search {

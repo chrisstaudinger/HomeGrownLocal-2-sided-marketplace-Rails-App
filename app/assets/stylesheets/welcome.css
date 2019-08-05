@@ -64,8 +64,8 @@ body {
   width: 15vw;
   border: none;
   background-color: #E9E9E9;
-  -webkit-box-shadow: inset 0px 0px 0px 2px #70C887;
-          box-shadow: inset 0px 0px 0px 2px #70C887;
+  -webkit-box-shadow: inset 0px 0px 0px 0.1vw #70C887;
+          box-shadow: inset 0px 0px 0px 0.1vw #70C887;
 }
 
 .welcome .booke-image #searchbar input:hover {
@@ -82,10 +82,39 @@ body {
   z-index: 9;
 }
 
+.welcome .booke-image #searchbar button img {
+  width: 4vw;
+  height: 8vh;
+}
+
 .welcome .booke-image #searchbar button:hover {
   background-color: #12A068;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.welcome .booke-image #searchbar select {
+  font-family: 'Overpass', sans-serif;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  z-index: 9;
+  width: 15vw;
+  font-size: 1vw;
+  background-color: #70C887;
+  color: #F5F5F5;
+  font-weight: 500;
+  -webkit-box-shadow: inset 0px 0px 0px 0.1vw #70C887;
+          box-shadow: inset 0px 0px 0px 0.1vw #70C887;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.welcome .booke-image #searchbar select:hover {
+  background-color: #F5F5F5;
+  color: #12A068;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 .welcome .booke-image #searchbar #item-search {

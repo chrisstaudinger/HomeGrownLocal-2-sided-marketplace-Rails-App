@@ -29,22 +29,42 @@ body {
           align-items: center;
 }
 
-.welcome .booke-image #searchbar {
+.welcome .booke-image #searchbar-container {
+  position: absolute;
   background-color: #F5F5F5;
-  width: 60vw;
-  height: 8vh;
-  border-radius: 5px;
-}
-
-.welcome .booke-image #searchbar #search-container {
-  position: relative;
-  bottom: 2vh;
-  right: 2.5vw;
-  background-color: #F5F5F5;
-  opacity: 0.15;
+  opacity: 0.20;
   height: 12vh;
   width: 65vw;
   border-radius: 5px;
+}
+
+.welcome .booke-image #searchbar {
+  background-color: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-end;
+          flex-direction: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 60vw;
+  height: 8vh;
+}
+
+.welcome .booke-image #searchbar input {
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  font-family: 'Overpass', sans-serif;
+  font-size: 1vw;
+  position: relative;
+  height: 100%;
+  width: 15vw;
+  border: none;
+  -webkit-box-shadow: inset 0px 0px 0px 2px #70C887;
+          box-shadow: inset 0px 0px 0px 2px #70C887;
 }
 
 .welcome #featured-items {

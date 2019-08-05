@@ -1,9 +1,18 @@
 <div class="welcome">
   <link rel="stylesheet" href="./stylesheets/welcome">
   <div class="booke-image">
+    <div id="searchbar-container">
+    </div>
     <div id="searchbar">
-      <div id="search-container">
-      </div>
+      <input type="text" id="autocomplete" />
+
+      <script>
+        var input = document.getElementById('autocomplete');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        google.maps.event.addListener(autocomplete, 'place_changed', function () {
+          var place = autocomplete.getPlace();
+        })
+      </script>
     </div>
   </div>
   <div id="featured-items">

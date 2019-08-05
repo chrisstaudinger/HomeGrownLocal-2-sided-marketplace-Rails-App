@@ -23,3 +23,8 @@
   margin-left: 20vw;
   margin-right: 20vw;
 }
+
+@mixin leftrightpaddingvar($var){
+  padding-left: $var;
+  padding-right: $var;
+}

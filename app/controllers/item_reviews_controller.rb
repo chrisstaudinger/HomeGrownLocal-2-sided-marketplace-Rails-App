@@ -18,8 +18,7 @@ class ItemReviewsController < ApplicationController
 
   # GET /item_reviews/new
   def new
-    
-    
+    @item_review = ItemReview.new
   end
 
   # GET /item_reviews/1/edit
@@ -30,7 +29,6 @@ class ItemReviewsController < ApplicationController
   # POST /item_reviews
   # POST /item_reviews.json
   def create
-    
     @item_review = ItemReview.new(item_review_params)
 
     respond_to do |format|

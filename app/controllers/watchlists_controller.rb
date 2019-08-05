@@ -15,19 +15,16 @@ class WatchlistsController < ApplicationController
 
   # GET /watchlists/new
   def new
-    
     @watchlist = Watchlist.new
   end
 
   # GET /watchlists/1/edit
   def edit
-    
   end
 
   # POST /watchlists
   # POST /watchlists.json
   def create
-    
     @watchlist = Watchlist.new(watchlist_params)
 
     respond_to do |format|

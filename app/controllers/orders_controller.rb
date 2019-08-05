@@ -1,7 +1,10 @@
 class OrdersController < ApplicationController
+<<<<<<< HEAD
   
   
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+=======
+>>>>>>> 617984cb964b62a059387f6a530eee9b5ad7615e
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
@@ -17,20 +20,26 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+<<<<<<< HEAD
     
    
+=======
+    @order = Order.new
+>>>>>>> 617984cb964b62a059387f6a530eee9b5ad7615e
   end
 
   # GET /orders/1/edit
   def edit
+<<<<<<< HEAD
     authorize @order
+=======
+>>>>>>> 617984cb964b62a059387f6a530eee9b5ad7615e
   end
 
   # POST /orders
   # POST /orders.json
   def create
-    
-    @order = Order.new
+    @order = Order.new(order_params)
 
     respond_to do |format|
       if @order.save

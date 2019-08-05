@@ -117,10 +117,10 @@ Devise.setup do |config|
   # config.pepper = '0f93ddf97ce1cbe48f4005f5d7e3ebc175820f0a25a83dc873f608647a5beb62c6d9cdedf1658a63bb8eb4c9608ab23adafb5bb23a10778b813d24ecb894b8a7'
 
   # Send a notification to the original email when the user's email is changed.
-  config.send_email_changed_notification = true
+  # config.send_email_changed_notification = false
 
   # Send a notification email when the user's password is changed.
-  config.send_password_change_notification = true
+  # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -139,7 +139,7 @@ Devise.setup do |config|
   # their account can't be confirmed with the token any more.
   # Default is nil, meaning there is no restriction on how long a user can take
   # before confirming their account.
-  config.confirm_within = 7.days
+  # config.confirm_within = 3.days
 
   # If true, requires any email changes to be confirmed (exactly the same way as
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
@@ -148,7 +148,7 @@ Devise.setup do |config|
   config.reconfirmable = true
 
   # Defines which key will be used when confirming an account
-  config.confirmation_keys = [:email]
+  # config.confirmation_keys = [:email]
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
@@ -158,7 +158,7 @@ Devise.setup do |config|
   config.expire_all_remember_me_on_sign_out = true
 
   # If true, extends the user's remember period when remembered via cookie.
-  config.extend_remember_period = true
+  # config.extend_remember_period = false
 
   # Options to be passed to the created cookie. For instance, you can set
   # secure: true in order to force SSL only cookies.
@@ -295,5 +295,5 @@ Devise.setup do |config|
 
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
-  config.sign_in_after_change_password = true
+  # config.sign_in_after_change_password = true
 end

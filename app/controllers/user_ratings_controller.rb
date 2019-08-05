@@ -16,19 +16,16 @@ class UserRatingsController < ApplicationController
 
   # GET /user_ratings/new
   def new
-    
     @user_rating = UserRating.new
   end
 
   # GET /user_ratings/1/edit
   def edit
-    
   end
 
   # POST /user_ratings
   # POST /user_ratings.json
   def create
-    
     @user_rating = UserRating.new(user_rating_params)
 
     respond_to do |format|

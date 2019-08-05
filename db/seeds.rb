@@ -108,10 +108,6 @@ roles = [
     {
         privilege: "premium",
         description: "paid tier. benefit TBD"
-    },
-    {
-        privilege: "admin",
-        description: "full functionality"
     }
 ]
 profiles = [
@@ -156,7 +152,7 @@ users = [
         profile_id: 2
     },
     {
-        role_id: 3,
+        role_id: 1,
         location_id: 3,
         email: "charlie@gmail.com",
         password: "123456",
@@ -503,5 +499,3 @@ requests.each do |request|
     a = Request.create(request)
     a.save!
 end
-
-puts "THE SEED FILE RAN"

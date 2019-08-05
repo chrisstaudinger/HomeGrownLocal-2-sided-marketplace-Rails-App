@@ -1,5 +1,4 @@
 class RolesController < ApplicationController
-  
   before_action :set_role, only: [:show, :edit, :update, :destroy]
 
   # GET /roles
@@ -15,7 +14,7 @@ class RolesController < ApplicationController
 
   # GET /roles/new
   def new
-    
+    @role = Role.new
   end
 
   # GET /roles/1/edit
@@ -26,7 +25,6 @@ class RolesController < ApplicationController
   # POST /roles
   # POST /roles.json
   def create
-    
     @role = Role.new(role_params)
 
     respond_to do |format|

@@ -35,6 +35,18 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     @item = Item.new
+    @user = current_user
+    # @item.item_category_id = params[:item_category_id]
+    
+    @measurement_options = []
+    Measurement.all.each do |measurement|
+      @measurement_options << measurement.unit
+    end
+
+    @category_options = []
+    ItemCategory.all.each do |category|
+      @category_options << category.name
+    end
   end
 
   # GET /items/1/edit
@@ -45,7 +57,6 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    
     @item = Item.new(item_params)
 
     respond_to do |format|
@@ -91,9 +102,8 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
     end
 
-   
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:item_category_id, :user_id, :name, :description, :price)
+      params.require(:item).permit(:item_category_id, :user_id, :name, :description, :measurement_id, :price, :quantity, :image)
     end
 end

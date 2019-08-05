@@ -18,7 +18,6 @@ class ItemCategoriesController < ApplicationController
 
   # GET /item_categories/new
   def new
-    
     @item_category = ItemCategory.new
   end
 
@@ -30,9 +29,8 @@ class ItemCategoriesController < ApplicationController
   # POST /item_categories
   # POST /item_categories.json
   def create
-    
     @item_category = ItemCategory.new(item_category_params)
-    
+
     respond_to do |format|
       if @item_category.save
         format.html { redirect_to @item_category, notice: 'Item category was successfully created.' }

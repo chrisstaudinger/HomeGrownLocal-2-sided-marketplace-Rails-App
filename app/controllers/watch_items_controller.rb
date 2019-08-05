@@ -16,20 +16,16 @@ class WatchItemsController < ApplicationController
 
   # GET /watch_items/new
   def new
-    
     @watch_item = WatchItem.new
   end
 
   # GET /watch_items/1/edit
   def edit
-    
-
   end
 
   # POST /watch_items
   # POST /watch_items.json
   def create
-    
     @watch_item = WatchItem.new(watch_item_params)
 
     respond_to do |format|

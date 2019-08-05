@@ -44,7 +44,27 @@ body {
         height: 100%;
         width: 15vw;
         border: none;
+        background-color: #E9E9E9;
         box-shadow:inset 0px 0px 0px 2px $primarygreen;
+        &:hover {
+          background-color: $offwhite1;
+          transition: all 0.5s;
+        }
+      }
+      button {
+        width: 5vw;
+        height: 100%;
+        background-color: $primarygreen;
+        border: none;
+        z-index: 9;
+        &:hover {
+          background-color: $darkgreen;
+          transition: all 0.5s;
+        }
+      }
+      #item-search {
+        width: 25vw;
+        box-shadow: none;
       }
     }
   }

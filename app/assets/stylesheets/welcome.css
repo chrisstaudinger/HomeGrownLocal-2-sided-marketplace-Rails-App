@@ -63,8 +63,35 @@ body {
   height: 100%;
   width: 15vw;
   border: none;
+  background-color: #E9E9E9;
   -webkit-box-shadow: inset 0px 0px 0px 2px #70C887;
           box-shadow: inset 0px 0px 0px 2px #70C887;
+}
+
+.welcome .booke-image #searchbar input:hover {
+  background-color: #F5F5F5;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.welcome .booke-image #searchbar button {
+  width: 5vw;
+  height: 100%;
+  background-color: #70C887;
+  border: none;
+  z-index: 9;
+}
+
+.welcome .booke-image #searchbar button:hover {
+  background-color: #12A068;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.welcome .booke-image #searchbar #item-search {
+  width: 25vw;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .welcome #featured-items {

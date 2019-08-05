@@ -4,6 +4,7 @@
     <div id="searchbar-container">
     </div>
     <div id="searchbar">
+    <form action="/items" method="get"></form>
       <script>
         function initialize() {
 
@@ -19,8 +20,11 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
       </script>
-      <input type="text" id="searchTextField" placeholder="Enter a location" autocomplete="on"/>
-
+      <input type="text" id="item-search" placeholder="Enter Item name" />
+      <input type="text" id="searchTextField" placeholder="Enter a location" autocomplete="on" />
+      <button type="submit">
+        <%= image_tag("searchicon.png",:alt=> "search-icon") %>
+      </button>
     </div>
   </div>
   <div id="featured-items">

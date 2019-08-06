@@ -20,9 +20,11 @@
     <div class="logo">
       <%= image_tag("typefacelogo.png", :alt => "logo") %>
     </div>
+    <div class="ads">
+      <a href="/items/new">Post an Ad</a>
+    </div>
     <div class="simple-navbar">
       <ul>
-        <li><a href="">Category</a></li>
         <li><a href="">About us</a></li>
         <% if !current_user %>
           <li><%= link_to "Log In", new_user_session_path %></li>
@@ -33,8 +35,6 @@
         <% end %>
       </ul>
     </div>
-    <div class="navbar-wrapper">
-</div>
   </header>
   <link rel="stylesheet" href="./stylesheets/body">
   <%= yield %>

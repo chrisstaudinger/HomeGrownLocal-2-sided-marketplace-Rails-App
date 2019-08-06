@@ -1,10 +1,6 @@
 Class ItemCategoryPolicy < ApplicationPolicy
-    
-
-  
   attr_reader :user, :category
 
-  
   def initialize(user, category)
     @user = user
     @category = category
@@ -42,9 +38,7 @@ Class ItemCategoryPolicy < ApplicationPolicy
       # current_user.try(:admin?)
   end
 
-  
-      def show?
-        true 
-      end
-    
-    end
+  def show?
+    true 
+  end
+end

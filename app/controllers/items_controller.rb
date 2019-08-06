@@ -1,6 +1,5 @@
 class ItemsController < ApplicationController
   
-  
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   protect_from_forgery prepend: true
 
@@ -11,32 +10,18 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
-
-    # respond_to do |format|
-    #   format.html
-    #   format.xml { render :xml => @item.to_xml }
-    # end
-
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
-
-    # respond_to do |format|
-    #   format.html
-    #   format.xml { render :xml => @item.to_xml }
-    # end
-
-    
   end
 
   # GET /items/new
   def new
     @item = Item.new
     @user = current_user
-    # @item.item_category_id = params[:item_category_id]
     
     @measurement_options = []
     Measurement.all.each do |measurement|

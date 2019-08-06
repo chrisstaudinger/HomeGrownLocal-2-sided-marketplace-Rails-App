@@ -4,28 +4,29 @@
     <div id="searchbar-container">
     </div>
     <div id="searchbar">
-    <form action="/items" method="get"></form>
-      <script>
-        function initialize() {
+      <form action="/items" method="get">
+        <script>
+          function initialize() {
 
-          var options = {
-            types: ['(cities)'],
-            componentRestrictions: {
-              country: "au"
-            }
-          };
+            var options = {
+              types: ['(cities)'],
+              componentRestrictions: {
+                country: "au"
+              }
+            };
 
-          var input = document.getElementById('searchTextField');
-          var autocomplete = new google.maps.places.Autocomplete(input, options);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-      </script>
-      <%= collection_select(:item, :item_category_id, ItemCategory.all, :id, :name, :prompt => "All Categories") %>
-      <input type="text" id="item-search" placeholder="Enter Item name" />
-      <input type="text" id="searchTextField" placeholder="Enter a location" autocomplete="on" />
-      <button type="submit">
-        <%= image_tag("searchicon.png",:alt=> "search-icon") %>
-      </button>
+            var input = document.getElementById('searchTextField');
+            var autocomplete = new google.maps.places.Autocomplete(input, options);
+          }
+          google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        <%= collection_select(:item, :item_category_id, ItemCategory.all, :id, :name, :prompt => "All Categories") %>
+        <input type="text" id="item-search" placeholder="Enter Item name" />
+        <input type="text" id="searchTextField" placeholder="Enter a location" autocomplete="on" />
+        <button type="submit">
+          <%= image_tag("searchicon.png",:alt=> "search-icon") %>
+        </button>
+      </form>
     </div>
   </div>
   <div id="featured-items">

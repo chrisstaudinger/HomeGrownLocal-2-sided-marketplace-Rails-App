@@ -40,6 +40,10 @@ body {
 
 .welcome .booke-image #searchbar {
   background-color: #F5F5F5;
+  width: 60vw;
+}
+
+.welcome .booke-image #searchbar form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,11 +54,15 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 60vw;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  z-index: 9;
   height: 8vh;
 }
 
-.welcome .booke-image #searchbar input {
+.welcome .booke-image #searchbar form input {
   padding-left: 0.5vw;
   padding-right: 0.5vw;
   font-family: 'Overpass', sans-serif;
@@ -63,18 +71,18 @@ body {
   height: 100%;
   width: 15vw;
   border: none;
-  background-color: #E9E9E9;
   -webkit-box-shadow: inset 0px 0px 0px 0.1vw #70C887;
           box-shadow: inset 0px 0px 0px 0.1vw #70C887;
+  background-color: #E9E9E9;
 }
 
-.welcome .booke-image #searchbar input:hover {
+.welcome .booke-image #searchbar form input:hover {
   background-color: #F5F5F5;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.welcome .booke-image #searchbar button {
+.welcome .booke-image #searchbar form button {
   width: 5vw;
   height: 100%;
   background-color: #70C887;
@@ -82,35 +90,36 @@ body {
   z-index: 9;
 }
 
-.welcome .booke-image #searchbar button img {
+.welcome .booke-image #searchbar form button img {
   width: 4vw;
   height: 8vh;
 }
 
-.welcome .booke-image #searchbar button:hover {
+.welcome .booke-image #searchbar form button:hover {
   background-color: #12A068;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.welcome .booke-image #searchbar select {
+.welcome .booke-image #searchbar form select {
   font-family: 'Overpass', sans-serif;
   padding-left: 1vw;
   padding-right: 1vw;
+  -webkit-box-shadow: inset 0px 0px 0px 0.1vw #70C887;
+          box-shadow: inset 0px 0px 0px 0.1vw #70C887;
   z-index: 9;
   width: 15vw;
+  height: 8vh;
   font-size: 1vw;
   background-color: #70C887;
   color: #F5F5F5;
   font-weight: 500;
-  -webkit-box-shadow: inset 0px 0px 0px 0.1vw #70C887;
-          box-shadow: inset 0px 0px 0px 0.1vw #70C887;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-.welcome .booke-image #searchbar select:hover {
+.welcome .booke-image #searchbar form select:hover {
   background-color: #F5F5F5;
   color: #12A068;
   -webkit-transition: all 0.25s;

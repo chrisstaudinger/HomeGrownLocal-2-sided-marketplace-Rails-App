@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'stripe'
 gem 'devise'
 gem "aws-sdk-s3", require: false
+gem 'searchkick'
 
 ruby '2.6.3'
 

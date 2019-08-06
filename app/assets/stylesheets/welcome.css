@@ -30,8 +30,9 @@ body {
 }
 
 .welcome .booke-image #searchbar-container {
-  position: absolute;
+  position: relative;
   background-color: #F5F5F5;
+  left: 0;
   opacity: 0.20;
   height: 12vh;
   width: 65vw;

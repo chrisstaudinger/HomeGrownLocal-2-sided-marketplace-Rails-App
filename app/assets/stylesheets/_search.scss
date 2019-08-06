@@ -1,0 +1,82 @@
+@import 'variables';
+@import 'mixins';
+
+
+#searchbar-container {
+  position: relative;
+  background-color: $darkgreen;
+  top: 10vh;
+  right: 2.5vw;
+  opacity: 0.20;
+  height: 12vh;
+  width: 65vw;
+  border-radius: 5px;
+}
+#searchbar {
+  background-color: $offwhite1;
+  width: 60vw;
+  margin-bottom: 8vh;
+  form {
+    display: flex;
+    flex-direction: flex-end;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    z-index: 9;
+    height: 8vh;
+    input {
+      @include leftrightpaddingvar(0.5vw);
+      @include overpass();
+      font-size: 1vw;
+      position: relative;
+      height: 100%;
+      width: 15vw;
+      border: none;
+      box-shadow: inset 0px 0px 0px 0.1vw $primarygreen;
+      background-color: #E9E9E9;
+      word-wrap: break-word;
+      &:hover {
+        background-color: $offwhite1;
+        transition: all 0.5s;
+      }
+    }
+    button {
+      width: 5vw;
+      height: 100%;
+      background-color: $primarygreen;
+      border: none;
+      z-index: 9;
+      img {
+        width: 4vw;
+        height: 8vh;
+      }
+      &:hover {
+        background-color: $darkgreen;
+        transition: all 0.5s;
+      }
+    }
+    select {
+      @include overpass();
+      @include leftrightpaddingvar(1vw);
+      box-shadow: inset 0px 0px 0px 0.1vw $primarygreen;
+      z-index: 9;
+      width: 15vw;
+      height: 8vh;
+      font-size: 1vw;
+      background-color: $primarygreen;
+      color: $offwhite1;
+      font-weight: 500;
+      appearance: none;
+      &:hover{
+        background-color: $offwhite1;
+        color: $darkgreen;
+        transition: all 0.25s;
+      }
+    }
+  }
+  #item_name {
+    width: 25vw;
+    box-shadow: none;
+  }
+}

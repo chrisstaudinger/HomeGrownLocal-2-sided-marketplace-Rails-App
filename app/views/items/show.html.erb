@@ -1,35 +1,56 @@
-<p id="notice"><%= notice %></p>
+<div class="sub-body">
+  <link rel="stylesheet" href="./stylesheets/search">
+  <div id="searchbar-container">
+  </div>
+  <div id="searchbar">
+    <form action="/items/search" method="get">
+      <script>
+        function initialize() {
 
-<p>
-  <strong>Item category:</strong>
-  <%= @item.item_category %>
-</p>
+          var options = {
+            types: ['(cities)'],
+            componentRestrictions: {
+              country: "au"
+            }
+          };
 
-<p>
-  <strong>User:</strong>
-  <%= @item.user %>
-</p>
+          var input = document.getElementById('location_field');
+          var autocomplete = new google.maps.places.Autocomplete(input, options);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+      </script>
+      <%= collection_select(:item, :item_category_id, ItemCategory.all, :id, :name, :prompt => "All Categories") %>
+      <%= text_field_tag :item_name, nil, placeholder: "Enter item name", name: "item_name" %>
+      <%= text_field_tag :location_field, nil , placeholder: "Enter a location" , autocomplete: "on" %>
+      <button type="submit">
+        <%= image_tag("searchicon.png",:alt=> "search-icon") %>
+      </button>
+    </form>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
+  <div class="item-highlight">
+    <% if @item.image.attached? %>
+    <%= @item.image.attachment %>
+    <% else %>
+    <%= image_tag("large-no-image.png",:alt=> "no-attachment") %>
+    <% end %>
+    <div class="item-information-container">
+      <div class="watchlist">
+        <%= image_tag("watchlist.png" ,:alt=> "watchlist-icon") %>
+      </div>
+      <div class="information-box">
+        <p class="item-name"> <%= @item.name %></p>
+        <div class="item-location">
+          <%= image_tag("logo2v2outlinewhite.png" ,:alt=> "location-pin") %>
+          <p><%= @item.user.location.suburb %></p>
+        </div>
+        <p class="item-description">
+          <%= @item.description %>
+        </p>
+      </div>
+    </div>
+  </div>
 
-<% if @item.image.attached? %>
-  <%= image_tag @item.image.service_url, class: 'image-size' %>
-<% else %>
-  <p>No image for this item</p>
-<% end %>
-
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+  <%= link_to 'Edit', edit_item_path(@item) %> |
+  <%= link_to 'Back', items_path %>
+</div>

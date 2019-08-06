@@ -1,3 +1,83 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
+@import 'mixins';
+
+
+.sub-body {
+  @include leftrightmargin();
+  display: flex;
+  flex-direction: column;
+  .item-highlight{
+    display: flex;
+    flex-direction: row;
+    img{
+      position: absolute;
+      left: 22vw;
+      width: 44vw;
+      height: 55vh;
+      z-index: 4;
+    }
+    .item-information-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      z-index: 3;
+      position: relative;
+      top: 7.5vh;
+      left: 15vw;
+      height: 80vh;
+      width: 35vw;
+      background-color: $formblack;
+      margin-bottom: 10vh;
+      padding: 2em;
+      .watchlist{
+        position: relative;
+        left: 9.5vw;
+        bottom: 50vh;
+        img {
+          width: 3vw;
+          height: 3vw;
+        }
+      }
+      .information-box {
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .item-name{
+          @include librefranklin;
+          font-size: 3em;
+          letter-spacing: 0.2vw;
+          color: $accentyellow;
+        }
+        .item-location {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          p {
+            @include librefranklin();
+            font-style: italic;
+            font-size: 2.5em;
+            font-weight: lighter;
+            color: $accentyellow;
+          }
+          img{
+            position: relative;
+            left: 0;
+            width: 5em;
+            height: 5.5em;
+          }
+        }
+        .item-description {
+          @include overpass();
+          height: 15vh;
+          font-size: 2.2em;
+          color: $offwhite1;
+          line-height: 1.3em;
+        }
+      }
+    }
+  }
+}

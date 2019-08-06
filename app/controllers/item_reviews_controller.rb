@@ -26,7 +26,7 @@ class ItemReviewsController < ApplicationController
 
   # GET /item_reviews/1/edit
   def edit
-    authorize @itemreview
+    authorize @item_review
   end
 
   # POST /item_reviews
@@ -48,7 +48,7 @@ class ItemReviewsController < ApplicationController
   # PATCH/PUT /item_reviews/1
   # PATCH/PUT /item_reviews/1.json
   def update
-    authorize @itemreview
+    authorize @item_review
     respond_to do |format|
       if @item_review.update(item_review_params)
         format.html { redirect_to @item_review, notice: 'Item review was successfully updated.' }
@@ -63,7 +63,7 @@ class ItemReviewsController < ApplicationController
   # DELETE /item_reviews/1
   # DELETE /item_reviews/1.json
   def destroy
-    authorize @itemreview
+    authorize @item_review
     @item_review.destroy
     respond_to do |format|
       format.html { redirect_to item_reviews_url, notice: 'Item review was successfully destroyed.' }

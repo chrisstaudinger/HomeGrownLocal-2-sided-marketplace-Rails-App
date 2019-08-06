@@ -139,6 +139,10 @@ body {
         width: 18vw;
         margin: 1vw;
         background-color: $offwhite2;
+        &:hover{
+          transform: scale(1.1);
+          transition: all 0.5s;
+        }
         p {
           @include overpass();
           margin-top: 1vh;
@@ -150,6 +154,15 @@ body {
         .item-image {
           display: flex;
           flex-direction: row;
+          a{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-color: $offwhite1;
+            &:visited{
+              background-color: $offwhite1;
+            }
+          }
           img {
             width: 100%;
             height: 60%;

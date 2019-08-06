@@ -205,6 +205,13 @@ body {
   background-color: #FBFBFB;
 }
 
+.welcome #featured-items #item-grid .item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .welcome #featured-items #item-grid .item p {
   font-family: 'Overpass', sans-serif;
   margin-top: 1vh;
@@ -222,6 +229,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.welcome #featured-items #item-grid .item .item-image a {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+.welcome #featured-items #item-grid .item .item-image a:visited {
+  background-color: #F5F5F5;
 }
 
 .welcome #featured-items #item-grid .item .item-image img {

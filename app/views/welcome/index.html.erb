@@ -37,101 +37,23 @@
       <li><%= link_to "Sale", "/" %></li>
     </ul>
     <div id="item-grid">
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= @fresh_items[0].price %></p>
-            <p class="price-notation">/<%= @fresh_items[0].measurement.unit  %></p>
+      <% @fresh_items.each do |item| %>
+        <div class="item">
+          <div class="item-image">
+            <%=link_to image_tag("image-unavailable.png",:alt=> "item-image"), item_path(item) %>
+            <div class="item-price">
+              <p class="price-notation">$</p>
+              <p><%= item.price %></p>
+              <p class="price-notation">/<%= item.measurement.unit  %></p>
+            </div>
           </div>
-        </div>
-
-        <p><%= @fresh_items[0].name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%=@fresh_items[0].user.location.city.city %></p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= @fresh_items[1].price %></p>
-            <p class="price-notation">/<%= @fresh_items[1].measurement.unit  %></p>
+          <p><%= item.name %></p>
+          <div class="item-location">
+            <%= image_tag("logo2v2.png", :alt => "pin") %>
+            <p><%=item.user.location.city.city %></p>
           </div>
-        </div>
-
-        <p><%= @fresh_items[1].name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= @fresh_items[1].user.location.city.city %></p>
-        </div>
       </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= @fresh_items[2].price %></p>
-            <p class="price-notation">/<%= @fresh_items[2].measurement.unit  %></p>
-          </div>
-        </div>
-
-        <p><%= @fresh_items[2].name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= @fresh_items[2].user.location.city.city %></p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= @fresh_items[3].price %></p>
-            <p class="price-notation">/<%= @fresh_items[3].measurement.unit  %></p>
-          </div>
-        </div>
-
-        <p><%= @fresh_items[3].name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= @fresh_items[3].user.location.city.city %></p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= @fresh_items[4].price %></p>
-            <p class="price-notation">/<%= @fresh_items[4].measurement.unit  %></p>
-          </div>
-        </div>
-        <p><%= @fresh_items[4].name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= @fresh_items[4].user.location.city.city %></p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= @fresh_items[5].price %></p>
-            <p class="price-notation">/<%= @fresh_items[5].measurement.unit  %></p>
-          </div>
-        </div>
-
-        <p><%= @fresh_items[5].name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= @fresh_items[5].user.location.city.city %></p>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
   <div id="featured-categories">

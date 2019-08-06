@@ -1,4 +1,8 @@
 class ItemReviewsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  
+  protect_from_forgery prepend: true
+  
   before_action :set_item_review, only: [:show, :edit, :update, :destroy]
 
   # GET /item_reviews
@@ -10,6 +14,9 @@ class ItemReviewsController < ApplicationController
   # GET /item_reviews/1
   # GET /item_reviews/1.json
   def show
+    
+    @item_review = ItemReview.find(params[:id])
+    
   end
 
   # GET /item_reviews/new
@@ -19,6 +26,7 @@ class ItemReviewsController < ApplicationController
 
   # GET /item_reviews/1/edit
   def edit
+    authorize @itemreview
   end
 
   # POST /item_reviews
@@ -40,6 +48,7 @@ class ItemReviewsController < ApplicationController
   # PATCH/PUT /item_reviews/1
   # PATCH/PUT /item_reviews/1.json
   def update
+    authorize @itemreview
     respond_to do |format|
       if @item_review.update(item_review_params)
         format.html { redirect_to @item_review, notice: 'Item review was successfully updated.' }
@@ -54,6 +63,7 @@ class ItemReviewsController < ApplicationController
   # DELETE /item_reviews/1
   # DELETE /item_reviews/1.json
   def destroy
+    authorize @itemreview
     @item_review.destroy
     respond_to do |format|
       format.html { redirect_to item_reviews_url, notice: 'Item review was successfully destroyed.' }

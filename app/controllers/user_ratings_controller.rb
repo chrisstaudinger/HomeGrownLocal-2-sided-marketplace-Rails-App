@@ -1,4 +1,6 @@
 class UserRatingsController < ApplicationController
+  
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_user_rating, only: [:show, :edit, :update, :destroy]
 
   # GET /user_ratings
@@ -40,6 +42,7 @@ class UserRatingsController < ApplicationController
   # PATCH/PUT /user_ratings/1
   # PATCH/PUT /user_ratings/1.json
   def update
+    authorize @userrating
     respond_to do |format|
       if @user_rating.update(user_rating_params)
         format.html { redirect_to @user_rating, notice: 'User rating was successfully updated.' }
@@ -54,6 +57,7 @@ class UserRatingsController < ApplicationController
   # DELETE /user_ratings/1
   # DELETE /user_ratings/1.json
   def destroy
+    authorize @user_rating
     @user_rating.destroy
     respond_to do |format|
       format.html { redirect_to user_ratings_url, notice: 'User rating was successfully destroyed.' }

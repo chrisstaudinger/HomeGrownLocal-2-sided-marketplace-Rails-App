@@ -1,4 +1,7 @@
 class CitiesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  protect_from_forgery prepend: true
+  
   before_action :set_city, only: [:show, :edit, :update, :destroy]
 
   # GET /cities

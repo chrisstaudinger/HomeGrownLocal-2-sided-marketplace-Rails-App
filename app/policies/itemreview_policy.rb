@@ -32,10 +32,4 @@ class ItemreviewPolicy < ApplicationPolicy
       end
   end
 
-  class NilClassPolicy < ApplicationPolicy
-    class Scope < Scope
-      def resolve
-        raise Pundit::NotDefinedError, "Cannot scope NilClass"
-      end
-  end
   

@@ -12,7 +12,7 @@ Class ItemCategoryPolicy < ApplicationPolicy
 
   def update?
     @user.role == "admin"
-
+    # current_user.try(:admin?)
     respond_to do |format|
       if @category.update(category_params)
         format.html { redirect_to @category, notice: 'Category was successfully updated.' }
@@ -29,15 +29,17 @@ Class ItemCategoryPolicy < ApplicationPolicy
 
   def new?
       @user.role == "admin"
+      # current_user.try(:admin?)
   end
 
      def edit?
       @user.role == "admin"
- 
+      # current_user.try(:admin?)
   end
 
   def destroy?
       @user.role == "admin"
+      # current_user.try(:admin?)
   end
 
   

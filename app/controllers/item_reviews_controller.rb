@@ -14,6 +14,9 @@ class ItemReviewsController < ApplicationController
   # GET /item_reviews/1
   # GET /item_reviews/1.json
   def show
+    
+    @item_review = ItemReview.find(params[:id])
+    
   end
 
   # GET /item_reviews/new

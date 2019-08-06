@@ -21,12 +21,11 @@ class ProfilePolicy < ApplicationPolicy
       end
   
       def new?
-        #   @profile.user_id == @user
-      end
+     end
   
         
       def destroy?
-          current_user.admin?
+        #  current_user.try(:admin?)
       end
   end
     

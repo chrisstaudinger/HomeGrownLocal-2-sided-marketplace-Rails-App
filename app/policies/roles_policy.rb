@@ -8,6 +8,7 @@ class RolePolicy < ApplicationPolicy
   
     def update?
       @user.role == 'admin'
+    #   current_user.try(:admin?)
          
     end
   
@@ -22,10 +23,12 @@ class RolePolicy < ApplicationPolicy
   
       def new?
           @user.role == 'admin'
+        #   current_user.try(:admin?)
       end
   
         
       def destroy?
           @user.role == 'admin'
+        #   current_user.try(:admin?)
       end
   end

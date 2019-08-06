@@ -5,6 +5,19 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+    raise
+  end
+
+  def search
+    params.permit(:location_field, :item_name, :item_category_id)
+    @test1 = params[:item_name]
+    @test2 = params[:location_field]
+    @test3 = item_params[:item_category_id]
+    Item.reindex
+    @result = Item.search(params[:item_name], where: {item_category_id: item_params[:item_category_id]})
+    @result.each do |item|
+      puts item.name
+    end
   end
 
   # GET /items/1

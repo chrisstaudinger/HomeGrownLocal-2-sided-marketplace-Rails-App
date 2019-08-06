@@ -51,6 +51,7 @@ body {
           border: none;
           box-shadow: inset 0px 0px 0px 0.1vw $primarygreen;
           background-color: #E9E9E9;
+          word-wrap: break-word;
           &:hover {
             background-color: $offwhite1;
             transition: all 0.5s;
@@ -90,7 +91,7 @@ body {
           }
         }
       }
-      #item-search {
+      #item_name {
         width: 25vw;
         box-shadow: none;
       }

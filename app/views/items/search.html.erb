@@ -1,0 +1,9 @@
+<h2>Search Result</h2>
+<h2><%= @test1 %></h2>
+<h2><%= @test2 %></h2>
+<h2><%= @test3 %></h2>
+<% @result.each do |item| %>
+  <h2><%= item.name %></h2>
+<% end %>
+<%= link_to 'Show', @item %> |
+<%= link_to 'Back', items_path %>

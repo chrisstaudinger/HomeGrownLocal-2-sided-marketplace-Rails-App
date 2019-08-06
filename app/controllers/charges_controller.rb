@@ -4,7 +4,9 @@ class ChargesController < ApplicationController
     
     def create
       # Amount in cents
-      @amount = 500
+      @item = Item.find(params[:item])
+      @amount_cents = convert_price_to_cents(@item.price)
+      @dollar_amount = '%.2f' % (@amount_cents / 100) 
     
       customer = Stripe::Customer.create({
         email: params[:stripeEmail],
@@ -13,13 +15,18 @@ class ChargesController < ApplicationController
     
       charge = Stripe::Charge.create({
         customer: customer.id,
-        amount: @amount,
+        amount: @amount_cents,
         description: 'Rails Stripe customer',
-        currency: 'usd',
+        currency: 'aud',
       })
-    
+
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path
+    end
+
+    private
+    def convert_price_to_cents(price)
+      price.to_i * 100
     end
   end

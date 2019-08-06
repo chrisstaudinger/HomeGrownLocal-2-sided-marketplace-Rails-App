@@ -6,13 +6,16 @@
       </div>
     <% end %>
     <label class="amount">
-      <span>Amount: $5.00</span>
+      <span><%= @amount %></span>
     </label>
   </article>
+  <div class="field">
+    <input type="hidden" id="item" name="item" value=<%= @item.id %>>
+  </div>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="Purchase Book"
-          data-amount="500"
+          data-description= <%= @item.name %>
+          data-amount= <%= @item.price.to_i * 100 %>
           data-locale="auto"></script>
 <% end %>

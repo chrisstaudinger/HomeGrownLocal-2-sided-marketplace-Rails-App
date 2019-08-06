@@ -22,26 +22,6 @@
         </script>
         <%= collection_select(:item, :item_category_id, ItemCategory.all, :id, :name, :prompt => "All Categories") %>
         <%= text_field_tag :item_name, nil, placeholder: "Enter item name", name: "item_name" %>
-        <script src="app/assets/javascripts/bloodhound/jquery.min.js"></script>
-        <script src="app/assets/javascripts/bloodhound/typeahead.js"></script>
-        <!--<script src="app\assets\javascripts\bloodhound\typeahead.bundle.min.js"></script>
-        <script src="app\assets\javascripts\bloodhound\typeahead.jquery.min.js"></script>-->
-        <script src="app/assets/javascripts/bloodhound/bloodhound.min.js"></script>
-        <script>
-          $(document).ready(function() {
-            var items = new Bloodhound({
-              datumTokenizer: Bloodhound.tokenizers.whitespace,
-              queryTokenizer: Bloodhound.tokenizers.whitespace,
-              remote: {
-                url: '/items/autocomplete?item_name=%ITEM_NAME',
-                wildcard: '%ITEM_NAME'
-              }
-            });
-          $('#query').typeahead(null, {
-              source: items
-            });
-          })
-        </script>
         <%= text_field_tag :location_field, nil , placeholder: "Enter a location" , autocomplete: "on" %>
         <button type="submit">
           <%= image_tag("searchicon.png",:alt=> "search-icon") %>

@@ -1,4 +1,4 @@
-Class ItemCategoryPolicy < ApplicationPolicy
+class ItemCategoryPolicy < ApplicationPolicy
   attr_reader :user, :category
 
   def initialize(user, category)

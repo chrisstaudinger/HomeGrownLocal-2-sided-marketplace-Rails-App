@@ -389,56 +389,68 @@ watchitems = [
 ]
 orders = [
     {
-        user_id: 1
+        user_id: 1,
+        item_id: 2,
+        quantity: 3 
     },
     {
-        user_id: 2
+        user_id: 2,
+        item_id: 3,
+        quantity: 0.5 
     },
     {
-        user_id: 3
+        user_id: 3,
+        item_id: 4,
+        quantity: 1 
     },
     {
-        user_id: 4
+        user_id: 4,
+        item_id: 5,
+        quantity: 0.6 
     },
     {
-        user_id: 5
+        user_id: 5,
+        item_id: 6,
+        quantity: 2 
     },
     {
-        user_id: 6
+        user_id: 6,
+        item_id: 5,
+        quantity: 1 
     }
 ]
-requests = [
-{
-    item_id: 1,
-    order_id: 2,
-    quantity: 10.0
-},
-{
-    item_id: 2,
-    order_id: 3,
-    quantity: 0.5
-},
-{
-    item_id: 3,
-    order_id: 4,
-    quantity: 1.0
-},
-{
-    item_id: 4,
-    order_id: 5,
-    quantity: 0.5
-},
-{
-    item_id: 4,
-    order_id: 6,
-    quantity: 2.0
-},
-{
-    item_id: 5,
-    order_id: 6,
-    quantity: 1.0
-}
-]
+# requests = [
+# {
+#     item_id: 1,
+#     order_id: 2,
+#     quantity: 10.0
+# },
+# {
+#     item_id: 2,
+#     order_id: 3,
+#     quantity: 0.5
+# },
+# {
+#     item_id: 3,
+#     order_id: 4,
+#     quantity: 1.0
+# },
+# {
+#     item_id: 4,
+#     order_id: 5,
+#     quantity: 0.5
+# },
+# {
+#     item_id: 4,
+#     order_id: 6,
+#     quantity: 2.0
+# },
+# {
+#     item_id: 5,
+#     order_id: 6,
+#     quantity: 1.0
+# }
+# ]
 states.each do |state|
     a = State.create(state)
     a.save!
@@ -495,7 +507,7 @@ orders.each do |order|
     a = Order.create(order)
     a.save!
 end
-requests.each do |request|
-    a = Request.create(request)
-    a.save!
-end
+# requests.each do |request|
+#     a = Request.create(request)
+#     a.save!
+# end

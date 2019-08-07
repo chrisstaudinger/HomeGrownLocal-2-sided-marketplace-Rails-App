@@ -1,103 +1,103 @@
-states = [
-    {
-        state: "Victoria",
-    },
-    {
-        state: "Queensland",
-    },
-    {
-        state: "New South Wales"
-    },
-    {
-        state: "Western Australia"
-    },
-    {
-        state: "South Australia"
-    },
-    {
-        state: "Northern Territory"
-    },
-    {
-        state: "Tasmania"
-    },
-    {
-        state: "Australain Capital Territory"
-    }
-]
-cities = [
-    {
-        city: "Melbourne",
-        state_id: 1
-    },
-    {
-        city: "Brisbane",
-        state_id: 2
-    },
-    {
-        city: "Sydney",
-        state_id: 3
-    },
-    {
-        city: "Perth",
-        state_id: 4
-    },
-    {
-        city: "Adelaide",
-        state_id: 5
-    },
-    {
-        city: "Darwin",
-        state_id: 6
-    },
-    {
-        city: "Hobart",
-        state_id: 7
-    },
-    {
-        city: "Canberra",
-        state_id: 8
-    }
-]
+# states = [
+#     {
+#         state: "Victoria"
+#     },
+#     {
+#         state: "Queensland"
+#     },
+#     {
+#         state: "New South Wales"
+#     },
+#     {
+#         state: "Western Australia"
+#     },
+#     {
+#         state: "South Australia"
+#     },
+#     {
+#         state: "Northern Territory"
+#     },
+#     {
+#         state: "Tasmania"
+#     },
+#     {
+#         state: "Australain Capital Territory"
+#     }
+# ]
+# cities = [
+#     {
+#         city: "Melbourne",
+#         state_id: 1
+#     },
+#     {
+#         city: "Brisbane",
+#         state_id: 2
+#     },
+#     {
+#         city: "Sydney",
+#         state_id: 3
+#     },
+#     {
+#         city: "Perth",
+#         state_id: 4
+#     },
+#     {
+#         city: "Adelaide",
+#         state_id: 5
+#     },
+#     {
+#         city: "Darwin",
+#         state_id: 6
+#     },
+#     {
+#         city: "Hobart",
+#         state_id: 7
+#     },
+#     {
+#         city: "Canberra",
+#         state_id: 8
+#     }
+# ]
 locations = [
     {
         postcode: "3141",
         suburb: "South Yarra",
-        city_id: 1
+        state: "Victoria"
     },
     {
         postcode: "4169",
         suburb: "Kangaroo Point",
-        city_id: 2
+        state: "Queensland"
     },
     {
         postcode: "2026",
         suburb: "Bondi",
-        city_id: 3
+        state: "New South Wales"
     },
     {
         postcode: "6153",
         suburb: "Applecross",
-        city_id: 4
+        state: "Western Australia"
     },
     {
         postcode: "5015",
         suburb: "Port Adelaide",
-        city_id: 5
+        state: "South Australia"
     },
     {
         postcode: "0810",
         suburb: "Coconut Grove",
-        city_id: 6
+        state: "Northern Territory"
     },
     {
         postcode: "7005",
         suburb: "Sandy Bay",
-        city_id: 7
+        state: "Tasmania"
     },
     {
         postcode: "2601",
         suburb: "Acton",
-        city_id: 8
+        state: "Australain Capital Territory"
     }
 ]
 roles = [
@@ -238,26 +238,26 @@ item_categories = [
 ]
 measurements = [
     {
-        unit: "Kilograms"
+        unit: "Kg"
     },
     {
-        unit: "Grams"
+        unit: "g"
     },
     {
-        unit: "Pieces"
+        unit: "pcs"
     },
     {
-        unit: "Litres"
+        unit: "Lt"
     },
     {
-        unit: "Millilitres"
+        unit: "mL"
     }
 ]
 items = [
     {
         item_category_id: 1,
         user_id: 1,
-        name: "Mt Fuji Apples",
+        name: "Fuji Apples",
         description: "Organic apples from my garden. No pesticides",
         price: 1.0,
         measurement_id: 3,
@@ -270,7 +270,7 @@ items = [
         description: "Organic fresh beetroot. No pesticides or sprays.",
         price: 8.5,
         measurement_id: 1,
-        quantity: 3000.0
+        quantity: 3.0
     },
     {
         item_category_id: 3,
@@ -407,38 +407,38 @@ orders = [
         user_id: 6
     }
 ]
-requests = [
-{
-    item_id: 1,
-    order_id: 2,
-    quantity: 10.0
-},
-{
-    item_id: 2,
-    order_id: 3,
-    quantity: 0.5
-},
-{
-    item_id: 3,
-    order_id: 4,
-    quantity: 1.0
-},
-{
-    item_id: 4,
-    order_id: 5,
-    quantity: 0.5
-},
-{
-    item_id: 4,
-    order_id: 6,
-    quantity: 2.0
-},
-{
-    item_id: 5,
-    order_id: 6,
-    quantity: 1.0
-}
-]
+# requests = [
+# {
+#     item_id: 1,
+#     order_id: 2,
+#     quantity: 10.0
+# },
+# {
+#     item_id: 2,
+#     order_id: 3,
+#     quantity: 0.5
+# },
+# {
+#     item_id: 3,
+#     order_id: 4,
+#     quantity: 1.0
+# },
+# {
+#     item_id: 4,
+#     order_id: 5,
+#     quantity: 0.5
+# },
+# {
+#     item_id: 4,
+#     order_id: 6,
+#     quantity: 2.0
+# },
+# {
+#     item_id: 5,
+#     order_id: 6,
+#     quantity: 1.0
+# }
+# ]
 states.each do |state|
     a = State.create(state)
     a.save!
@@ -495,7 +495,7 @@ orders.each do |order|
     a = Order.create(order)
     a.save!
 end
-requests.each do |request|
-    a = Request.create(request)
-    a.save!
-end
+# requests.each do |request|
+#     a = Request.create(request)
+#     a.save!
+# end

@@ -110,6 +110,7 @@ body {
   -webkit-box-shadow: inset 0px 0px 0px 0.1vw #70C887;
           box-shadow: inset 0px 0px 0px 0.1vw #70C887;
   z-index: 9;
+  border-radius: 0;
   width: 15vw;
   height: 8vh;
   font-size: 1vw;

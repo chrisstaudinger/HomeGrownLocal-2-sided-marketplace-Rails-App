@@ -78,6 +78,7 @@ body {
           @include leftrightpaddingvar(1vw);
           box-shadow: inset 0px 0px 0px 0.1vw $primarygreen;
           z-index: 9;
+          border-radius: 0;
           width: 15vw;
           height: 8vh;
           font-size: 1vw;

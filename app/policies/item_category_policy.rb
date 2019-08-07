@@ -18,6 +18,7 @@ class ItemCategoryPolicy < ApplicationPolicy
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end
+  end
   
     def create?
       new?

@@ -19,8 +19,11 @@ class ItemsController < ApplicationController
     @test3 = item_params[:item_category_id]
     Item.reindex
     @result = Item.search(params[:item_name], where: {item_category_id: item_params[:item_category_id]})
+    @after_location = []
     @result.each do |item|
-      puts item.name
+      if item.user.location.suburb == params[:location_field]
+        @after_location.push(item)
+      end
     end
   end
 

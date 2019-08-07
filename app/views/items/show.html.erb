@@ -28,8 +28,10 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @item.price %>
+  <%= "$#{@dollar_amount}" %>
 </p>
+
+<%= render :partial => "quantity_purchase_form" %>
 
 <%= render :partial => "/layouts/shared/stripe_form" %>
 

@@ -16,6 +16,7 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
+    @dollar_amount = '%.2f' % @item.price
   end
 
   # GET /items/new

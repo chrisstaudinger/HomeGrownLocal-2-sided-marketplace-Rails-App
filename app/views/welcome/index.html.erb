@@ -4,7 +4,7 @@
     <div id="searchbar-container">
     </div>
     <div id="searchbar">
-      <form action="/items" method="get">
+      <form action="/items/search" method="get">
         <script>
           function initialize() {
 
@@ -15,14 +15,14 @@
               }
             };
 
-            var input = document.getElementById('searchTextField');
+            var input = document.getElementById('location_field');
             var autocomplete = new google.maps.places.Autocomplete(input, options);
           }
           google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <%= collection_select(:item, :item_category_id, ItemCategory.all, :id, :name, :prompt => "All Categories") %>
-        <input type="text" id="item-search" placeholder="Enter Item name" />
-        <input type="text" id="searchTextField" placeholder="Enter a location" autocomplete="on" />
+        <%= text_field_tag :item_name, nil, placeholder: "Enter item name", name: "item_name" %>
+        <%= text_field_tag :location_field, nil , placeholder: "Enter a location" , autocomplete: "on" %>
         <button type="submit">
           <%= image_tag("searchicon.png",:alt=> "search-icon") %>
         </button>
@@ -37,128 +37,50 @@
       <li><%= link_to "Sale", "/" %></li>
     </ul>
     <div id="item-grid">
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= Item.find(1).price %></p>
-            <p class="price-notation">/<%= Item.find(1).measurement.unit  %></p>
+      <% @fresh_items.each do |item| %>
+        <div class="item">
+          <div class="item-image">
+            <%=link_to image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/fruits.png",:alt=> "item-image"), item_path(item) %>
+            <div class="item-price">
+              <p class="price-notation">$</p>
+              <p><%= item.price %></p>
+              <p class="price-notation">/<%= item.measurement.unit  %></p>
+            </div>
           </div>
-        </div>
-
-        <p><%= Item.find(1).name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= Item.find(1).user.location.city.city %></p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= Item.find(2).price %></p>
-            <p class="price-notation">/<%= Item.find(2).measurement.unit  %></p>
+          <p><%= item.name %></p>
+          <div class="item-location">
+            <%= image_tag("logo2v2.png", :alt => "pin") %>
+            <p><%=item.user.location.city.city %></p>
           </div>
-        </div>
-
-        <p><%= Item.find(2).name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= Item.find(2).user.location.city.city %></p>
-        </div>
       </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= Item.find(3).price %></p>
-            <p class="price-notation">/<%= Item.find(3).measurement.unit  %></p>
-          </div>
-        </div>
-
-        <p><%= Item.find(3).name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= Item.find(3).user.location.city.city %></p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= Item.find(4).price %></p>
-            <p class="price-notation">/<%= Item.find(4).measurement.unit  %></p>
-          </div>
-        </div>
-
-        <p><%= Item.find(4).name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= Item.find(4).user.location.city.city %></p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= Item.find(5).price %></p>
-            <p class="price-notation">/<%= Item.find(5).measurement.unit  %></p>
-          </div>
-        </div>
-        <p><%= Item.find(5).name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= Item.find(5).user.location.city.city %></p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-image">
-          <%= image_tag("image-unavailable.png",:alt=> "item-image") %>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= Item.find(6).price %></p>
-            <p class="price-notation">/<%= Item.find(6).measurement.unit  %></p>
-          </div>
-        </div>
-
-        <p><%= Item.find(6).name %></p>
-        <div class="item-location">
-          <%= image_tag("logo2v2.png", :alt => "pin") %>
-          <p><%= Item.find(6).user.location.city.city %></p>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
   <div id="featured-categories">
     <p>Categories</p>
     <div id="categories-grid">
       <div class="category">
-        <%= image_tag("fruits.png", :alt => "category-image") %>
+        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/fruits.png", :alt => "category-image") %>
         <p>Fruits</p>
       </div>
       <div class="category">
-        <%= image_tag("vegs.png", :alt => "category-image") %>
+        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/vegs.png", :alt => "category-image") %>
         <p>Vegs</p>
       </div>
       <div class="category">
-        <%= image_tag("roots.png", :alt => "category-image") %>
+        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/relishes1.jpg", :alt => "category-image") %>
         <p>Roots</p>
       </div>
       <div class="category">
-        <%= image_tag("goods.png", :alt => "category-image") %>
+        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/goods.png", :alt => "category-image") %>
         <p>Home <br> Made <br> Goods</p>
       </div>
       <div class="category">
-        <%= image_tag("spices.png", :alt => "category-image") %>
+        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/spices.png", :alt => "category-image") %>
         <p>Herbs <br> & <br> Spices</p>
       </div>
       <div class="category">
-        <%= image_tag("dairy.png", :alt => "category-image") %>
+        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/dairy.png", :alt => "category-image") %>
         <p>Dairy</p>
       </div>
     </div>

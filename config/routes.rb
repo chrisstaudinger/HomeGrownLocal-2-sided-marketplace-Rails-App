@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :requests
   resources :watch_items
   resources :orders
+  get '/items/search', to: 'items#search'
   resources :items
   resources :watchlists
   resources :item_categories

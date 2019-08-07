@@ -1,1 +1,119 @@
-/* No CSS *//*# sourceMappingURL=items.css.map */
+.sub-body {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sub-body .item-highlight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sub-body .item-highlight img {
+  position: absolute;
+  left: 22vw;
+  width: 44vw;
+  height: 55vh;
+  z-index: 4;
+}
+
+.sub-body .item-highlight .item-information-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: 3;
+  position: relative;
+  top: 7.5vh;
+  left: 15vw;
+  height: 80vh;
+  width: 35vw;
+  background-color: #3D403D;
+  margin-bottom: 10vh;
+  padding: 2em;
+}
+
+.sub-body .item-highlight .item-information-container .watchlist {
+  position: relative;
+  left: 9.5vw;
+  bottom: 50vh;
+}
+
+.sub-body .item-highlight .item-information-container .watchlist img {
+  width: 3vw;
+  height: 3vw;
+}
+
+.sub-body .item-highlight .item-information-container .information-box {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-name {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 3em;
+  letter-spacing: 0.2vw;
+  color: #F0FF51;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-location p {
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;
+  font-weight: lighter;
+  color: #F0FF51;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-location img {
+  position: relative;
+  left: 0;
+  width: 5em;
+  height: 5.5em;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-description {
+  font-family: 'Overpass', sans-serif;
+  height: 15vh;
+  font-size: 2.2em;
+  color: #F5F5F5;
+  line-height: 1.3em;
+}
+/*# sourceMappingURL=items.css.map */

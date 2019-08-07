@@ -5,6 +5,7 @@
   <title>Home Grown Local</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -18,23 +19,23 @@
   <header>
     <link rel="stylesheet" href="./stylesheets/nav">
     <div class="logo">
-      <%= image_tag("typefacelogo.png", :alt => "logo") %>
+      <%= image_tag("typeface-v2-light.png", :alt => "logo") %>
+    </div>
+    <div class="ads">
+      <a href="/items/new">Post an Ad</a>
     </div>
     <div class="simple-navbar">
       <ul>
-        <li><a href="">Category</a></li>
         <li><a href="">About us</a></li>
-                  <% if !current_user %>
-          <li><%= link_to "Log In", new_user_session_path %></li>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <% if !current_user %>
+        <li><%= link_to "Log In", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
         <% else %>
-          <li><%= link_to "Sign Out", destroy_user_session_path, {method: :delete} %></li>
-          <li><%= link_to "Account", "/profiles/#{current_user.id}" %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, {method: :delete} %></li>
+        <li><%= link_to "Account", "/profiles/#{current_user.id}" %></li>
         <% end %>
       </ul>
     </div>
-    <div class="navbar-wrapper">
-</div>
   </header>
   <link rel="stylesheet" href="./stylesheets/body">
   <%= yield %>

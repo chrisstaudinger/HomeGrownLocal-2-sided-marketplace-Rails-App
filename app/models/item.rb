@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  searchkick
   belongs_to :item_category
   belongs_to :user
   belongs_to :measurement

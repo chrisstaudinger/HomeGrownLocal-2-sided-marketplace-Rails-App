@@ -11,8 +11,9 @@ h2 {
 }
 
 .form {
-  @include leftrightmargin();
-  width: 60vw;
+  @include leftrightmarginvar(25vw);
+  padding: 5vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -21,11 +22,19 @@ h2 {
   border-radius: 5px;
   padding: 2.5vh;
   background-color: $formblack;
+  textarea{
+    @include leftrightmarginvar(8vw);
+    resize: none;
+    width: 30vw;
+    height: 15vh;
+    font-size: 1.5vw;
+    padding: 1vh;
+  }
   label {
     @include topdownmarginvar(2.5vh);
     @include leftrightmarginvar(3vw);
     @include montserrat();
-    font-size: 40px;
+    font-size: 2vw;
     color: $offwhite1;
   }
   input {
@@ -33,9 +42,15 @@ h2 {
     display: flex;
     justify-content: center;
     padding: 1vh;
-    font-size: 32px;
-    width: 40vw;
+    font-size: 1.5vw;
+    width: 30vw;
     height: 5vh;
+  }
+  select {
+    @include leftrightmarginvar(8vw);
+    font-size: 1.5vw;
+    height: 7vh;
+    width: 20vw;
   }
   .actions{
     @include topdownmarginvar(2.5vh);
@@ -47,12 +62,12 @@ h2 {
       color: $offwhite1;
       border-style: none;
       height: 10vh;
-      width: 20vw;
-      font-size: 40px;
+      width: 30vw;
+      font-size: 2vw;
       font-weight: 600;
-      border-radius: 5px;
+      border-radius: 0.1vw;
       border-style: solid;
-      border-width: 5px;
+      border-width: 0.1vw;
       border-color: $darkgreen;
       &:hover{
         background-color: $formblack;
@@ -63,7 +78,7 @@ h2 {
   }
   a {
     @include montserrat();
-    font-size: 32px;
+    font-size: 1.5vw;
     color: $offwhite2;
     text-decoration: none;
     padding: 1vh;
@@ -80,5 +95,8 @@ h2 {
   }
   em {
     display: none;
+  }
+  #item_image{
+    color: $primarygreen;
   }
 }

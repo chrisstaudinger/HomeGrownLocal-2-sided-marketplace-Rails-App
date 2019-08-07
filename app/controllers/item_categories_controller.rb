@@ -14,6 +14,8 @@ class ItemCategoriesController < ApplicationController
   # GET /item_categories/1
   # GET /item_categories/1.json
   def show
+    @items = Item.where(Item.item_category)
+    @display_items = @items.find(params[:id]).last(9)
   end
 
   # GET /item_categories/new

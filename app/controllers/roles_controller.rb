@@ -19,6 +19,7 @@ class RolesController < ApplicationController
 
   # GET /roles/1/edit
   def edit
+    authorize @role
   end
 
   # POST /roles
@@ -54,6 +55,7 @@ class RolesController < ApplicationController
   # DELETE /roles/1
   # DELETE /roles/1.json
   def destroy
+    authorize @role
     @role.destroy
     respond_to do |format|
       format.html { redirect_to roles_url, notice: 'Role was successfully destroyed.' }

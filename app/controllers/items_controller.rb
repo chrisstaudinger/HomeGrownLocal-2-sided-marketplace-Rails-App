@@ -1,5 +1,10 @@
 class ItemsController < ApplicationController
+  
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  protect_from_forgery prepend: true
+
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /items
   # GET /items.json
@@ -22,13 +27,13 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @item = Item.find(params[:id])
   end
 
   # GET /items/new
   def new
     @item = Item.new
     @user = current_user
-    # @item.item_category_id = params[:item_category_id]
     
     @measurement_options = []
     Measurement.all.each do |measurement|
@@ -43,6 +48,7 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    authorize @item
   end
 
   # POST /items
@@ -64,6 +70,7 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
+    authorize @item
     respond_to do |format|
       if @item.update(item_params)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
@@ -78,6 +85,7 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
+    authorize @item
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }

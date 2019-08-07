@@ -26,7 +26,7 @@
     <div class="simple-navbar">
       <ul>
         <li><a href="">About us</a></li>
-        <% if !current_user %>
+                  <% if !current_user %>
           <li><%= link_to "Log In", new_user_session_path %></li>
           <li><%= link_to "Sign up", new_user_registration_path %></li>
         <% else %>

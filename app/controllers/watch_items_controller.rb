@@ -1,6 +1,8 @@
 class WatchItemsController < ApplicationController
+  
+  
   before_action :set_watch_item, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /watch_items
   # GET /watch_items.json
   def index
@@ -40,6 +42,8 @@ class WatchItemsController < ApplicationController
   # PATCH/PUT /watch_items/1
   # PATCH/PUT /watch_items/1.json
   def update
+    authorize @watchlist
+    authorize @watchitem
     respond_to do |format|
       if @watch_item.update(watch_item_params)
         format.html { redirect_to @watch_item, notice: 'Watch item was successfully updated.' }
@@ -54,6 +58,8 @@ class WatchItemsController < ApplicationController
   # DELETE /watch_items/1
   # DELETE /watch_items/1.json
   def destroy
+    authorize @watchlist
+    authorize @watchitem
     @watch_item.destroy
     respond_to do |format|
       format.html { redirect_to watch_items_url, notice: 'Watch item was successfully destroyed.' }

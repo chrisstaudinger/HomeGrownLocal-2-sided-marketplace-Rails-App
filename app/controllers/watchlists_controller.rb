@@ -1,4 +1,5 @@
 class WatchlistsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_watchlist, only: [:show, :edit, :update, :destroy]
 
   # GET /watchlists
@@ -40,6 +41,8 @@ class WatchlistsController < ApplicationController
   # PATCH/PUT /watchlists/1
   # PATCH/PUT /watchlists/1.json
   def update
+    authorize @watchlist
+    authorize @watchitem
     respond_to do |format|
       if @watchlist.update(watchlist_params)
         format.html { redirect_to @watchlist, notice: 'Watchlist was successfully updated.' }
@@ -54,6 +57,8 @@ class WatchlistsController < ApplicationController
   # DELETE /watchlists/1
   # DELETE /watchlists/1.json
   def destroy
+    authorize @watchlist
+    authorize @watchitem
     @watchlist.destroy
     respond_to do |format|
       format.html { redirect_to watchlists_url, notice: 'Watchlist was successfully destroyed.' }

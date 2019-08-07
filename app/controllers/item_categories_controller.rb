@@ -1,4 +1,8 @@
 class ItemCategoriesController < ApplicationController
+
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  protect_from_forgery prepend: true
+  
   before_action :set_item_category, only: [:show, :edit, :update, :destroy]
 
   # GET /item_categories
@@ -19,6 +23,7 @@ class ItemCategoriesController < ApplicationController
 
   # GET /item_categories/1/edit
   def edit
+    authorize @itemcategory
   end
 
   # POST /item_categories
@@ -40,6 +45,7 @@ class ItemCategoriesController < ApplicationController
   # PATCH/PUT /item_categories/1
   # PATCH/PUT /item_categories/1.json
   def update
+    authorize @itemcategory
     respond_to do |format|
       if @item_category.update(item_category_params)
         format.html { redirect_to @item_category, notice: 'Item category was successfully updated.' }
@@ -54,6 +60,7 @@ class ItemCategoriesController < ApplicationController
   # DELETE /item_categories/1
   # DELETE /item_categories/1.json
   def destroy
+    authorize @itemcategory
     @item_category.destroy
     respond_to do |format|
       format.html { redirect_to item_categories_url, notice: 'Item category was successfully destroyed.' }

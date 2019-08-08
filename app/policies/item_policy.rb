@@ -1,6 +1,3 @@
-
-
-
 class ItemPolicy < ApplicationPolicy
     
   attr_reader :user, :item

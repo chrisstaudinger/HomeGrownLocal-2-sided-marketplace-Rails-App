@@ -1,9 +1,9 @@
 class UserRatingPolicy < ApplicationPolicy
   attr_reader :user, :rating
 
-  before_action :authenticate_user!
-  include Pundit
-  protect_from_forgery
+  # before_action :authenticate_user!
+  # include Pundit
+  # protect_from_forgery
 
   def initialize(user, rating)
     @user = user

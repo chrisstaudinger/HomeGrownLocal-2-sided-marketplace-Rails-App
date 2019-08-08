@@ -42,7 +42,7 @@
         <p class="item-name"> <%= @item.name %></p>
         <div class="item-location">
           <%= image_tag("logo2v2outlinewhite.png" ,:alt=> "location-pin") %>
-          <p><%= @item.user.location.suburb %></p>
+          <p><%= @item.user.user_location %></p>
         </div>
         <p class="item-description">
           <%= @item.description %>

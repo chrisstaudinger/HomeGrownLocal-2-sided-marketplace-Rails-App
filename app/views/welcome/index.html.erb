@@ -41,7 +41,7 @@
         <div class="item">
           <div class="item-image">
             <% if item.image.attached? %>
-              <%= image_tag(item.image.attachment, :alt => "attached-image") %>
+              <%= link_to image_tag(item.image.attachment, :alt => "attached-image"), item_path(item) %>
             <% else %>
               <%=link_to image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/image-unavailable.png",:alt=> "item-image"), item_path(item) %>
             <% end %>

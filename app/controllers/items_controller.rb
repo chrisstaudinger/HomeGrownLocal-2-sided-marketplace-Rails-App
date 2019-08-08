@@ -39,44 +39,44 @@ class ItemsController < ApplicationController
     Item.reindex
     #full query
     if(item_key && category && location)
-      @result = Item.search(params[:item_name], where: {item_category_id: item_params[:item_category_id]})
-      @result.each do |item|
+      @results = Item.search(params[:item_name], where: {item_category_id: item_params[:item_category_id]})
+      @results.each do |item|
         if item.user.user_location == params[:location_field]
           after_location.push(item)
         end
       end
-      @result = after_location
+      @results = after_location
     ##partial query
     elsif(category && location)
-      @result = Item.search(where: {item_category_id: item_params[:item_category_id]})
-      @result.each do |item|
+      @results = Item.search(where: {item_category_id: item_params[:item_category_id]})
+      @results.each do |item|
         if item.user.user_location == params[:location_field]
           after_location.push(item)
         end
       end
-      @result = after_location
+      @results = after_location
     elsif(category && item_key)
-      @result = Item.search(params[:item_name], where: {item_category_id: item_params[:item_category_id]})
+      @results = Item.search(params[:item_name], where: {item_category_id: item_params[:item_category_id]})
     elsif(item_key && location)
-      @result = Item.search(params[:item_name])
-      @result.each do |item|
+      @results = Item.search(params[:item_name])
+      @results.each do |item|
         if item.user.user_location == params[:location_field]
           after_location.push(item)
         end
       end
-      @result = after_location
+      @results = after_location
     elsif(item_key)
-      @result = Item.search(params[:item_name])
+      @results = Item.search(params[:item_name])
     elsif(location)
-      @result = Item.all
-      @result.each do |item|
+      @results = Item.all
+      @results.each do |item|
         if item.user.user_location == params[:location_field]
           after_location.push(item)
         end
       end
-      @result = after_location
+      @results = after_location
     elsif(category)
-      @result = Item.where(item_category_id: item_params[:item_category_id])
+      @results = Item.where(item_category_id: item_params[:item_category_id])
     else
       redirect_to '/'
     end

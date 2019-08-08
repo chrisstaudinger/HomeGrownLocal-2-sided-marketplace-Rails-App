@@ -36,31 +36,7 @@
       <li><%= link_to "Watchlist", "/" %></li>
       <li><%= link_to "Sale", "/" %></li>
     </ul>
-    <div id="item-grid">
-      <% @fresh_items.each do |item| %>
-        <div class="item">
-          <div class="item-image">
-            <% if item.image.attached? %>
-              <%= link_to image_tag(item.image.attachment, :alt => "attached-image"), item_path(item) %>
-            <% else %>
-              <%=link_to image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/image-unavailable.png",:alt=> "item-image"), item_path(item) %>
-            <% end %>
-          </div>
-          <div class="item-price">
-            <p class="price-notation">$</p>
-            <p><%= item.price %></p>
-            <p class="price-notation">/<%= item.measurement.unit  %></p>
-          </div>
-          <div class="item-text">
-          <p><%= item.name %></p>
-            <div class="item-location">
-              <%= image_tag("logo2v2.png", :alt => "pin") %>
-              <p><%= item.user.user_location %></p>
-            </div>
-          </div>
-      </div>
-      <% end %>
-    </div>
+    <%= render :partial => "layouts/shared/grid_item" ,locals: {results: @results} %>
   </div>
   <div id="featured-categories">
     <p>Categories</p>

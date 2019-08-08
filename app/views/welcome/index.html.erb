@@ -40,7 +40,7 @@
       <% @fresh_items.each do |item| %>
         <div class="item">
           <div class="item-image">
-            <%=link_to image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/fruits.png",:alt=> "item-image"), item_path(item) %>
+            <%=link_to image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/image-unavailable.png",:alt=> "item-image"), item_path(item) %>
             <div class="item-price">
               <p class="price-notation">$</p>
               <p><%= item.price %></p>
@@ -50,7 +50,6 @@
           <p><%= item.name %></p>
           <div class="item-location">
             <%= image_tag("logo2v2.png", :alt => "pin") %>
-            <p><%=item.user.location.city.city %></p>
           </div>
       </div>
       <% end %>
@@ -68,7 +67,7 @@
         <p>Vegs</p>
       </div>
       <div class="category">
-        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/relishes1.jpg", :alt => "category-image") %>
+        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/relishes2.jpg", :alt => "category-image") %>
         <p>Roots</p>
       </div>
       <div class="category">

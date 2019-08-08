@@ -1,5 +1,7 @@
-<h2>Search Result</h2>
-<%= render :partial => "layouts/shared/search_form" %>
-<%= render :partial => "layouts/shared/grid_item" ,locals: {result: @results} %>
-<%= link_to 'Show', @item %> |
-<%= link_to 'Back', "/" %>
+<div class="background-section1">
+  <h2>Search Result</h2>
+  <%= render :partial => "layouts/shared/search_form" %>
+  <%= render :partial => "layouts/shared/grid_item" ,locals: {result: @results} %>
+  <%= link_to 'Show', @item %> |
+  <%= link_to 'Back', "/" %>
+</div>

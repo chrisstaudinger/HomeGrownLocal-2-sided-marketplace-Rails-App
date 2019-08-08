@@ -45,6 +45,7 @@ header {
       border-color: $formblack;
       border-style: solid;
       border-width: 0.2vw;
+      z-index: 99;
       &:hover{
         background-color: $offwhite1;
         border-color: $primarygreen;

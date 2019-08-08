@@ -8,7 +8,7 @@
   @include leftrightmargin();
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 40% 40%;
+  grid-auto-rows: 40%;
   grid-row-gap: 5vh;
   .item {
     border-radius: 5px;

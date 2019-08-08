@@ -36,6 +36,8 @@ Homegrown local will also try to promote edible urban landscape. In the old days
 
 The demand of organic food is increasing throughout the years. Organic food is known to be healthier because of the absence of chemicals that are normally used in the cultivation process, but because of the complication that came without using the chemicals, which means higher cultivation risk for the farmer and higher returns are expected out of organic food. On top of that, involvement of middle party between farmer and consumer increases the price of the food even further.
 
+Most of homegrown produces are grown just with basic sunlight, rainwater, organic compost and a lot of care. Hence no industrial chemicals or pesticides are used. That will classify our produces organics.
+
 3. Describe the project will you be conducting and how. your App will address the needs.
 
 HomeGrownLocal is an web application that directly connects farmer with consumer. Our application also happens to be a two sided marketplace, therefore the consumer are allowed to participate as a seller if the consumer happened to have a small garden or a vacant field.
@@ -222,7 +224,10 @@ Users will have many items
 Each user can be both seller and buyer
 Items can have zero to many reviews
 
-HOMEGROWN MARKET PLACE 
+Ripenearme
+https://www.ripenear.me/
+RipeNearMe turns your trees and plants into subscribe-able resources and improves the share-ability of vegetables and fruits.
+Subscription is free
 
 
 12. Discuss the database relations to be implemented.
@@ -315,15 +320,109 @@ Watchlist
 
 15. Provide User stories for your App.
 
-https://trello.com/c/ohZYZYz9/25-user-stories
+As a garden enthusiast, I would like to check what’s growing in my locale, so I search on my postcode and find out 
+
+As a vegan, I love trying various plant tastes, and homegrown plants produce, especially from my locale, would love to purchase them 
+
+As a pot plants hobbyist, I grow various herbs in my small garden patch in the balcony and I love to share my knowledge with the world 
+
+As a mom who loves to teach my kids to grown our own food supplies, I love to share my experience with the world 
+
+As a tomato backyard hobbyist, I ended up with 27 trees, can’t eat them all, so need to sell them, if there are surplus, which are many times in a year. 
+
+As an organic enthusiast, I spend a fortune buying from local supermarket or other organic suppliers, love to support local community rather than big corporation  
+
+As a café owner, love to be able to try out different various home- made sauces or oils, I will check interesting produces and ship them if necessary. 
+
+As a cook enthusiast, I love to share experiences and findings with another similar hobbyist 
+
+As a bored pensioner, I love to have a hobby that will make me money to supply my pension 
+
+As a stay home made, I love to make money using resources I have 
+
+As a regular columnist, I love to review interesting new thing, and new ideas or new business ideas worth written on 
+
+As an administrator, I love to review how many new users signed up in a week 
+
+As an administrator, I love to have a summary of users per post code 
+
+As an administrator, I love to have logs to show users movement in my website 
+
+As an administrator, I love to have logs to show conversion rate between new IPs and sign up 
+
+As an administrator, I love to have a summary of new purchase order per day compared to number of searches in that day grouped by area and also grouped by unique users 
+
+As an administrator, I love to summary revenue per month grouped by user ID and group by area 
+
+As a young person, I can’t cook so I buy anything that is new trend and has been reviewed as a good stuff. 
+
+As I have to sit in a train for two hours each day, I will read anything, my emails including, so anything happening in my locale I would read the messages or news 
+
+As a collector, I collect new tastes and experiences, if anyone selling anything sounds original, certainly will try them 
+
+As a restauranteur, I love to include unique pieces on my plate decoration, so an over small potatoes growing locale, or super-hot- chilies, would try them, or even ship them if grown a bit further out. 
+
+As a backyard columnist I love to write about locale gardeners 
+
+As a kid I love to see if anyone can grow anything in a balcony 
+
+As a traveler, I love to be able to buy fruits that taste local 
+
+As a foodist I love to incorporate a new homegrown food item 
+
+As I have tasted NZ apples and Tasmania grapes, I love to be able to buy direct from growers and got them shipped! 
+
+As a food blogger, I like to search new food items, local market normally where I shop but if I can search anything new or unique plant or food produce in my locale or as I travel within where I am staying, I would love to visit them and take pictures for my blo 
+
+As a keen biologist, I like to see the nature of soil and discussion around certain area, so local homegrown seller would be ideal to have a chat. Various areas in Victoria have very distinct soil.  
+
+As an overseas foreigner, as part of the day trip, I would not mind to see if I can visit locale growers within certain areas without going to mainstream wineries.  
+
+If user buys item, messages will contain discussion about pick up time etc 
+
+If user buys item and cash on pick up, and he fails to pick up, seller will manually have to put back the quantity reserved back to the quantity available to purchase 
+
+As a user, to sign in, a user should be able to specify the postcode, or not to specify, the default is null. 
 
 16. Provide Wireframes for your App.
 
-- answer
+(in folder - file Wireframe.png)
 
 17. Describe the way tasks are allocated and tracked in your project.
 
 - Both tasks allocation and tracking are achieved through Kanban board, there are few layers of stages in our Kanban board.
+We have Trello card tabs:
+Backlog
+Next
+In Progress
+Review 
+Completed
+
+Each card is allocated as either 
+V1 (version 1 - MVP see below)
+V2 (future features)
+V3 (future features)
+
+
+MVP Features
+- A list of available items as the home page
+- A detailed item page
+- A form to upload new items
+- A form to edit items
+- Buttons on the home page that delete an item
+- Signup page
+- Login/signout button in navbar
+Future Features
+- Ability to review users
+- A map to see where all the items are
+- Search, filter and sort functionality
+- Watchlist
+- Admin Dashboard (include KPI)
+KPIs we are targeting
+- Active users per week
+- Number of sign ups per week
+
+
 
 18. Discuss how Agile methodology is being implemented in your project.
 
@@ -337,7 +436,45 @@ https://trello.com/c/ohZYZYz9/25-user-stories
 
 19. Provide an overview and description of your Source control process.
 
-- answer
+Services:
+
+S3 Module: Image Storage from Amazon Web Services
+
+Stripe: Payment processing Software as a Service (SASS) from Stripe. Allows users to pay for products or services within the app using credit card.
+
+Devise: User Authentication module used to manage user registration, sign-in, passwords, confirmation etc
+
+Pundit: Authorizations module used to define the scope of account
+
+AWS / Active Storage: Used to host uploaded images on Amazon Web Services
+
+Gems we are using:
+
+gem 'stripe'
+gem 'devise'
+gem 'pundit'
+gem "aws-sdk-s3", require: false
+ruby '2.6.3'
+gem 'rails', '~> 5.2.3'
+gem 'pg'
+gem 'puma', '~> 3.11'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.2'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.5'
+gem 'bootsnap', '>= 1.1.0', require: false
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capybara', '>= 2.15'
+  gem 'selenium-webdriver'
+ 
+  gem 'chromedriver-helper'
+ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 
 20. Provide an overview and description of your Testing process.
 

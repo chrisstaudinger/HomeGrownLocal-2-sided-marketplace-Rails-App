@@ -10,7 +10,7 @@ body {
 
 .welcome .booke-image {
   background-position-y: 70%;
-  background-image: url("brusselspout");
+  background-image: url("heroimage2");
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -31,9 +31,9 @@ body {
 
 .welcome .booke-image #searchbar-container {
   position: relative;
-  background-color: #F5F5F5;
+  background-color: #3D403D;
   left: 0;
-  opacity: 0.20;
+  opacity: 0.30;
   height: 12vh;
   width: 65vw;
   border-radius: 5px;
@@ -110,6 +110,7 @@ body {
   -webkit-box-shadow: inset 0px 0px 0px 0.1vw #70C887;
           box-shadow: inset 0px 0px 0px 0.1vw #70C887;
   z-index: 9;
+  border-radius: 0;
   width: 15vw;
   height: 8vh;
   font-size: 1vw;
@@ -170,7 +171,7 @@ body {
 }
 
 .welcome #featured-items #filter-list li a {
-  color: #70C887;
+  color: #3D403D;
   text-decoration: none;
 }
 
@@ -218,7 +219,7 @@ body {
   margin-top: 1vh;
   margin-left: 0.3vw;
   margin-right: 0.3vw;
-  color: #70C887;
+  color: #3D403D;
   font-size: 22px;
 }
 
@@ -270,12 +271,12 @@ body {
   width: 10vw;
   height: 40px;
   background-color: #1F1F1F;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .welcome #featured-items #item-grid .item .item-image .item-price p {
   font-size: 36px;
-  color: #E4FB8B;
+  color: #F0FF51;
 }
 
 .welcome #featured-items #item-grid .item .item-image .item-price .price-notation {
@@ -321,7 +322,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   letter-spacing: 4px;
-  color: #12A068;
+  color: #3D403D;
   font-size: 64px;
   font-weight: 600;
   margin-bottom: 3vh;

@@ -7,7 +7,7 @@
 }
 
 header {
-  background-color: $primarygreen;
+  background-color: $formblack;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -78,6 +78,7 @@ header {
       list-style: none;
       color: $primarygreen;
       a{
+        @include opensans();
         white-space: nowrap;
         color: $offwhite1;
         font-size: 1vw;

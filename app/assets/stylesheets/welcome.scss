@@ -13,7 +13,7 @@ body {
   width: 100vw;
   .booke-image {
     background-position-y: 70%;
-    background-image: url("brusselspout");
+    background-image: url("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/avocado-close-up-eating-healthy-1656666.jpg");
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -23,9 +23,9 @@ body {
     align-items: center;
     #searchbar-container {
       position: relative;
-      background-color: #F5F5F5;
+      background-color: $formblack;
       left: 0;
-      opacity: 0.20;
+      opacity: 0.30;
       height: 12vh;
       width: 65vw;
       border-radius: 5px;
@@ -78,6 +78,7 @@ body {
           @include leftrightpaddingvar(1vw);
           box-shadow: inset 0px 0px 0px 0.1vw $primarygreen;
           z-index: 9;
+          border-radius: 0;
           width: 15vw;
           height: 8vh;
           font-size: 1vw;
@@ -117,7 +118,7 @@ body {
         @include montserrat();
         font-size: 36px;
         a{
-          color: $primarygreen;
+          color: $formblack;
           text-decoration: none;
           &:hover {
             background-color: $offwhite1;
@@ -149,7 +150,7 @@ body {
           margin-top: 1vh;
           margin-left: 0.3vw;
           margin-right: 0.3vw;
-          color: $primarygreen;
+          color: $formblack;
           font-size: 22px;
         }
         .item-image {
@@ -180,7 +181,7 @@ body {
             width: 10vw;
             height: 40px;
             background-color: $pricetag;
-            opacity: 0.5;
+            opacity: 0.8;
             p{
               font-size: 36px;
               color: $accentyellow;
@@ -214,7 +215,7 @@ body {
       display: flex;
       justify-content: center;
       letter-spacing: 4px;
-      color: $darkgreen;
+      color: $formblack;
       font-size: 64px;
       font-weight: 600;
       margin-bottom: 3vh;

@@ -21,6 +21,7 @@ class RequestPolicy < ApplicationPolicy
       format.json { render json: @request.errors, status: :unprocessable_entity }
     end
   end
+  end
   
   def create?
     new?

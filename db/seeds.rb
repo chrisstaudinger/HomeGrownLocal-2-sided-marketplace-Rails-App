@@ -139,56 +139,48 @@ profiles = [
 users = [
     {
         role_id: 1,
-        location_id: 1,
         email: "adam@gmail.com",
         password: "123456",
         profile_id: 1
     },
     {
         role_id: 1,
-        location_id: 2,
         email: "belinda@gmail.com",
         password: "123456",
         profile_id: 2
     },
     {
         role_id: 1,
-        location_id: 3,
         email: "charlie@gmail.com",
         password: "123456",
         profile_id: 3
     },
     {
         role_id: 1,
-        location_id: 4,
         email: "dylan@gmail.com",
         password: "123456",
         profile_id: 4
     },
     {
         role_id: 1,
-        location_id: 5,
         email: "elise@gmail.com",
         password: "123456",
         profile_id: 5
     },
     {
         role_id: 1,
-        location_id: 6,
         email: "frank@gmail.com",
         password: "123456",
         profile_id: 6
     },
     {
         role_id: 1,
-        location_id: 7,
         email: "geoff@gmail.com",
         password: "123456",
         profile_id: 7
     },
     {
         role_id: 1,
-        location_id: 8,
         email: "harmony@gmail.com",
         password: "123456",
         profile_id: 8

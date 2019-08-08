@@ -11,9 +11,9 @@
         }
       };
 
-      var input = document.getElementById('user_location');
+      var input = document.getElementById('user_user_location');
       var autocomplete = new google.maps.places.Autocomplete(input, options);
-      var location = document.querySelector('#user_location')
+      var location = document.querySelector('#user_user_location')
       location.addEventListener('change', () => {
         var submit = document.querySelector('#submit')
         submit.disabled = false
@@ -43,8 +43,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :location %> <br />
-    <%= f.text_field :location, { value: nil,  placeholder: "Enter a location" , autocomplete: "on"} %>
+    <%= f.label :user_location %> <br />
+    <%= f.text_field :user_location, { value: nil,  placeholder: "Enter a location" , autocomplete: "on"} %>
   </div>
 
 

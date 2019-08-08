@@ -25,6 +25,7 @@
     </div>
     <div class="ads">
       <a href="/items/new">Post an Ad</a>
+      <%= render :partial => "layouts/shared/stripe_form", locals: {donation_amount: @donation_amount_cents } %>
     </div>
     <div class="simple-navbar">
       <ul>

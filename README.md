@@ -12,6 +12,7 @@
 # Design & Documentation
 #### User Stories
 #### Workflow
+Figma, mockflow, lucychart
 #### Wireframes
 #### Database Entity Relationship Diagram
 
@@ -119,14 +120,16 @@ This postgresSQL database will become our Development and Testing database
 
 rails db:seed
 It will seed our database with fake data we put on seeds.rb file
-We initially created an local instance of a PostgreSQL database using Ruby on Rails by calling the flag -d postgresql when creating the Rails app. We then call 'rails db:create' and set up our tables and columns using migrations: eg 'rails g model user' & 'rails g migration AddNameToUser'. This database then becomes our Development and testing database which we seed with fake data using the seeds.rb file.
+
+####### Chris - can you comment on these answers as I did not actually do this part ######
+<We initially created an local instance of a PostgreSQL database using Ruby on Rails by calling the flag -d postgresql when creating the Rails app. We then call 'rails db:create' and set up our tables and columns using migrations: eg 'rails g model user' & 'rails g migration AddNameToUser'. This database then becomes our Development and testing database which we seed with fake data using the seeds.rb file.>
 
 <For Production, the Migrations and Schema of our Development Database are pushed to Heroku from the GitHub repository, then set up within Heroku. To do this we run the same commands to create the database and run migrations, only we put 'heroku run' before the command.
 
 Because the schema and migrations are the same, the structure of our database on Heroku is exactly the same and can be seeded using the same seeds.rb file.
 
-Therefore our production database is an instance of a postgres database, hosted on Heroku, because the schema and migrations are the sma, the structure of database on Heroku is exactly the same and can be seeded using the same seed.rb file
-
+Therefore our production database is an instance of a postgres database, hosted on Heroku, because the schema and migrations are the same, the structure of database on Heroku is exactly the same and can be seeded using the same seed.rb file
+#######################
 
 
 8. Describe the architecture of your App.
@@ -313,13 +316,14 @@ Watchlist
 
 - answer
 
+
 15. Provide User stories for your App.
 
 https://trello.com/c/ohZYZYz9/25-user-stories
 
 16. Provide Wireframes for your App.
 
-- answer
+!(C:\Users\a\OneDrive\coderacademy\RailsProject\New folder)
 
 17. Describe the way tasks are allocated and tracked in your project.
 

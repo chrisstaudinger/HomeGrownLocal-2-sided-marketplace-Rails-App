@@ -58,48 +58,48 @@
 #         state_id: 8
 #     }
 # ]
-locations = [
-    {
-        postcode: "3141",
-        suburb: "South Yarra",
-        state: "Victoria"
-    },
-    {
-        postcode: "4169",
-        suburb: "Kangaroo Point",
-        state: "Queensland"
-    },
-    {
-        postcode: "2026",
-        suburb: "Bondi",
-        state: "New South Wales"
-    },
-    {
-        postcode: "6153",
-        suburb: "Applecross",
-        state: "Western Australia"
-    },
-    {
-        postcode: "5015",
-        suburb: "Port Adelaide",
-        state: "South Australia"
-    },
-    {
-        postcode: "0810",
-        suburb: "Coconut Grove",
-        state: "Northern Territory"
-    },
-    {
-        postcode: "7005",
-        suburb: "Sandy Bay",
-        state: "Tasmania"
-    },
-    {
-        postcode: "2601",
-        suburb: "Acton",
-        state: "Australain Capital Territory"
-    }
-]
+# locations = [
+#     {
+#         postcode: "3141",
+#         suburb: "South Yarra",
+#         state: "Victoria"
+#     },
+#     {
+#         postcode: "4169",
+#         suburb: "Kangaroo Point",
+#         state: "Queensland"
+#     },
+#     {
+#         postcode: "2026",
+#         suburb: "Bondi",
+#         state: "New South Wales"
+#     },
+#     {
+#         postcode: "6153",
+#         suburb: "Applecross",
+#         state: "Western Australia"
+#     },
+#     {
+#         postcode: "5015",
+#         suburb: "Port Adelaide",
+#         state: "South Australia"
+#     },
+#     {
+#         postcode: "0810",
+#         suburb: "Coconut Grove",
+#         state: "Northern Territory"
+#     },
+#     {
+#         postcode: "7005",
+#         suburb: "Sandy Bay",
+#         state: "Tasmania"
+#     },
+#     {
+#         postcode: "2601",
+#         suburb: "Acton",
+#         state: "Australain Capital Territory"
+#     }
+# ]
 roles = [
     {
         privilege: "standard",
@@ -141,73 +141,81 @@ users = [
         role_id: 1,
         email: "adam@gmail.com",
         password: "123456",
-        profile_id: 1
+        profile_id: 1,
+        user_location: "Melbourne VIC, Australia"
     },
     {
         role_id: 1,
         email: "belinda@gmail.com",
         password: "123456",
-        profile_id: 2
+        profile_id: 2,
+        user_location: "Brisbane QLD, Australia"
     },
     {
         role_id: 1,
         email: "charlie@gmail.com",
         password: "123456",
-        profile_id: 3
+        profile_id: 3,
+        user_location: "Sydney NSW, Australia"
     },
     {
         role_id: 1,
         email: "dylan@gmail.com",
         password: "123456",
-        profile_id: 4
+        profile_id: 4,
+        user_location: "Perth WA, Australia"
     },
     {
         role_id: 1,
         email: "elise@gmail.com",
         password: "123456",
-        profile_id: 5
+        profile_id: 5,
+        user_location: "Adelaide SA, Australia"
     },
     {
         role_id: 1,
         email: "frank@gmail.com",
         password: "123456",
-        profile_id: 6
+        profile_id: 6,
+        user_location: "Darwin NT, Australia"
     },
     {
         role_id: 1,
         email: "geoff@gmail.com",
         password: "123456",
-        profile_id: 7
+        profile_id: 7,
+        user_location: "Canberra ACT, Australia"
     },
     {
         role_id: 1,
         email: "harmony@gmail.com",
         password: "123456",
-        profile_id: 8
+        profile_id: 8,
+        user_location: "Melbourne VIC, Australia"
     }
 ]
-user_ratings = [
-    {
-        reviewee_id: 1,
-        reviewer_id: 2,
-        rating: 5.0
-    },
-    {
-        reviewee_id: 1,
-        reviewer_id: 3,
-        rating: 3.0
-    },
-    {
-        reviewee_id: 2,
-        reviewer_id: 1,
-        rating: 4.0
-    },
-    {
-        reviewee_id: 3,
-        reviewer_id: 8,
-        rating: 5.0
-    }
-]
+# user_ratings = [
+#     {
+#         reviewee_id: 1,
+#         reviewer_id: 2,
+#         rating: 5.0
+#     },
+#     {
+#         reviewee_id: 1,
+#         reviewer_id: 3,
+#         rating: 3.0
+#     },
+#     {
+#         reviewee_id: 2,
+#         reviewer_id: 1,
+#         rating: 4.0
+#     },
+#     {
+#         reviewee_id: 3,
+#         reviewer_id: 8,
+#         rating: 5.0
+#     }
+# ]
 item_categories = [
     {
         name: "Fruits"
@@ -298,41 +306,53 @@ items = [
         description: "The eggs our hens lay usually weigh in at around 700g per dozen. They roam free range in our backyard. They are food scraps and grain.",
         price: 0.5,
         measurement_id: 3,
-        quantity: 60.0
+        quantity: 60.0,
+        image_name: ""
     }
 ]
-item_reviews = [
-    {
-        item_id: 1,
-        reviewer_id: 2,
-        message: "Deliciously sweet and crunchy. Will definitely be buying again!",
-        rating: 5.0
-    },
-    {
-        item_id: 2,
-        reviewer_id: 3,
-        message: "Nice to get that are organic without having to pay a small fortune. I Recommend this product and seller.",
-        rating: 4.0
-    },
-    {
-        item_id: 3,
-        reviewer_id: 4,
-        message: "Charlie's Chilli Jam is amazing!! It's explosive with tones of sweetness and spice.",
-        rating: 5.0
-    },
-    {
-        item_id: 4,
-        reviewer_id: 5,
-        message: "Will be buying again. The strength is so much more than Woolworths and Coles. Once you trying home made almond milk you really see the differnce.",
-        rating: 5.0
-    },
-    {
-        item_id: 1,
-        reviewer_id: 6,
-        message: "Decent apples. Crunchy and sweet",
-        rating: 4.0
+
+{
+        fandom: "Game of Thrones",
+        image_name: "game-of-thrones-fandom.jpg"
     }
 ]
+items.each do |item|
+    path = Rails.root.join("app", "assets", "images","items", item[:image_name])
+    Item.find_by(item: item[:item]).image.attach(io: File.open(path), filename: item[:image_name])
+end
+
+# item_reviews = [
+#     {
+#         item_id: 1,
+#         reviewer_id: 2,
+#         message: "Deliciously sweet and crunchy. Will definitely be buying again!",
+#         rating: 5.0
+#     },
+#     {
+#         item_id: 2,
+#         reviewer_id: 3,
+#         message: "Nice to get that are organic without having to pay a small fortune. I Recommend this product and seller.",
+#         rating: 4.0
+#     },
+#     {
+#         item_id: 3,
+#         reviewer_id: 4,
+#         message: "Charlie's Chilli Jam is amazing!! It's explosive with tones of sweetness and spice.",
+#         rating: 5.0
+#     },
+#     {
+#         item_id: 4,
+#         reviewer_id: 5,
+#         message: "Will be buying again. The strength is so much more than Woolworths and Coles. Once you trying home made almond milk you really see the differnce.",
+#         rating: 5.0
+#     },
+#     {
+#         item_id: 1,
+#         reviewer_id: 6,
+#         message: "Decent apples. Crunchy and sweet",
+#         rating: 4.0
+#     }
+# ]
 watchlists = [
     {
         user_id: 1
@@ -379,26 +399,26 @@ watchitems = [
         watchlist_id: 6
     }
 ]
-orders = [
-    {
-        user_id: 1
-    },
-    {
-        user_id: 2
-    },
-    {
-        user_id: 3
-    },
-    {
-        user_id: 4
-    },
-    {
-        user_id: 5
-    },
-    {
-        user_id: 6
-    }
-]
+# orders = [
+#     {
+#         user_id: 1
+#     },
+#     {
+#         user_id: 2
+#     },
+#     {
+#         user_id: 3
+#     },
+#     {
+#         user_id: 4
+#     },
+#     {
+#         user_id: 5
+#     },
+#     {
+#         user_id: 6
+#     }
+# ]
 # requests = [
 # {
 #     item_id: 1,
@@ -431,18 +451,18 @@ orders = [
 #     quantity: 1.0
 # }
 # ]
-states.each do |state|
-    a = State.create(state)
-    a.save!
-end
-cities.each do |city|
-    a = City.create(city)
-    a.save!
-end
-locations.each do |location|
-    a = Location.create(location)
-    a.save!
-end
+# states.each do |state|
+#     a = State.create(state)
+#     a.save!
+# end
+# cities.each do |city|
+#     a = City.create(city)
+#     a.save!
+# end
+# locations.each do |location|
+#     a = Location.create(location)
+#     a.save!
+# end
 roles.each do |role|
     a = Role.create(role)
     a.save!
@@ -455,10 +475,10 @@ users.each do |user|
     a = User.create(user)
     a.save!
 end
-user_ratings.each do |user_rating|
-    a = UserRating.create(user_rating)
-    a.save!
-end
+# user_ratings.each do |user_rating|
+#     a = UserRating.create(user_rating)
+#     a.save!
+# end
 item_categories.each do |item_category|
     a = ItemCategory.create(item_category)
     a.save!
@@ -471,10 +491,10 @@ items.each do |item|
     a = Item.create(item)
     a.save!
 end
-item_reviews.each do |item_review|
-    a = ItemReview.create(item_review)
-    a.save!
-end
+# item_reviews.each do |item_review|
+#     a = ItemReview.create(item_review)
+#     a.save!
+# end
 watchlists.each do |watchlist|
     a = Watchlist.create(watchlist)
     a.save!
@@ -483,10 +503,10 @@ watchitems.each do |watchitem|
     a = WatchItem.create(watchitem)
     a.save!
 end
-orders.each do |order|
-    a = Order.create(order)
-    a.save!
-end
+# orders.each do |order|
+#     a = Order.create(order)
+#     a.save!
+# end
 # requests.each do |request|
 #     a = Request.create(request)
 #     a.save!

@@ -14,19 +14,71 @@ class ItemsController < ApplicationController
 
   def search
     params.permit(:location_field, :item_name, :item_category_id)
-    @test1 = params[:item_name]
-    @test2 = params[:location_field]
-    @test3 = item_params[:item_category_id]
+    item_length = params[:item_name].length
+    location_length = params[:location_field].length
+    category_length = item_params[:item_category_id].length
+    @test1 = item_length
+    @test2 = location_length
+    @test3 = category_length
+    item_key = false
+    location = false
+    category = false
+    if item_length > 0
+      item_key = true
+    end
+    if location_length > 0
+      location = true
+    end
+    if category_length > 0
+      category = true
+    end
+    # item_name? = if_empty(params[:item_name])
+    # location? = if_empty(params[:location])
+    # category? = if_empty(params[:item_category_id])
+    after_location = []
     Item.reindex
-    @result = Item.search(params[:item_name], where: {item_category_id: item_params[:item_category_id]})
-    @after_location = []
-    @result.each do |item|
-      if item.user.location.suburb == params[:location_field]
-        @after_location.push(item)
+    #full query
+    if(item_key && category && location)
+      @result = Item.search(params[:item_name], where: {item_category_id: item_params[:item_category_id]})
+      @result.each do |item|
+        if item.user.user_location == params[:location_field]
+          after_location.push(item)
+        end
       end
+      @result = after_location
+    ##partial query
+    elsif(category && location)
+      @result = Item.search(where: {item_category_id: item_params[:item_category_id]})
+      @result.each do |item|
+        if item.user.user_location == params[:location_field]
+          after_location.push(item)
+        end
+      end
+      @result = after_location
+    elsif(category && item_key)
+      @result = Item.search(params[:item_name], where: {item_category_id: item_params[:item_category_id]})
+    elsif(item_key && location)
+      @result = Item.search(params[:item_name])
+      @result.each do |item|
+        if item.user.user_location == params[:location_field]
+          after_location.push(item)
+        end
+      end
+      @result = after_location
+    elsif(item_key)
+      @result = Item.search(params[:item_name])
+    elsif(location)
+      @result = Item.all
+      @result.each do |item|
+        if item.user.user_location == params[:location_field]
+          after_location.push(item)
+        end
+      end
+      @result = after_location
+    elsif(category)
+      @result = Item.where(item_category_id: item_params[:item_category_id])
     end
   end
-
   # GET /items/1
   # GET /items/1.json
   def show

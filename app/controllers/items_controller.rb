@@ -77,6 +77,8 @@ class ItemsController < ApplicationController
       @result = after_location
     elsif(category)
       @result = Item.where(item_category_id: item_params[:item_category_id])
+    else
+      redirect_to '/'
     end
   end
   # GET /items/1

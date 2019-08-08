@@ -15,6 +15,11 @@ header {
   justify-items: center;
   width: 100vw;
   height: 8vh;
+  a {
+    &:hover{
+      background-color: $formblack;
+    }
+  }
   .ads {
     width: 100vw;
     height: 8vh;
@@ -39,11 +44,11 @@ header {
       color: $offwhite1;
       border-color: $formblack;
       border-style: solid;
-      border-width: 0.1vw;
+      border-width: 0.2vw;
       &:hover{
         background-color: $offwhite1;
-        border-color: $formblack;
-        color: $formblack;
+        border-color: $primarygreen;
+        color: $darkgreen;
         transition: all 0.5s;
       }
     }
@@ -84,9 +89,8 @@ header {
         font-size: 1vw;
         text-decoration: none;
         &:hover {
-          @include underlinehover($accentyellow);
-          color: $accentyellow;
-          background-color: $primarygreen;
+          @include underlinehover($offwhite1);
+          background-color: $formblack;
         }
       }
     }

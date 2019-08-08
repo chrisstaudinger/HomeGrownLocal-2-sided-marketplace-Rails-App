@@ -1,9 +1,23 @@
 <h2>Search Result</h2>
-<h2><%= @test1 %></h2>
-<h2><%= @test2 %></h2>
-<h2><%= @test3 %></h2>
+<%= render :partial => "layouts/shared/search_form" %>
+<div id="item-grid">
 <% @result.each do |item| %>
-  <h2><%= item.name %></h2>
+  <div class="item">
+    <div class="item-image">
+      <%=link_to image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/image-unavailable.png",:alt=> "item-image"), item_path(item) %>
+      <div class="item-price">
+        <p class="price-notation">$</p>
+        <p><%= item.price %></p>
+        <p class="price-notation">/<%= item.measurement.unit  %></p>
+      </div>
+    </div>
+    <p><%= item.name %></p>
+    <div class="item-location">
+      <%= image_tag("logo2v2.png", :alt => "pin") %>
+      <p><%= item.user.user_location %></p>
+    </div>
+  </div>
 <% end %>
+</div>
 <%= link_to 'Show', @item %> |
-<%= link_to 'Back', items_path %>
+<%= link_to 'Back', "/" %>

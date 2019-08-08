@@ -1,10 +1,10 @@
 @import 'variables';
 @import 'mixins';
 
-
 #searchbar-container {
+  @include leftrightmargin();
   position: relative;
-  background-color: $darkgreen;
+  background-color: $formblack;
   top: 10vh;
   right: 2.5vw;
   opacity: 0.20;
@@ -13,6 +13,7 @@
   border-radius: 5px;
 }
 #searchbar {
+  @include leftrightmargin();
   background-color: $offwhite1;
   width: 60vw;
   margin-bottom: 8vh;

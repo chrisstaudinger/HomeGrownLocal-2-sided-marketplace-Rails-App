@@ -31,7 +31,7 @@
   </div>
   <div id="featured-items">
     <ul id="filter-list">
-      <li><%= link_to "Fresh", "/" %></li>
+      <li><%= link_to "Fresh", "/items/fresh" %></li>
       <li><%= link_to "Popular", "/" %></li>
       <li><%= link_to "Watchlist", "/" %></li>
       <li><%= link_to "Sale", "/" %></li>
@@ -42,28 +42,40 @@
     <p>Categories</p>
     <div id="categories-grid">
       <div class="category">
-        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/fruits.png", :alt => "category-image") %>
-        <p>Fruits</p>
+        <a href="/items/search?item%5Bitem_category_id%5D=1&item_name=&location_field=">
+          <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/fruits.png", :alt => "category-image") %>
+          <p>Fruits</p>
+        </a>
       </div>
       <div class="category">
-        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/vegs.png", :alt => "category-image") %>
-        <p>Vegs</p>
+        <a href="/items/search?item%5Bitem_category_id%5D=2&item_name=&location_field=">
+          <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/vegs.png", :alt => "category-image") %>
+          <p>Vegs</p>
+        </a>
       </div>
       <div class="category">
-        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/relishes2.jpg", :alt => "category-image") %>
-        <p>Roots</p>
+        <a href="/items/search?item%5Bitem_category_id%5D=3&item_name=&location_field=">
+          <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/relishes2.jpg", :alt => "category-image") %>
+          <p>Relish</p>
+        </a>
       </div>
       <div class="category">
-        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/goods.png", :alt => "category-image") %>
-        <p>Home <br> Made <br> Goods</p>
+        <a href="/items/search?item%5Bitem_category_id%5D=4&item_name=&location_field=">
+          <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/goods.png", :alt => "category-image") %>
+          <p>Home <br> Made <br> Goods</p>
+        </a>
       </div>
       <div class="category">
-        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/spices.png", :alt => "category-image") %>
-        <p>Herbs <br> & <br> Spices</p>
+        <a href="/items/search?item%5Bitem_category_id%5D=5&item_name=&location_field=">
+          <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/spices.png", :alt => "category-image") %>
+          <p>Herbs <br> & <br> Spices</p>
+        </a>
       </div>
       <div class="category">
-        <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/dairy.png", :alt => "category-image") %>
-        <p>Dairy</p>
+        <a href="/items/search?item%5Bitem_category_id%5D=6&item_name=&location_field=">
+          <%= image_tag("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/dairy.png", :alt => "category-image") %>
+          <p>Eggs</p>
+        </a>
       </div>
     </div>
   </div>

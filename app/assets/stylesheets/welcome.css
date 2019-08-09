@@ -4,7 +4,7 @@ body {
 }
 
 .welcome {
-  height: 70vh;
+  height: 260vh;
   width: 100vw;
 }
 
@@ -12,7 +12,7 @@ body {
   background-position-y: 70%;
   background-image: url("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/avocado-close-up-eating-healthy-1656666.jpg");
   background-size: cover;
-  height: 100%;
+  height: 70vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,6 +136,7 @@ body {
 }
 
 .welcome #featured-items {
+  position: relative;
   width: 100vw;
   height: 80vh;
   display: -webkit-box;
@@ -167,7 +168,7 @@ body {
 .welcome #featured-items #filter-list li {
   margin-top: 5vh;
   font-family: 'Montserrat', sans-serif;
-  font-size: 36px;
+  font-size: 2vw;
 }
 
 .welcome #featured-items #filter-list li a {
@@ -185,127 +186,8 @@ body {
   transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
-.welcome #featured-items #item-grid {
-  margin-top: 5vh;
-  width: 60vw;
-  height: 70vh;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 40% 40%;
-      grid-template-rows: 40% 40%;
-  grid-row-gap: 5vh;
-}
-
-.welcome #featured-items #item-grid .item {
-  border-radius: 5px;
-  height: 27vh;
-  width: 18vw;
-  margin: 1vw;
-  background-color: #FBFBFB;
-}
-
-.welcome #featured-items #item-grid .item:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.welcome #featured-items #item-grid .item p {
-  font-family: 'Overpass', sans-serif;
-  margin-top: 1vh;
-  margin-left: 0.3vw;
-  margin-right: 0.3vw;
-  color: #3D403D;
-  font-size: 1vw;
-}
-
-.welcome #featured-items #item-grid .item .item-text {
-  position: relative;
-  bottom: 4vh;
-}
-
-.welcome #featured-items #item-grid .item .item-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 20vh;
-  background-color: #F5F5F5;
-}
-
-.welcome #featured-items #item-grid .item .item-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: inherit;
-}
-
-.welcome #featured-items #item-grid .item .item-price {
-  position: relative;
-  bottom: 10vh;
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin-left: 9vw;
-  width: 10vw;
-  height: 40px;
-  background-color: #1F1F1F;
-  opacity: 0.8;
-}
-
-.welcome #featured-items #item-grid .item .item-price p {
-  font-size: 2vw;
-  color: #F0FF51;
-}
-
-.welcome #featured-items #item-grid .item .item-price .price-notation {
-  font-size: 1vw;
-}
-
-.welcome #featured-items #item-grid .item .item-location {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.welcome #featured-items #item-grid .item .item-location img {
-  width: 19px;
-  height: 23px;
-}
-
 .welcome #featured-categories {
+  position: relative;
   padding-top: 10vh;
   height: 110vh;
   margin-left: 20vw;
@@ -320,9 +202,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  letter-spacing: 4px;
+  letter-spacing: 1vw;
   color: #3D403D;
-  font-size: 64px;
+  font-size: 4vw;
   font-weight: 600;
   margin-bottom: 3vh;
 }
@@ -342,6 +224,7 @@ body {
 
 .welcome #featured-categories #categories-grid .category {
   margin: 2vh;
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,11 +232,25 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   font-family: 'Montserrat Alternates', sans-serif;
   color: #F5F5F5;
+}
+
+.welcome #featured-categories #categories-grid .category a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+.welcome #featured-categories #categories-grid .category a:hover {
+  background-color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .welcome #featured-categories #categories-grid .category p {
@@ -368,16 +265,16 @@ body {
           justify-content: flex-start;
   line-height: 3vw;
   color: #FBFBFB;
-  text-shadow: 2px 2px #bbbbbb;
+  text-shadow: 2px 2px #8d8d8d;
 }
 
 .welcome #featured-categories #categories-grid .category img {
   position: absolute;
-  height: auto;
-  width: auto;
+  height: 41vh;
+  width: 16vw;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0.7;
   z-index: -1;
-  -webkit-filter: grayscale(20%);
-          filter: grayscale(20%);
 }
 /*# sourceMappingURL=welcome.css.map */

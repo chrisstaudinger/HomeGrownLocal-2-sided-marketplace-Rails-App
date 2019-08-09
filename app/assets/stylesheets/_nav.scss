@@ -45,6 +45,7 @@ header {
       border-color: $formblack;
       border-style: solid;
       border-width: 0.2vw;
+      z-index: 99;
       &:hover{
         background-color: $offwhite1;
         border-color: $primarygreen;
@@ -68,7 +69,6 @@ header {
   justify-content: center;
   justify-items: center;
   width: 50vw;
-  margin-left: 35vw;
   ul{
     width: 100%;
     display: flex;

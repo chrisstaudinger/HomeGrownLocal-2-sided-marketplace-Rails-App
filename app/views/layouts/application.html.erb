@@ -19,16 +19,45 @@
   <header>
     <link rel="stylesheet" href="./stylesheets/nav">
     <div class="logo">
-    <a href="/">
-      <%= image_tag("typeface-v2-light.png", :alt => "logo") %>
-    </a>
+      <a href="/">
+        <%= image_tag("typeface-v2-light.png", :alt => "logo") %>
+      </a>
     </div>
     <div class="ads">
       <a href="/items/new">Post an Ad</a>
-      <%= render :partial => "layouts/shared/stripe_form", locals: {donation_amount: @donation_amount_cents } %>
     </div>
     <div class="simple-navbar">
       <ul>
+        <li> <a id="customButton"> Donate us</a> </li>
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+        <script>
+          var handler = StripeCheckout.configure({
+            key: 'pk_test_TYooMQauvdEDq54NiTphI7jx',
+            image: 'https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/image-unavailable.png',
+            locale: 'auto',
+            token: function (token) {
+              // You can access the token ID with `token.id`.
+              // Get the token ID to your server-side code for use.
+            }
+          });
+
+          document.getElementById('customButton').addEventListener('click', function (e) {
+            // Open Checkout with further options:
+            handler.open({
+              name: 'Home Grown Local',
+              description: 'AUD 5 Donation',
+              currency: 'aud',
+              zipCode: true,
+              amount: 500
+            });
+            e.preventDefault();
+          });
+
+          // Close Checkout on page navigation:
+          window.addEventListener('popstate', function () {
+            handler.close();
+          });
+        </script>
         <li><a href="">About us</a></li>
         <% if !current_user %>
         <li><%= link_to "Log In", new_user_session_path %></li>

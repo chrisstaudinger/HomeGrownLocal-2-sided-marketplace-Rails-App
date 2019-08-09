@@ -261,7 +261,8 @@ items = [
         description: "Organic apples from my garden. No pesticides",
         price: 1.0,
         measurement_id: 3,
-        quantity: 5.0
+        quantity: 5.0,
+        image_name: "apples-1.jpg"
     },
     {
         item_category_id: 2,
@@ -270,7 +271,8 @@ items = [
         description: "Organic fresh beetroot. No pesticides or sprays.",
         price: 8.5,
         measurement_id: 1,
-        quantity: 3.0
+        quantity: 3.0,
+        image_name: "beetroot-1.jpg"
     },
     {
         item_category_id: 3,
@@ -279,7 +281,8 @@ items = [
         description: "Try my famous Chilli Jam. The family recipe has been passed down three generations. 100mg jars.",
         price: 7.99,
         measurement_id: 3,
-        quantity: 15.0
+        quantity: 15.0,
+        image_name: "chilli-jam-1.jpg"
     },
     {
         item_category_id: 4,
@@ -288,7 +291,8 @@ items = [
         description: "Made from organic almonds. No perservatives added. 1L bottles.",
         price: 4.99,
         measurement_id: 4,
-        quantity: 5.0
+        quantity: 5.0,
+        image_name: "almond-milk-1.jpg"
     },
     {
         item_category_id: 5,
@@ -297,7 +301,8 @@ items = [
         description: "Grown in my veggie patch.",
         price: 3.99,
         measurement_id: 3,
-        quantity: 5.0
+        quantity: 5.0,
+        image_name: "coriander-1.jpg"
     },
     {
         item_category_id: 6,
@@ -306,20 +311,10 @@ items = [
         description: "The eggs our hens lay usually weigh in at around 700g per dozen. They roam free range in our backyard. They are food scraps and grain.",
         price: 0.5,
         measurement_id: 3,
-        quantity: 60.0
-        image_name: ""
+        quantity: 60.0,
+        image_name: "chickens-backyard-1.jpg"
     }
 ]
-
-# {
-#         fandom: "Game of Thrones",
-#         image_name: "game-of-thrones-fandom.jpg"
-#     }
-# ]
-items.each do |item|
-    path = Rails.root.join("app", "assets", "images","items", item[:image_name])
-    Item.find_by(item: item[:item]).image.attach(io: File.open(path), filename: item[:image_name])
-end
 
 # item_reviews = [
 #     {
@@ -487,10 +482,26 @@ measurements.each do |measurement|
     a = Measurement.create(measurement)
     a.save!
 end
+
 items.each do |item|
-    a = Item.create(item)
-    a.save!
+    new_item = Item.new
+    new_item.item_category_id = item[:item_category_id]
+    new_item.user_id = item[:user_id]
+    new_item.name = item[:name]
+    new_item.description = item[:description]
+    new_item.price = item[:price]
+    new_item.measurement_id = item[:measurement_id]
+    new_item.quantity = item[:quantity]
+    new_item.save!
+    path = Rails.root.join("app", "assets", "images", "item_images", item[:image_name])
+    Item.last.image.attach(io: File.open(path), filename: item[:image_name])
+    Item.last.save!
 end
+
+# items.each do |item|
+#     a = Item.create(item)
+#     a.save!
+# end
 # item_reviews.each do |item_review|
 #     a = ItemReview.create(item_review)
 #     a.save!

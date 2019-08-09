@@ -306,16 +306,16 @@ items = [
         description: "The eggs our hens lay usually weigh in at around 700g per dozen. They roam free range in our backyard. They are food scraps and grain.",
         price: 0.5,
         measurement_id: 3,
-        quantity: 60.0,
+        quantity: 60.0
         image_name: ""
     }
 ]
 
-{
-        fandom: "Game of Thrones",
-        image_name: "game-of-thrones-fandom.jpg"
-    }
-]
+# {
+#         fandom: "Game of Thrones",
+#         image_name: "game-of-thrones-fandom.jpg"
+#     }
+# ]
 items.each do |item|
     path = Rails.root.join("app", "assets", "images","items", item[:image_name])
     Item.find_by(item: item[:item]).image.attach(io: File.open(path), filename: item[:image_name])

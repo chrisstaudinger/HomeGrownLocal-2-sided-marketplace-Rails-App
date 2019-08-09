@@ -63,6 +63,20 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: flex-start;
+        a {
+          align-self: flex-end;
+          width: max-content;
+          @include montserrat();
+          font-size: 1.5vw;
+          color: $offwhite1;
+          text-decoration: none;
+          &:hover{
+            background-color: $formblack;
+            color: $accentyellow;
+            transition: all 0.5s;
+          }
+        }
         .item-name{
           @include montserrat;
           font-size: 2vw;
@@ -94,7 +108,7 @@
           margin-top: 2vh;
           height: 15vh;
           font-size: 1vw;
-          color: $offwhite1;
+            color: $offwhite1;
           line-height: 1.3em;
         }
       }

@@ -99,6 +99,28 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.sub-body .item-highlight .item-information-container .information-box a {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5vw;
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.sub-body .item-highlight .item-information-container .information-box a:hover {
+  background-color: #3D403D;
+  color: #F0FF51;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .sub-body .item-highlight .item-information-container .information-box .item-name {

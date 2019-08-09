@@ -44,6 +44,11 @@
   margin-bottom: 5vh;
 }
 
+@mixin topdownpaddingvar($var){
+  padding-top: $var;
+  padding-bottom: $var;
+}
+
 @mixin opensans(){
   font-family: 'Open Sans', sans-serif;
 }

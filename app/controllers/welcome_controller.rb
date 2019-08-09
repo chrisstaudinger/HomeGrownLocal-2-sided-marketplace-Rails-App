@@ -1,5 +1,11 @@
 class WelcomeController < ApplicationController
   def index
-    @results = Item.last(6)
+    @items = Item.all
+    @results = []
+    @items.each_with_index do |item, index|
+      if (index % 2 == 0)
+        @results << item
+      end
+    end
   end
 end

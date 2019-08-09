@@ -10,15 +10,19 @@
 #### Tech Stack
 
 Contents
-=> Section 1: Description
+=> Section 1: DESCRIPTION
 
-Tech Stack
+HomegrownLocal is a homegrower market place where people share interests in getting better value for money, healthier option and more variety of fruits and vegetable. Bigh chain suppliers are known to have fruits and vegetables that been on the transport for months before being consumed.
+
+
+
+>>>Tech Stack
 Front-end: HTML, ERB, CSS, Sass
 Back-end: Ruby, Ruby on Rails
 Database: PostgreSQL Database
 Deployment: Heroku
 
-Configuration / Installation Instructions
+>>>Configuration / Installation Instructions
 
 In your local directory run 'https://github.com/chrisstaudinger/home-grown-local'
 
@@ -36,26 +40,42 @@ In your browser, navigate to 'http://localhost:3000/' to view the website
 
 You can browse without login or create new account. Only if you want to 'Post and Item' or 'Buy Item' that you need to login/create account. We provide link to login (if you have already created account) or to create account (if you have not had an account)
 
-Sitemap
+>>>>Sitemap
 
-Features
+>>>Features
+. Create user account and modify profile
+. Secure login, authorisation and authentician.
+. View items - free browsing for non registered user
+- For future enhancement, user can review trees                    
+
+
+
+. 
+
+
+
 
 Screenshots
 
 Our Inspiration & The Idea
 
-=> Section 2: Planning
+=> Section 2: PLANNING
 
 Project Plan
+@Trello
+
 Wireframes
 
 
+Color scheme
 ERD
 User Journey Diagram
 
 
 Team Communication
+
 Task Management
+
 Version / Source-Control
 
 => Section 3: Short Answer Questions
@@ -354,7 +374,7 @@ This postgresSQL database will become our Development and Testing database
 
 rails db:seed
 It will seed our database with fake data we put on seeds.rb file
-
+ 
 ####### Chris - can you comment on these answers as I did not actually do this part ######
 <We initially created an local instance of a PostgreSQL database using Ruby on Rails by calling the flag -d postgresql when creating the Rails app. We then call 'rails db:create' and set up our tables and columns using migrations: eg 'rails g model user' & 'rails g migration AddNameToUser'. This database then becomes our Development and testing database which we seed with fake data using the seeds.rb file.>
 

@@ -81,6 +81,10 @@ class ItemsController < ApplicationController
       redirect_to '/'
     end
   end
+
+  def fresh
+    @results = Item.all.last(9)
+  end
   # GET /items/1
   # GET /items/1.json
   def show

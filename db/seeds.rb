@@ -1,105 +1,105 @@
-states = [
-    {
-        state: "Victoria",
-    },
-    {
-        state: "Queensland",
-    },
-    {
-        state: "New South Wales"
-    },
-    {
-        state: "Western Australia"
-    },
-    {
-        state: "South Australia"
-    },
-    {
-        state: "Northern Territory"
-    },
-    {
-        state: "Tasmania"
-    },
-    {
-        state: "Australain Capital Territory"
-    }
-]
-cities = [
-    {
-        city: "Melbourne",
-        state_id: 1
-    },
-    {
-        city: "Brisbane",
-        state_id: 2
-    },
-    {
-        city: "Sydney",
-        state_id: 3
-    },
-    {
-        city: "Perth",
-        state_id: 4
-    },
-    {
-        city: "Adelaide",
-        state_id: 5
-    },
-    {
-        city: "Darwin",
-        state_id: 6
-    },
-    {
-        city: "Hobart",
-        state_id: 7
-    },
-    {
-        city: "Canberra",
-        state_id: 8
-    }
-]
-locations = [
-    {
-        postcode: "3141",
-        suburb: "South Yarra",
-        city_id: 1
-    },
-    {
-        postcode: "4169",
-        suburb: "Kangaroo Point",
-        city_id: 2
-    },
-    {
-        postcode: "2026",
-        suburb: "Bondi",
-        city_id: 3
-    },
-    {
-        postcode: "6153",
-        suburb: "Applecross",
-        city_id: 4
-    },
-    {
-        postcode: "5015",
-        suburb: "Port Adelaide",
-        city_id: 5
-    },
-    {
-        postcode: "0810",
-        suburb: "Coconut Grove",
-        city_id: 6
-    },
-    {
-        postcode: "7005",
-        suburb: "Sandy Bay",
-        city_id: 7
-    },
-    {
-        postcode: "2601",
-        suburb: "Acton",
-        city_id: 8
-    }
-]
+# states = [
+#     {
+#         state: "Victoria"
+#     },
+#     {
+#         state: "Queensland"
+#     },
+#     {
+#         state: "New South Wales"
+#     },
+#     {
+#         state: "Western Australia"
+#     },
+#     {
+#         state: "South Australia"
+#     },
+#     {
+#         state: "Northern Territory"
+#     },
+#     {
+#         state: "Tasmania"
+#     },
+#     {
+#         state: "Australain Capital Territory"
+#     }
+# ]
+# cities = [
+#     {
+#         city: "Melbourne",
+#         state_id: 1
+#     },
+#     {
+#         city: "Brisbane",
+#         state_id: 2
+#     },
+#     {
+#         city: "Sydney",
+#         state_id: 3
+#     },
+#     {
+#         city: "Perth",
+#         state_id: 4
+#     },
+#     {
+#         city: "Adelaide",
+#         state_id: 5
+#     },
+#     {
+#         city: "Darwin",
+#         state_id: 6
+#     },
+#     {
+#         city: "Hobart",
+#         state_id: 7
+#     },
+#     {
+#         city: "Canberra",
+#         state_id: 8
+#     }
+# ]
+# locations = [
+#     {
+#         postcode: "3141",
+#         suburb: "South Yarra",
+#         state: "Victoria"
+#     },
+#     {
+#         postcode: "4169",
+#         suburb: "Kangaroo Point",
+#         state: "Queensland"
+#     },
+#     {
+#         postcode: "2026",
+#         suburb: "Bondi",
+#         state: "New South Wales"
+#     },
+#     {
+#         postcode: "6153",
+#         suburb: "Applecross",
+#         state: "Western Australia"
+#     },
+#     {
+#         postcode: "5015",
+#         suburb: "Port Adelaide",
+#         state: "South Australia"
+#     },
+#     {
+#         postcode: "0810",
+#         suburb: "Coconut Grove",
+#         state: "Northern Territory"
+#     },
+#     {
+#         postcode: "7005",
+#         suburb: "Sandy Bay",
+#         state: "Tasmania"
+#     },
+#     {
+#         postcode: "2601",
+#         suburb: "Acton",
+#         state: "Australain Capital Territory"
+#     }
+# ]
 roles = [
     {
         privilege: "standard",
@@ -141,73 +141,81 @@ users = [
         role_id: 1,
         email: "adam@gmail.com",
         password: "123456",
-        profile_id: 1
+        profile_id: 1,
+        user_location: "Melbourne VIC, Australia"
     },
     {
         role_id: 1,
         email: "belinda@gmail.com",
         password: "123456",
-        profile_id: 2
+        profile_id: 2,
+        user_location: "Brisbane QLD, Australia"
     },
     {
         role_id: 1,
         email: "charlie@gmail.com",
         password: "123456",
-        profile_id: 3
+        profile_id: 3,
+        user_location: "Sydney NSW, Australia"
     },
     {
         role_id: 1,
         email: "dylan@gmail.com",
         password: "123456",
-        profile_id: 4
+        profile_id: 4,
+        user_location: "Perth WA, Australia"
     },
     {
         role_id: 1,
         email: "elise@gmail.com",
         password: "123456",
-        profile_id: 5
+        profile_id: 5,
+        user_location: "Adelaide SA, Australia"
     },
     {
         role_id: 1,
         email: "frank@gmail.com",
         password: "123456",
-        profile_id: 6
+        profile_id: 6,
+        user_location: "Darwin NT, Australia"
     },
     {
         role_id: 1,
         email: "geoff@gmail.com",
         password: "123456",
-        profile_id: 7
+        profile_id: 7,
+        user_location: "Canberra ACT, Australia"
     },
     {
         role_id: 1,
         email: "harmony@gmail.com",
         password: "123456",
-        profile_id: 8
+        profile_id: 8,
+        user_location: "Melbourne VIC, Australia"
     }
 ]
-user_ratings = [
-    {
-        reviewee_id: 1,
-        reviewer_id: 2,
-        rating: 5.0
-    },
-    {
-        reviewee_id: 1,
-        reviewer_id: 3,
-        rating: 3.0
-    },
-    {
-        reviewee_id: 2,
-        reviewer_id: 1,
-        rating: 4.0
-    },
-    {
-        reviewee_id: 3,
-        reviewer_id: 8,
-        rating: 5.0
-    }
-]
+# user_ratings = [
+#     {
+#         reviewee_id: 1,
+#         reviewer_id: 2,
+#         rating: 5.0
+#     },
+#     {
+#         reviewee_id: 1,
+#         reviewer_id: 3,
+#         rating: 3.0
+#     },
+#     {
+#         reviewee_id: 2,
+#         reviewer_id: 1,
+#         rating: 4.0
+#     },
+#     {
+#         reviewee_id: 3,
+#         reviewer_id: 8,
+#         rating: 5.0
+#     }
+# ]
 item_categories = [
     {
         name: "Fruits"
@@ -230,30 +238,31 @@ item_categories = [
 ]
 measurements = [
     {
-        unit: "Kilograms"
+        unit: "Kg"
     },
     {
-        unit: "Grams"
+        unit: "g"
     },
     {
-        unit: "Pieces"
+        unit: "pcs"
     },
     {
-        unit: "Litres"
+        unit: "Lt"
     },
     {
-        unit: "Millilitres"
+        unit: "mL"
     }
 ]
 items = [
     {
         item_category_id: 1,
         user_id: 1,
-        name: "Mt Fuji Apples",
+        name: "Fuji Apples",
         description: "Organic apples from my garden. No pesticides",
         price: 1.0,
         measurement_id: 3,
-        quantity: 5.0
+        quantity: 5.0,
+        image_name: "apples-1.jpg"
     },
     {
         item_category_id: 2,
@@ -262,7 +271,8 @@ items = [
         description: "Organic fresh beetroot. No pesticides or sprays.",
         price: 8.5,
         measurement_id: 1,
-        quantity: 3000.0
+        quantity: 3.0,
+        image_name: "beetroot-1.jpg"
     },
     {
         item_category_id: 3,
@@ -271,7 +281,8 @@ items = [
         description: "Try my famous Chilli Jam. The family recipe has been passed down three generations. 100mg jars.",
         price: 7.99,
         measurement_id: 3,
-        quantity: 15.0
+        quantity: 15.0,
+        image_name: "chilli-jam-1.jpg"
     },
     {
         item_category_id: 4,
@@ -280,7 +291,8 @@ items = [
         description: "Made from organic almonds. No perservatives added. 1L bottles.",
         price: 4.99,
         measurement_id: 4,
-        quantity: 5.0
+        quantity: 5.0,
+        image_name: "almond-milk-1.jpg"
     },
     {
         item_category_id: 5,
@@ -289,7 +301,8 @@ items = [
         description: "Grown in my veggie patch.",
         price: 3.99,
         measurement_id: 3,
-        quantity: 5.0
+        quantity: 5.0,
+        image_name: "coriander-1.jpg"
     },
     {
         item_category_id: 6,
@@ -298,41 +311,43 @@ items = [
         description: "The eggs our hens lay usually weigh in at around 700g per dozen. They roam free range in our backyard. They are food scraps and grain.",
         price: 0.5,
         measurement_id: 3,
-        quantity: 60.0
+        quantity: 60.0,
+        image_name: "chickens-backyard-1.jpg"
     }
 ]
-item_reviews = [
-    {
-        item_id: 1,
-        reviewer_id: 2,
-        message: "Deliciously sweet and crunchy. Will definitely be buying again!",
-        rating: 5.0
-    },
-    {
-        item_id: 2,
-        reviewer_id: 3,
-        message: "Nice to get that are organic without having to pay a small fortune. I Recommend this product and seller.",
-        rating: 4.0
-    },
-    {
-        item_id: 3,
-        reviewer_id: 4,
-        message: "Charlie's Chilli Jam is amazing!! It's explosive with tones of sweetness and spice.",
-        rating: 5.0
-    },
-    {
-        item_id: 4,
-        reviewer_id: 5,
-        message: "Will be buying again. The strength is so much more than Woolworths and Coles. Once you trying home made almond milk you really see the differnce.",
-        rating: 5.0
-    },
-    {
-        item_id: 1,
-        reviewer_id: 6,
-        message: "Decent apples. Crunchy and sweet",
-        rating: 4.0
-    }
-]
+
+# item_reviews = [
+#     {
+#         item_id: 1,
+#         reviewer_id: 2,
+#         message: "Deliciously sweet and crunchy. Will definitely be buying again!",
+#         rating: 5.0
+#     },
+#     {
+#         item_id: 2,
+#         reviewer_id: 3,
+#         message: "Nice to get that are organic without having to pay a small fortune. I Recommend this product and seller.",
+#         rating: 4.0
+#     },
+#     {
+#         item_id: 3,
+#         reviewer_id: 4,
+#         message: "Charlie's Chilli Jam is amazing!! It's explosive with tones of sweetness and spice.",
+#         rating: 5.0
+#     },
+#     {
+#         item_id: 4,
+#         reviewer_id: 5,
+#         message: "Will be buying again. The strength is so much more than Woolworths and Coles. Once you trying home made almond milk you really see the differnce.",
+#         rating: 5.0
+#     },
+#     {
+#         item_id: 1,
+#         reviewer_id: 6,
+#         message: "Decent apples. Crunchy and sweet",
+#         rating: 4.0
+#     }
+# ]
 watchlists = [
     {
         user_id: 1
@@ -379,70 +394,70 @@ watchitems = [
         watchlist_id: 6
     }
 ]
-orders = [
-    {
-        user_id: 1
-    },
-    {
-        user_id: 2
-    },
-    {
-        user_id: 3
-    },
-    {
-        user_id: 4
-    },
-    {
-        user_id: 5
-    },
-    {
-        user_id: 6
-    }
-]
-requests = [
-{
-    item_id: 1,
-    order_id: 2,
-    quantity: 10.0
-},
-{
-    item_id: 2,
-    order_id: 3,
-    quantity: 0.5
-},
-{
-    item_id: 3,
-    order_id: 4,
-    quantity: 1.0
-},
-{
-    item_id: 4,
-    order_id: 5,
-    quantity: 0.5
-},
-{
-    item_id: 4,
-    order_id: 6,
-    quantity: 2.0
-},
-{
-    item_id: 5,
-    order_id: 6,
-    quantity: 1.0
-}
-]
-states.each do |state|
-    a = State.create(state)
-    a.save!
-end
-cities.each do |city|
-    a = City.create(city)
-    a.save!
-end
-locations.each do |location|
-    a = Location.create(location)
-    a.save!
-end
+# orders = [
+#     {
+#         user_id: 1
+#     },
+#     {
+#         user_id: 2
+#     },
+#     {
+#         user_id: 3
+#     },
+#     {
+#         user_id: 4
+#     },
+#     {
+#         user_id: 5
+#     },
+#     {
+#         user_id: 6
+#     }
+# ]
+# requests = [
+# {
+#     item_id: 1,
+#     order_id: 2,
+#     quantity: 10.0
+# },
+# {
+#     item_id: 2,
+#     order_id: 3,
+#     quantity: 0.5
+# },
+# {
+#     item_id: 3,
+#     order_id: 4,
+#     quantity: 1.0
+# },
+# {
+#     item_id: 4,
+#     order_id: 5,
+#     quantity: 0.5
+# },
+# {
+#     item_id: 4,
+#     order_id: 6,
+#     quantity: 2.0
+# },
+# {
+#     item_id: 5,
+#     order_id: 6,
+#     quantity: 1.0
+# }
+# ]
+# states.each do |state|
+#     a = State.create(state)
+#     a.save!
+# end
+# cities.each do |city|
+#     a = City.create(city)
+#     a.save!
+# end
+# locations.each do |location|
+#     a = Location.create(location)
+#     a.save!
+# end
 roles.each do |role|
     a = Role.create(role)
     a.save!
@@ -455,10 +470,10 @@ users.each do |user|
     a = User.create(user)
     a.save!
 end
-user_ratings.each do |user_rating|
-    a = UserRating.create(user_rating)
-    a.save!
-end
+# user_ratings.each do |user_rating|
+#     a = UserRating.create(user_rating)
+#     a.save!
+# end
 item_categories.each do |item_category|
     a = ItemCategory.create(item_category)
     a.save!
@@ -467,14 +482,30 @@ measurements.each do |measurement|
     a = Measurement.create(measurement)
     a.save!
 end
+
 items.each do |item|
-    a = Item.create(item)
-    a.save!
+    new_item = Item.new
+    new_item.item_category_id = item[:item_category_id]
+    new_item.user_id = item[:user_id]
+    new_item.name = item[:name]
+    new_item.description = item[:description]
+    new_item.price = item[:price]
+    new_item.measurement_id = item[:measurement_id]
+    new_item.quantity = item[:quantity]
+    new_item.save!
+    path = Rails.root.join("app", "assets", "images", "item_images", item[:image_name])
+    Item.last.image.attach(io: File.open(path), filename: item[:image_name])
+    Item.last.save!
 end
-item_reviews.each do |item_review|
-    a = ItemReview.create(item_review)
-    a.save!
-end
+
+# items.each do |item|
+#     a = Item.create(item)
+#     a.save!
+# end
+# item_reviews.each do |item_review|
+#     a = ItemReview.create(item_review)
+#     a.save!
+# end
 watchlists.each do |watchlist|
     a = Watchlist.create(watchlist)
     a.save!
@@ -483,11 +514,11 @@ watchitems.each do |watchitem|
     a = WatchItem.create(watchitem)
     a.save!
 end
-orders.each do |order|
-    a = Order.create(order)
-    a.save!
-end
-requests.each do |request|
-    a = Request.create(request)
-    a.save!
-end
+# orders.each do |order|
+#     a = Order.create(order)
+#     a.save!
+# end
+# requests.each do |request|
+#     a = Request.create(request)
+#     a.save!
+# end

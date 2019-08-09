@@ -6,14 +6,261 @@
 #### Problem Statement
 #### Features
 #### Screenshots
+
 #### Tech Stack
 
----
+Contents
+=> Section 1: DESCRIPTION
+
+HomegrownLocal is a homegrower market place where people share interests in getting better value for money, healthier option and more variety of fruits and vegetable. Bigh chain suppliers are known to have fruits and vegetables that been on the transport for months before being consumed.
+
+
+
+>>>Tech Stack
+Front-end: HTML, ERB, CSS, Sass
+Back-end: Ruby, Ruby on Rails
+Database: PostgreSQL Database
+Deployment: Heroku
+
+>>>Configuration / Installation Instructions
+
+In your local directory run 'https://github.com/chrisstaudinger/home-grown-local'
+
+Open the directory you clone the repositories to, 
+
+We are using Visual Code, so make sure you open the directory where the files been unzipped to:
+
+code/run - 'bundle install' to install the dependencies
+
+code/run 'rails db:reset' to reset the database (db:reset will drop the database, seed data)
+
+code/run rails s to run the server in development mode
+
+In your browser, navigate to 'http://localhost:3000/' to view the website
+
+You can browse without login or create new account. Only if you want to 'Post and Item' or 'Buy Item' that you need to login/create account. We provide link to login (if you have already created account) or to create account (if you have not had an account)
+
+>>>>Sitemap
+
+>>>Features
+. Create user account and modify profile
+. Secure login, authorisation and authentician.
+. View items - free browsing for non registered user
+- For future enhancement, user can review trees                    
+
+
+
+. 
+
+
+
+
+Screenshots
+
+Our Inspiration & The Idea
+
+=> Section 2: PLANNING
+
+Project Plan
+@Trello
+
+Wireframes
+
+
+Color scheme
+ERD
+User Journey Diagram
+
+
+Team Communication
+
+Task Management
+
+Version / Source-Control
+
+=> Section 3: Short Answer Questions
+
+=> Section 4: Reflection
+
+Challenges
+Take-Aways
+Extending-Coding-Tutor
+
+=> Section 4: Section 5: Appendix Single Page Scrolling
+Search & Filtering
 # Design & Documentation
 #### User Stories
+
+As a garden enthusiast, I would like to check what’s growing in my locale, so I search on my postcode and find out 
+
+As a vegan, I love trying various plant tastes, and homegrown plants produce, especially from my locale, would love to purchase them 
+
+As a pot plants hobbyist, I grow various herbs in my small garden patch in the balcony and I love to share my knowledge with the world 
+
+As a mom who loves to teach my kids to grown our own food supplies, I love to share my experience with the world 
+
+As a tomato backyard hobbyist, I ended up with 27 trees, can’t eat them all, so need to sell them, if there are surplus, which are many times in a year. 
+
+As an organic enthusiast, I spend a fortune buying from local supermarket or other organic suppliers, love to support local community rather than big corporation  
+
+As a café owner, love to be able to try out different various home- made sauces or oils, I will check interesting produces and ship them if necessary. 
+
+As a cook enthusiast, I love to share experiences and findings with another similar hobbyist 
+
+As a bored pensioner, I love to have a hobby that will make me money to supply my pension 
+
+As a stay home made, I love to make money using resources I have 
+
+As a regular columnist, I love to review interesting new thing, and new ideas or new business ideas worth written on 
+
+As an administrator, I love to review how many new users signed up in a week 
+
+As an administrator, I love to have a summary of users per post code 
+
+As an administrator, I love to have logs to show users movement in my website 
+
+As an administrator, I love to have logs to show conversion rate between new IPs and sign up 
+
+As an administrator, I love to have a summary of new purchase order per day compared to number of searches in that day grouped by area and also grouped by unique users 
+
+As an administrator, I love to summary revenue per month grouped by user ID and group by area 
+
+As a young person, I can’t cook so I buy anything that is new trend and has been reviewed as a good stuff. 
+
+As I have to sit in a train for two hours each day, I will read anything, my emails including, so anything happening in my locale I would read the messages or news 
+
+As a collector, I collect new tastes and experiences, if anyone selling anything sounds original, certainly will try them 
+
+As a restauranteur, I love to include unique pieces on my plate decoration, so an over small potatoes growing locale, or super-hot- chilies, would try them, or even ship them if grown a bit further out. 
+
+As a backyard columnist I love to write about locale gardeners 
+
+As a kid I love to see if anyone can grow anything in a balcony 
+
+As a traveler, I love to be able to buy fruits that taste local 
+
+As a foodist I love to incorporate a new homegrown food item 
+
+As I have tasted NZ apples and Tasmania grapes, I love to be able to buy direct from growers and got them shipped! 
+
+As a food blogger, I like to search new food items, local market normally where I shop but if I can search anything new or unique plant or food produce in my locale or as I travel within where I am staying, I would love to visit them and take pictures for my blo 
+
+As a keen biologist, I like to see the nature of soil and discussion around certain area, so local homegrown seller would be ideal to have a chat. Various areas in Victoria have very distinct soil.  
+
+As an overseas foreigner, as part of the day trip, I would not mind to see if I can visit locale growers within certain areas without going to mainstream wineries.  
+
+If user buys item, messages will contain discussion about pick up time etc 
+
+If user buys item and cash on pick up, and he fails to pick up, seller will manually have to put back the quantity reserved back to the quantity available to purchase 
+
+As a user, to sign in, a user should be able to specify the postcode, or not to specify, the default is null. 
+
+#### User Flow
+As a GUEST(standard user - a user who is not signed in), I should be able to:
+-View the homepage, browse through the list of organic produce within my area
+- Navigate through the front page to find out price and quantity of the produce on the list
+- Navigate through the front page to find search of a particular item
+- Click on a particular listing to view further about the produce 
+(description, and exact address)
+- View the lister and make contact (email, direct message, or phone number)
+- Navigate on the detail product page to go back to homepage
+- Search other areas or other produce within further reach geographical areas
+- Create a new account easily if I want to list my garden produce or to purchase
+- Able to add a produce into my basket
+- Able to change the quantity of the produce ordered in my basket
+ 
+As a signed in user, I should be able to:
+
+ 
+guest (unsigned user) wants to be able to:
+1. navigate through the website to search produce within his area
+2. navigate through the website to find out how much charges to list produce
+3. navigate through the website to find out whether produce can be delivered
+4. find out payment methods
+5. read blogs or comments from other users on a produce
+ 
+user alias seller wants to be able to:
+1. create a new account
+2. login and create new garden/listing
+3. login and update listing (quantity or price)
+4. login and check and reply to messages
+5. login and check total orders to date 
+6. login and search particular order (to get detail of purchaser, quantity, or address of buyer in case drop off order)
+7. login and search related produce within the area
+8. check payment history
+9. view ratings or reviews
+ 
+user alias buyer wants to be able to:
+1. create a new account
+2. login and create purchase order (basket)
+3. login and review basket (update quantity or delete) or review detail of items on the order
+4. login and pay purchase order
+5. login and check payment history
+6. login and communicate with seller
+7. login and communicate with administrator (queries or complaints)
+8. create reviews
+ 
+administrator wants to be able to:
+1. view all users profiles and orders
+2. view complaints or messages
+3. build KPIs - total order by number per week, total order by quantity per week, or per month, total new users per month
+4. moderate content (reviews/profiles)
+a. flag users/content>notify admin
+b. softban (1 day)
+5. edit/delete content, including orders and listings
+6. view financial data
+ 
+UI Flow
+1 — “typically used for one of two purposes. First, they are used to model the interactions that users have with your software, as defined in a single use case. [. . .] Second, [. . .] they enable you to gain a high-level overview of the user interface for your application.”
+2 — “show graphically how a user will navigate a solution’s user interface”
+ 
+high fidelity User Interface Flow - 
+single task flows Task Flows
+
+ 
+not signed in users
+User goal (goal/story level)
+1. navigate through the website to browse items within geographical area
+2. search based on postcode
+3. drill down to description of the produce (show page)
+4. click on purchase button on the show page
+5. view basket (and delete or update quantity)
+ 
+Task flow - action level
+1. user need to go to home page
+2. popup message to ask user to put their postcode 
+3. index page will display all produce within that postcode
+4. if user click on a particular item, show page to detail that produce will appear
+5. user may click on purchase button, if purchase button click, pop up message to show the basket with that produce item and user need to put quantity, the basket sub total will be recalculated each time user change the quantity in the basket
+6. before the basket appear, another pop up message will appear to prompt user to create account, 
+7. once account detail entered, user automatically log in and basket appear with that item on it and prompt user to put quantity
+8. user may want to go back and forth between index and show pages via navigation bar
+9. user will want to review basket and check out
+10. if user check out, payment system page will appear, upon successful payment, detail of the seller address and phone number will be emailed to the buyer
+ 
+Wire flow - component level
+1. home page
+2. index
+3. show page
+4. account set up page
+5. index page
+6.  show page
+7. basket
+8. payment system 
+9. basket 
+10. index page
+ 
+User flow - interaction level
+
+
+
+
+ 
+ 
 #### Workflow
 Figma, mockflow, lucychart
 #### Wireframes
+
 #### Database Entity Relationship Diagram
 
 ---
@@ -21,13 +268,14 @@ Figma, mockflow, lucychart
 #### Timeline
 #### Trello board
 
+
+
 ---
 #Short Answer Questions
 
 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-HOMEGROWN LOCAL promotes diversity, quality and uniqueness. Homegrown Local will reduce the time from the harvest time to the consumer plate. Our fruits will be harvested while ripe and not firm like commercial food chain because unlike fruits from commercial food distributor our fruits do not have to travel for months before reaching the consumer. 
-Homegrown local will also bring the profits back to the grower by cut short the distribution chain. Homegrown Local hopes if our network being implemented widely that we might be able to add volume and variety to our urban landscape. 
+@HOMEGROWN-LOCAL promotes diversity, quality and uniqueness. We are giving consumer ability to choose to have their fruits and vegetable demand being met by their local growers. The supply hopefully will bring back the quality of our fruits and vegetable supplies because products are being harvested while ripe and time travel to consumer plate is reduced being local. Unlike fruits from a commercial food distributor, our fruits and vegetable will focus on quality not looks, apples might not look perfect but they taste good and super fresh. @HOMEGROWN-LOCAL will also be bringing the profits back to the grower by cut short the distribution chain. 
 
 
 2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
@@ -43,24 +291,30 @@ HomeGrownLocal is an web application that directly connects farmer with consumer
 
 4. Describe the network infrastructure the App may be based on.
 
-Deployment through Heroku, directly from GitHub to the internet via Heroku's deployment platfrom and network infrastructure. Heroku can be accessed either directly from GitHub and allows developers to spin up an application quickly and for free without needing to purchase their own servers or deploy their own database/network infrastucture. 
 
-Database with Postgresql.
+>>>>>>>>>>>>>>>>>>>>>
+Our application is deployed through the Platform as a Service (PAAS) Heroku, a popular software product that allows developers to push code directly from GitHub to the internet via Heroku's deployment platfrom and network infrastructure.
 
- APPLICATION DEVELOPMENT PHASE
+Heroku can be accessed either directly from GitHub or through the Heroku Command Line Interface (CLI), and allows developers to spin up an application quickly and for free without needing to purchase their own servers or deploy their own database / network infrastructure.
 
-Software is developed on local computer using Ruby on Rails and deployed for local testing using inbuilt Rails Server (which hosts the application at a localhost port)
-We write the source code, configure dependencies, configure the database
-We store the code in a GitHub repository, both as a means of Version Control, and in preparation for Deployment
+Our app is deployed through the following process:
 
-APPLICATION BUILD PHASE
+DEVELOPMENT PHASE
+Ruby on Rails is a popular web framework written in Ruby.
+Codes are written using Ruby on Rails application and deployment for local testing enabled using with inbuilt Rails Server hosting it at a localhost port). For Version Control we manage our source code using Github repositories. Each programmer needs to download a version from origin each time before starting daily coding. Pull request generated and merge with a local master. 
+Our database is using PostgreSQL.
 
-When our application is ready, we create a new app on Heroku and push the code in our GitHub repository directly to Heroku so that Heroku can prepare it for deployment
-Heroku receives the code and initiates the build process
-Heroku bundles assets necessary to run the application, like the your compiled code, and combines this them with the application to create a 'slug', which describes the bundled file that’s ready for deployment.
 
-APPLICATION DEPLOYMENT / EXECUTION PHASE
+DEPLOYMENT / EXECUTION PHASE
 
+Heroku integrates with GitHub to make it easy to deploy code living on GitHub to apps running on Heroku. When GitHub integration is configured for a Heroku app, Heroku can automatically build and release (if the build is successful) pushes to the specified GitHub repo.
+
+We integrate our Github repositories with Heroku application deployment (To configure GitHub integration, you have to authenticate with GitHub. You only have to do this once per Heroku account). We use the Heroku dashboard to configure Github integration.
+
+Heroku is is a free Cloud-based platform to build and deploy internet application. 
+Deployment is performed directly from GitHub via Heroku's deployment platform. Heroku can be accessed either directly from GitHub or through the Heroku Command Line Interface (CLI). 
+
+The Heroku Command Line Interface (CLI) makes it easy to create and manage your Heroku apps directly from the terminal
 
 5. Identify and describe the software to be used in your App.
 
@@ -120,7 +374,7 @@ This postgresSQL database will become our Development and Testing database
 
 rails db:seed
 It will seed our database with fake data we put on seeds.rb file
-
+ 
 ####### Chris - can you comment on these answers as I did not actually do this part ######
 <We initially created an local instance of a PostgreSQL database using Ruby on Rails by calling the flag -d postgresql when creating the Rails app. We then call 'rails db:create' and set up our tables and columns using migrations: eg 'rails g model user' & 'rails g migration AddNameToUser'. This database then becomes our Development and testing database which we seed with fake data using the seeds.rb file.>
 

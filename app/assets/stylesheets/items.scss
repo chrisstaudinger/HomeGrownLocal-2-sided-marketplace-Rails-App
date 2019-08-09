@@ -28,14 +28,11 @@
       height: 55vh;
       z-index: 4;
       background-color: $formblack;
-      border: solid;
-      border-color: $primarygreen;
-      border-width: 0.5em;
       img {
         object-fit: cover;
         height: inherit;
-        // width: 100%;
-        // height: inherit;
+        width: inherit;
+        border-radius: 3px;
       }
     }
     .item-information-container {
@@ -50,7 +47,8 @@
       width: 35vw;
       background-color: $formblack;
       margin-bottom: 10vh;
-      padding: 2em;
+      padding: 2vw;
+      border-radius: 3px;
       .watchlist{
         position: relative;
         left: 9.5vw;
@@ -64,35 +62,38 @@
         height: 30vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
         .item-name{
-          @include librefranklin;
-          font-size: 3em;
+          @include montserrat;
+          font-size: 2vw;
+          font-weight: 600;
           letter-spacing: 0.2vw;
           color: $accentyellow;
         }
         .item-location {
+          margin-top: 3vh;
           display: flex;
           flex-direction: row;
           align-items: center;
           p {
             @include librefranklin();
             font-style: italic;
-            font-size: 2.5em;
+            font-size: 1vw;
             font-weight: lighter;
             color: $accentyellow;
           }
           img{
             position: relative;
             left: 0;
-            width: 5em;
-            height: 5.5em;
+            width: 2.5vw;
+            height: 3vw;
           }
         }
         .item-description {
           @include overpass();
+          margin-top: 2vh;
           height: 15vh;
-          font-size: 2.2em;
+          font-size: 1vw;
           color: $offwhite1;
           line-height: 1.3em;
         }

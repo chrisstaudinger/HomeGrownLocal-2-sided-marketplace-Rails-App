@@ -1,10 +1,6 @@
 @import 'variables';
 @import 'mixins';
 
-*{
-  line-height: 1vh;
-}
-
 .item-metainfo {
   position: relative;
   display: flex;

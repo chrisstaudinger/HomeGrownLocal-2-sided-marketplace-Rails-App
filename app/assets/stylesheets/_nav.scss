@@ -59,8 +59,12 @@ header {
 
 .logo {
   margin-left: 3.5vw;
+  width: max-content;
   img {
     height: 6.5vh;
+    @media screen and (max-width: $break-small) {
+      // background: url(logov2-clean.png)
+    }
   }
 }
 

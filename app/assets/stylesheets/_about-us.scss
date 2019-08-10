@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'mixins';
+
+.about-us-landing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .left-section{
+    position: relative;
+    left: 10vw;
+    width: 30vw;
+    bottom: 5vh;
+    @include topdownmarginvar(10vh);
+
+    #header{
+      text-align: center;
+      @include montserrat();
+      font-size: 3vw;
+      color: $formblack;
+      margin-bottom: 10vh;
+    }
+    #about-us-text {
+      text-align: center;
+      line-height: 3vh;
+      @include overpass();
+      font-size: 1.5vw;
+      color: $formblack;
+    }
+  }
+  .right-section {
+    z-index :-1;
+    position: relative;
+    right: 10vw;
+    width: 40vw;
+    margin-right: 10vw;
+    @include topdownmarginvar(15vh);
+    img {
+      width: 53vw;
+      height: 80vh;
+    }
+  }
+}

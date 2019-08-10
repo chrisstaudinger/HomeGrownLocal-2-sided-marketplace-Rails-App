@@ -1,9 +1,3 @@
-<p id="notice"><%= notice %></p>
+<h2>My Watchlist</h2>
 
-<p>
-  <strong>User:</strong>
-  <%= @watchlist.user %>
-</p>
-
-<%= link_to 'Edit', edit_watchlist_path(@watchlist) %> |
-<%= link_to 'Back', watchlists_path %>
+<%= render :partial => "layouts/shared/grid_item" ,locals: {result: @results} %>

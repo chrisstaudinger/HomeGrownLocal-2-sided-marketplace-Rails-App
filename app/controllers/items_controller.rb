@@ -91,6 +91,11 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @watch_item = WatchItem.new
     @watch_item.item = @item
+    if user_signed_in?
+      @watchlisted = WatchItem.search( where: {item_id: @item.id, watchlist_id: current_user.watchlist.id}).length
+    else
+      @watchlisted = 0
+    end
   end
 
   # GET /items/new

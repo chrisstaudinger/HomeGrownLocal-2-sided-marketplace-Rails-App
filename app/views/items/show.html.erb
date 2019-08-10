@@ -21,7 +21,9 @@
         <p class="item-description">
           <%= @item.description %>
         </p>
-        <%= render :partial => "layouts/shared/watchlist" %>
+        <% if @watchlisted == 0 %>
+          <%= render :partial => "layouts/shared/watchlist" %>
+        <% end %>
         <%= link_to 'Edit', edit_item_path(@item) %>
       </div>
     </div>

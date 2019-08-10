@@ -3,16 +3,16 @@
 
 #item-grid {
   margin-top: 5vh;
+  margin-bottom: 5vh;
   width: 60vw;
-  height: 70vh;
+  height: auto;
   @include leftrightmargin();
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 40%;
-  grid-row-gap: 5vh;
+  grid-auto-rows: 35vh;
   .item {
     border-radius: 5px;
-    height: 27vh;
+    height: 25vh;
     width: 18vw;
     margin: 1vw;
     background-color: $offwhite2;
@@ -31,7 +31,7 @@
     }
     .item-text{
       position: relative;
-      bottom: 4vh;
+      bottom: 5vh;
     }
     .item-image {
       display: flex;

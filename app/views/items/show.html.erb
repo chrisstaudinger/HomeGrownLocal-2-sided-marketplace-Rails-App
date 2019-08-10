@@ -3,9 +3,9 @@
   <div class="item-highlight">
     <div class="image-container">
       <% if @item.image.attached? %>
-        <%= image_tag(@item.image.attachment, :alt => "attached-image") %>
+      <%= image_tag(@item.image.attachment, :alt => "attached-image") %>
       <% else %>
-        <%= image_tag("large-no-image.png",:alt=> "no-attachment") %>
+      <%= image_tag("large-no-image.png",:alt=> "no-attachment") %>
       <% end %>
     </div>
     <div class="item-information-container">
@@ -21,13 +21,16 @@
         <p class="item-description">
           <%= @item.description %>
         </p>
+        <%= link_to 'Edit', edit_item_path(@item) %>
       </div>
     </div>
   </div>
-  
-  <link rel="stylesheet" href="./stylesheets/form">
-  <div class="form" style="margin: 0;">>
-    <%= link_to 'Edit', edit_item_path(@item) %> |
-    <%= link_to 'Back', '/' %>
+  <div class="second-section">
+    <%= render :partial => "layouts/shared/item_meta" %>
+  </div>
+  <div class="item-seller-info">
+    <p></p>
   </div>
 </div>
+</div>
+<link rel="stylesheet" href="./stylesheets/form">

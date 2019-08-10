@@ -43,15 +43,14 @@
   height: 55vh;
   z-index: 4;
   background-color: #3D403D;
-  border: solid;
-  border-color: #70C887;
-  border-width: 0.5em;
 }
 
 .sub-body .item-highlight .image-container img {
   -o-object-fit: cover;
      object-fit: cover;
   height: inherit;
+  width: inherit;
+  border-radius: 3px;
 }
 
 .sub-body .item-highlight .item-information-container {
@@ -73,7 +72,8 @@
   width: 35vw;
   background-color: #3D403D;
   margin-bottom: 10vh;
-  padding: 2em;
+  padding: 2vw;
+  border-radius: 3px;
 }
 
 .sub-body .item-highlight .item-information-container .watchlist {
@@ -96,18 +96,43 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.sub-body .item-highlight .item-information-container .information-box a {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5vw;
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.sub-body .item-highlight .item-information-container .information-box a:hover {
+  background-color: #3D403D;
+  color: #F0FF51;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .sub-body .item-highlight .item-information-container .information-box .item-name {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 3em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2vw;
+  font-weight: 600;
   letter-spacing: 0.2vw;
   color: #F0FF51;
 }
 
 .sub-body .item-highlight .item-information-container .information-box .item-location {
+  margin-top: 3vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,7 +148,7 @@
 .sub-body .item-highlight .item-information-container .information-box .item-location p {
   font-family: 'Libre Franklin', sans-serif;
   font-style: italic;
-  font-size: 2.5em;
+  font-size: 1vw;
   font-weight: lighter;
   color: #F0FF51;
 }
@@ -131,14 +156,15 @@
 .sub-body .item-highlight .item-information-container .information-box .item-location img {
   position: relative;
   left: 0;
-  width: 5em;
-  height: 5.5em;
+  width: 2.5vw;
+  height: 3vw;
 }
 
 .sub-body .item-highlight .item-information-container .information-box .item-description {
   font-family: 'Overpass', sans-serif;
+  margin-top: 2vh;
   height: 15vh;
-  font-size: 2.2em;
+  font-size: 1vw;
   color: #F5F5F5;
   line-height: 1.3em;
 }

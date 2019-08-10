@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="./stylesheets/item_meta">
+<div class="item-metainfo">
+  <div class="inner-box">
+    <p id="meta-label">Price</p>
+    <div class="meta-container">
+      <p id="currency">
+        A$
+      </p>
+      <p id="price">
+        <%= @item.price %>
+      </p>
+      <p id="unit">
+        /<%= @item.measurement.unit %>
+      </p>
+    </div>
+    <p id="meta-label">In-Stock</p>
+    <div class="meta-container">
+      <p id="stock">
+        <%= @item.quantity %>
+      </p>
+      <p id="unit">
+        <%= @item.measurement.unit %>
+      </p>
+    </div>
+  </div>
+</div>

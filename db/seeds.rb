@@ -566,10 +566,10 @@ end
 #     a = ItemReview.create(item_review)
 #     a.save!
 # end
-watchlists.each do |watchlist|
-    a = Watchlist.create(watchlist)
-    a.save!
-end
+# watchlists.each do |watchlist|
+#     a = Watchlist.create(watchlist)
+#     a.save!
+# end
 watchitems.each do |watchitem|
     a = WatchItem.create(watchitem)
     a.save!

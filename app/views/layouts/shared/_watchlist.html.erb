@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="./stylesheets/watch_item">
+<%= form_with(model: WatchItem.new, local: true) do |form| %>
+  <div class="field">
+    <%= form.hidden_field :item_id, value: @item.id %>
+  </div>
+​
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

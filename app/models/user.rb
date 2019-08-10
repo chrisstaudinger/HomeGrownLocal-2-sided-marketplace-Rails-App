@@ -14,12 +14,14 @@ class User < ApplicationRecord
   has_many :items
   has_many :orders
   belongs_to :role
+  has_many :watch_items, through: :watchlist
 
   has_many :sent_item_reviews, :class_name => 'ItemReview', :foreign_key => 'reviewer_id'
 
 
   after_initialize :set_default_role, :if => :new_record?
-  before_save :assign_profile 
+  before_save :assign_profile
+  after_save :watchlist_init
 
   def set_default_role
     self.role = Role.find(1)
@@ -31,5 +33,11 @@ class User < ApplicationRecord
     new_profile.name = nil
     new_profile.save!
     return new_profile
+  end
+
+  def watchlist_init
+    new_watchlist = Watchlist.new
+    new_watchlist.user = self
+    new_watchlist.save!
   end
 end

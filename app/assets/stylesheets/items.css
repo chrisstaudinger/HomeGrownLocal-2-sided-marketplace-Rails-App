@@ -3,6 +3,10 @@
   bottom: 0;
   padding-top: 5vh;
   background-color: #F5F5F5;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-block;
 }
 
 .sub-body {
@@ -105,6 +109,8 @@
 }
 
 .sub-body .item-highlight .item-information-container .information-box a {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: -webkit-max-content;
@@ -163,7 +169,7 @@
 .sub-body .item-highlight .item-information-container .information-box .item-description {
   font-family: 'Overpass', sans-serif;
   margin-top: 2vh;
-  height: 15vh;
+  height: 30vh;
   font-size: 1vw;
   color: #F5F5F5;
   line-height: 1.3em;

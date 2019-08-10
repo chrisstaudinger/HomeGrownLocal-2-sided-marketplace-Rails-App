@@ -30,7 +30,7 @@ class WatchItemsController < ApplicationController
     @watch_item.watchlist = current_user.watchlist
     respond_to do |format|
       if @watch_item.save
-        format.html { redirect_to "/items/#{@watch_item.item.id}", notice: 'Watch item was successfully created.' }
+        format.html { redirect_to "/watchlists/#{current_user.watchlist.id}", notice: 'Watch item was successfully created.' }
         format.json { render :show, status: :created, location: @watch_item }
       else
         format.html { render :new }
@@ -58,11 +58,11 @@ class WatchItemsController < ApplicationController
   # DELETE /watch_items/1
   # DELETE /watch_items/1.json
   def destroy
-    authorize @watchlist
-    authorize @watchitem
+    # authorize @watchlist
+    # authorize @watchitem
     @watch_item.destroy
     respond_to do |format|
-      format.html { redirect_to watch_items_url, notice: 'Watch item was successfully destroyed.' }
+      format.html { redirect_to "/watchlists/#{current_user.watchlist.id}", notice: 'Watch item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

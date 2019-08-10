@@ -21,10 +21,12 @@
         <p class="item-description">
           <%= @item.description %>
         </p>
+        <%= link_to 'Edit', edit_item_path(@item) %>
         <% if @watchlisted == 0 %>
           <%= render :partial => "layouts/shared/watchlist" %>
+        <% else %>
+          <%= link_to 'Unlist', "/watch_items/#{@watchlist_item.id}}", method: "delete"  %>
         <% end %>
-        <%= link_to 'Edit', edit_item_path(@item) %>
       </div>
     </div>
   </div>

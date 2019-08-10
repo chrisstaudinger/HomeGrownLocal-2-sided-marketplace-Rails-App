@@ -6,6 +6,7 @@
   margin-bottom: 5vh;
   width: 60vw;
   height: auto;
+  min-height: 60vh;
   @include leftrightmargin();
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -27,10 +27,10 @@ class WatchItemsController < ApplicationController
   # POST /watch_items.json
   def create
     @watch_item = WatchItem.new(watch_item_params)
-
+    @watch_item.watchlist = current_user.watchlist
     respond_to do |format|
       if @watch_item.save
-        format.html { redirect_to @watch_item, notice: 'Watch item was successfully created.' }
+        format.html { redirect_to "/watchlists/#{current_user.watchlist.id}", notice: 'Watch item was successfully created.' }
         format.json { render :show, status: :created, location: @watch_item }
       else
         format.html { render :new }
@@ -58,11 +58,11 @@ class WatchItemsController < ApplicationController
   # DELETE /watch_items/1
   # DELETE /watch_items/1.json
   def destroy
-    authorize @watchlist
-    authorize @watchitem
+    # authorize @watchlist
+    # authorize @watchitem
     @watch_item.destroy
     respond_to do |format|
-      format.html { redirect_to watch_items_url, notice: 'Watch item was successfully destroyed.' }
+      format.html { redirect_to "/watchlists/#{current_user.watchlist.id}", notice: 'Watch item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,6 +75,6 @@ class WatchItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def watch_item_params
-      params.require(:watch_item).permit(:item_id, :watchlist_id)
+      params.require(:watch_item).permit(:item_id, :watchlist_id, :watch_item_item)
     end
 end

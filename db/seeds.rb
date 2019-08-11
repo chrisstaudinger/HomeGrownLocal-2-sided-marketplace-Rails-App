@@ -313,6 +313,66 @@ items = [
         measurement_id: 3,
         quantity: 60.0,
         image_name: "chickens-backyard-1.jpg"
+    },
+    {
+        item_category_id: 6,
+        user_id: 1,
+        name: "Free Range Duck Eggs",
+        description: "Our ducks roam free in our backyard. They are fed food scraps and grain. Usually a dozen eggs weighs around 350g.",
+        price: 0.5,
+        measurement_id: 3,
+        quantity: 30.0,
+        image_name: "ducks-backyard-1.jpg"
+    },
+    {
+        item_category_id: 1,
+        user_id: 2,
+        name: "Bowen Mangos",
+        description: "Ripe from our trees. We have too many. We pick them when they are ripe (not just let them fall on the ground). $1.50 each.",
+        price: 1.5,
+        measurement_id: 3,
+        quantity: 24.0,
+        image_name: "bowen-mango-1.jpg"
+    },
+    {
+        item_category_id: 2,
+        user_id: 3,
+        name: "Birdseye Chilli",
+        description: "Organic birdseye chilli. We don't use any sprays or pesticides. I sell them in 100g bags for $3.00ea.",
+        price: 30.0,
+        measurement_id: 1,
+        quantity: 0.5,
+        image_name: "chilli-birdseye-1.png"
+    },
+    {
+        item_category_id: 3,
+        user_id: 4,
+        name: "Strawberry Jam",
+        description: "We have a small strawberry farm up towards Yanchep. I get the strawberries from there and use them to whip up the old family recipe! $12.00 per jar (300g)",
+        price: 10.0,
+        measurement_id: 3,
+        quantity: 40,
+        image_name: "home-made-strawberry-jam-1.jpg"
+    },
+    {
+        item_category_id: 4,
+        user_id: 5,
+        name: "Delicious Fruit Icy Poles!",
+        description: "These icy poles are made from 100% fruit. I make them out of fruit smoothies I blend.",
+        price: 2.5,
+        measurement_id: 3,
+        quantity: 20,
+        image_name: "fruit-icy-pole-1.jpg"
+    },
+    {
+        item_category_id: 5,
+        user_id: 1,
+        name: "Fresh Basil",
+        description: "We have some herbs that we grow on our veranda. More basil than we need. $4.00 per bunch.",
+        price: 4.0,
+        measurement_id: 3,
+        quantity: 4,
+        image_name: "basil-1.jpg"
     }
 ]
 
@@ -506,10 +566,10 @@ end
 #     a = ItemReview.create(item_review)
 #     a.save!
 # end
-watchlists.each do |watchlist|
-    a = Watchlist.create(watchlist)
-    a.save!
-end
+# watchlists.each do |watchlist|
+#     a = Watchlist.create(watchlist)
+#     a.save!
+# end
 watchitems.each do |watchitem|
     a = WatchItem.create(watchitem)
     a.save!

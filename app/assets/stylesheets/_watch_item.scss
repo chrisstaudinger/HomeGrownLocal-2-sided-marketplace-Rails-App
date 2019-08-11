@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+
+form{
+  align-self: flex-end;
+  overflow-y: visible;
+  .field {
+  }
+  .actions {
+    height: min-content;
+    margin-bottom: 0;
+    input {
+      z-index: 99;
+      @include montserrat();
+      background-color: $formblack;
+      border: none;
+      font-size: 1.5vw;
+      color: $offwhite1;
+      text-decoration: none;
+      cursor: pointer;
+      width: inherit;
+      &:hover{
+        color: $accentyellow;
+        transition: all 0.5s;
+      }
+    }
+  }
+}

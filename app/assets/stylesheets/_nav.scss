@@ -59,8 +59,23 @@ header {
 
 .logo {
   margin-left: 3.5vw;
-  img {
-    height: 6.5vh;
+  width: max-content;
+  a {
+    img {
+      height: 6.5vh;
+    }
+    .mobile-logo {
+      display: none;
+    }
+    @media screen and (max-width: 880px){
+      .mobile-logo {
+        padding-top: 1vh;
+        display: block;
+      }
+      .desktop-logo {
+        display: none;
+      }
+    }
   }
 }
 

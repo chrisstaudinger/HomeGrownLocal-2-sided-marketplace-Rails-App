@@ -89,6 +89,15 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
+    @watch_item = WatchItem.new
+    @watch_item.item = @item
+    if user_signed_in?
+      watchlist = WatchItem.search( where: {item_id: @item.id, watchlist_id: current_user.watchlist.id})
+      @watchlisted = watchlist.length
+      @watchlist_item = watchlist[0]
+    else
+      @watchlisted = 0
+    end
   end
 
   # GET /items/new

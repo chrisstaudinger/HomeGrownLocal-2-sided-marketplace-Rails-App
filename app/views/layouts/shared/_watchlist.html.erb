@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="./stylesheets/watch_item">
+<%= form_with(model: WatchItem.new, local: true) do |form| %>
+​
+  <div class="actions">
+    <input type="submit" value="Watchlist">
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :item_id, value: @item.id %>
+  </div>
+
+<% end %>

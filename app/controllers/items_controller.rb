@@ -92,7 +92,7 @@ class ItemsController < ApplicationController
     @watch_item = WatchItem.new
     @watch_item.item = @item
     if user_signed_in?
-      watchlist = WatchItem.where("item_id = :item_id and watchlist_id = :watchlist_id", {item_id: @item.id, watchlist_id: current_user.watchlist.id})
+      watchlist = WatchItem.search( where: {item_id: @item.id, watchlist_id: current_user.watchlist.id})
       @watchlisted = watchlist.length
       @watchlist_item = watchlist[0]
     else

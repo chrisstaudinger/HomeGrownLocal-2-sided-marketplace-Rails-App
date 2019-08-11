@@ -462,6 +462,92 @@ watchitems = [
         watchlist_id: 6
     }
 ]
+
+conversations = [
+    {
+        topic: "Buy Item",
+        buyer_id: 2,
+        seller_id: 1
+    },
+    {
+        topic: "Buy Item",
+        buyer_id: 3,
+        seller_id: 2
+    },
+    {
+        topic: "Buy Item",
+        buyer_id: 4,
+        seller_id: 3
+    },
+    {
+        topic: "Buy Item",
+        buyer_id: 5,
+        seller_id: 4
+    },
+    {
+        topic: "Buy Item",
+        buyer_id: 6,
+        seller_id: 5
+    },
+    {
+        topic: "Buy Item",
+        buyer_id: 6,
+        seller_id: 1
+    },
+    {
+        topic: "Buy Item",
+        buyer_id: 5,
+        seller_id: 2
+    },
+    {
+        topic: "Buy Item",
+        buyer_id: 3,
+        seller_id: 4
+    }
+]
+
+messages = [
+    {
+        conversation_id: 1,
+        user_id: 2,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 2,
+        user_id: 3,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 3,
+        user_id: 4,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 4,
+        user_id: 5,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 5,
+        user_id: 6,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 6,
+        user_id: 6,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 7,
+        user_id: 5,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 8,
+        user_id: 3,
+        message: "Hi, I was wondering if your item is still for sale?"
+    }
+]
 # orders = [
 #     {
 #         user_id: 1
@@ -581,6 +667,16 @@ end
 watchitems.each do |watchitem|
     a = WatchItem.create(watchitem)
     a.save!
+end
+
+conversations.each do |conversation|
+    conversation = Conversation.create(conversation)
+    conversation.save!
+end
+
+messages.each do |message|
+    message = Message.create(message)
+    message.save!
 end
 # orders.each do |order|
 #     a = Order.create(order)

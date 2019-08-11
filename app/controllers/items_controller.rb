@@ -128,8 +128,6 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        # Tell the UserMailer to send a welcome email after save
-        UserMailer.with(email: "siapnostaudinger@gmail.com").welcome_email.deliver_now
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
         format.json { render :show, status: :created, location: @item }
       else

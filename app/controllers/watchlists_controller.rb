@@ -11,6 +11,12 @@ class WatchlistsController < ApplicationController
   # GET /watchlists/1
   # GET /watchlists/1.json
   def show
+    WatchItem.reindex
+    watch_items = WatchItem.search(where: {watchlist_id: current_user.watchlist.id})
+    @results = []
+    watch_items.each do |item|
+      @results.push item.item
+    end
   end
 
   # GET /watchlists/new

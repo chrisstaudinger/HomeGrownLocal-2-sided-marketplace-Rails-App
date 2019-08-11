@@ -9,6 +9,8 @@
   bottom: 0;
   padding-top: 5vh;
   background-color: $offwhite1;
+  height: fit-content;
+  display: inline-block;
 }
 
 .sub-body {
@@ -65,6 +67,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         a {
+          @include topdownmarginvar(1vh);
           align-self: flex-end;
           width: max-content;
           @include montserrat();
@@ -106,13 +109,18 @@
         .item-description {
           @include overpass();
           margin-top: 2vh;
-          height: 15vh;
+          height: 30vh;
           font-size: 1vw;
-            color: $offwhite1;
+          color: $offwhite1;
           line-height: 1.3em;
         }
       }
     }
   }
+}
+
+.second-section {
+  display: flex;
+  flex-direction: row;
 }
 

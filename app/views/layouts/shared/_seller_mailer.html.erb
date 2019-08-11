@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="./stylesheets/grid_item">
+
+<div class="item-seller-info">
+  <div class="user-information-wrapper">
+    <%= image_tag("account", alt: "account-icon") %>
+    <div class="user-information">
+      <p>
+        <%= @item.user.name %>
+      </p>
+      <p id="user-email">
+        <%= @item.user.email %>
+      </p>
+    </div>
+  </div>
+  <div class="user-location">
+    <%= image_tag("logo2v2", alt: "location-pin") %>
+    <p>
+      <%= @item.user.user_location %>
+    </p>
+  </div>
+  <form action="post" id="">
+    <textarea id="user-message" name="user-message" placeholder="Hi! Can i pick this up tomorrow?"></textarea>
+    <div id="form-wrapper">
+      <input type="text" name="user-name" id="user-name" placeholder="Name">
+      <input type="text" name="user-email" id="user-email" placeholder="Email">
+    </div>
+    <input type="submit" id="submit-message" name="submit-message" value="Send">
+  </form>
+</div>

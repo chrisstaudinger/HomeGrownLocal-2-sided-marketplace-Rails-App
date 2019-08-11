@@ -1,10 +1,6 @@
 @import 'variables';
 @import 'mixins';
 
-*{
-  line-height: 1vh;
-}
-
 .item-metainfo {
   position: relative;
   display: flex;
@@ -16,7 +12,6 @@
   width: 25vw;
   border-radius: 5px;
   .inner-box{
-    // @include topdownpaddingvar(3vh);
     padding: 1vw;
     background-color: $offwhite2;
     width: 80%;
@@ -35,7 +30,6 @@
     }
     .meta-container{
       align-self: center;
-      // @include topdownmarginvar(3vh);
       @include topdownpaddingvar(1vh);
       @include leftrightpaddingvar(1vw);
       display: flex;

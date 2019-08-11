@@ -138,6 +138,7 @@ profiles = [
 ]
 users = [
     {
+        name: "adam",
         role_id: 1,
         email: "adam@gmail.com",
         password: "123456",
@@ -145,6 +146,7 @@ users = [
         user_location: "Melbourne VIC, Australia"
     },
     {
+        name: "belinda",
         role_id: 1,
         email: "belinda@gmail.com",
         password: "123456",
@@ -152,6 +154,7 @@ users = [
         user_location: "Brisbane QLD, Australia"
     },
     {
+        name: "charlie",
         role_id: 1,
         email: "charlie@gmail.com",
         password: "123456",
@@ -159,6 +162,7 @@ users = [
         user_location: "Sydney NSW, Australia"
     },
     {
+        name: "dylan",
         role_id: 1,
         email: "dylan@gmail.com",
         password: "123456",
@@ -166,6 +170,7 @@ users = [
         user_location: "Perth WA, Australia"
     },
     {
+        name: "elise",
         role_id: 1,
         email: "elise@gmail.com",
         password: "123456",
@@ -173,6 +178,7 @@ users = [
         user_location: "Adelaide SA, Australia"
     },
     {
+        name: "frank",
         role_id: 1,
         email: "frank@gmail.com",
         password: "123456",
@@ -180,6 +186,7 @@ users = [
         user_location: "Darwin NT, Australia"
     },
     {
+        name: "geoff",
         role_id: 1,
         email: "geoff@gmail.com",
         password: "123456",
@@ -187,6 +194,7 @@ users = [
         user_location: "Canberra ACT, Australia"
     },
     {
+        name: "harmony",
         role_id: 1,
         email: "harmony@gmail.com",
         password: "123456",

@@ -7,9 +7,15 @@ class ConversationsController < ApplicationController
     @conversations = Conversation.all
   end
 
+  def my_conversations
+    @sell_conversations = Conversation.where(seller_id: current_user.id)
+    @buy_conversations = Conversation.where(buyer_id: current_user.id)
+  end
+
   # GET /conversations/1
   # GET /conversations/1.json
   def show
+    @messages = Message.where(conversation_id: @conversation.id)
   end
 
   # GET /conversations/new

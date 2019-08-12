@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   resources :messages
+  get 'conversations/my_conversations', to: 'conversations#my_conversations'
   resources :conversations
   resources :item_reviews
   resources :measurements
   resources :charges
-
   resources :requests
   resources :watch_items
   resources :orders

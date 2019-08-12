@@ -32,7 +32,9 @@
   </div>
   <div class="second-section">
     <%= render :partial => "layouts/shared/item_meta" %>
-    <%= render :partial => "layouts/shared/seller_mailer" %>
+    <% if @item.user.id != current_user.id %>
+      <%= render :partial => "layouts/shared/seller_mailer" %>
+    <% end %>
   </div>
 </div>
 </div>

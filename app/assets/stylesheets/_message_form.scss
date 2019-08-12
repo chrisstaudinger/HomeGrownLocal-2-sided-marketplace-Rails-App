@@ -2,8 +2,6 @@
 @import 'mixins';
 
 .field{
-  display: flex;
-  align-content: center;
   textarea {
     position: relative;
     bottom: 5vh;
@@ -11,6 +9,7 @@
     padding: 1vh;
     text-align: left;
     resize: none;
+    width: 23.5vw;
     height: 20vh;
     margin-bottom: 2vh;
     outline: none;

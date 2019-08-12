@@ -1,14 +1,33 @@
-<p id="notice"><%= notice %></p>
+<h2>Conversation</h2>
 
-<p>
-  <strong>Buyer:</strong>
-  <%= @conversation.buyer %>
-</p>
-
-<p>
-  <strong>Seller:</strong>
-  <%= @conversation.seller %>
-</p>
-
-<%= link_to 'Edit', edit_conversation_path(@conversation) %> |
-<%= link_to 'Back', conversations_path %>
+<div class="conversation-wrapper">
+  <link rel="stylesheet" href="./stylesheets/conversation">
+  <div class="user-information-wrapper">
+    <%= image_tag("account", alt: "account-icon") %>
+    <div class="user-information">
+      <p>
+        <%= @conversation.seller.name %>
+      </p>
+      <p id="user-email">
+        <%= @conversation.seller.email %>
+      </p>
+    </div>
+  </div>
+  <div class="user-location">
+    <%= image_tag("logo2v2", alt: "location-pin") %>
+    <p>
+      <%= @conversation.seller.user_location %>
+    </p>
+  </div>
+  <% @messages.each do |message| %>
+    <% if current_user.id == message.user_id %>
+      <div class="my-message">
+        <p><%= message.message %></p>
+      </div>
+    <% else %>
+      <div class="buyer-message">
+        <p><%= message.message %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,13 @@
+<h2> My Conversations </h2>
+<div class="conversation-wrapper">
+  <div class="sell-conversations">
+    <% @sell_conversations.each do |conversation| %>
+      <%= link_to "Conversation with #{conversation.buyer.name} ", "/conversations/#{conversation.id}"  %>
+    <% end %>
+  </div>
+  <div class="buy-conversations">
+    <% @buy_conversations.each do |conversation| %>
+      <%= link_to("Conversation with #{conversation.seller.name}", "/conversations/#{conversation.id}") %>
+    <% end %>
+  </div>
+</div>

@@ -1,614 +1,611 @@
-# Deployment link
----
-# GitHub Repository
----
-# Description
-#### Problem Statement
-#### Features
-#### Screenshots
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/images/logo2v2.png?raw=true "Home Grown Local Logo")
 
-#### Tech Stack
+# Home Grown Local
 
-Contents
-=> Section 1: DESCRIPTION
+### [View Live application](https://homegrownlocal.herokuapp.com/)
 
-HomegrownLocal is a homegrower market place where people share interests in getting better value for money, healthier option and more variety of fruits and vegetable. Bigh chain suppliers are known to have fruits and vegetables that been on the transport for months before being consumed.
+#### Contributers
 
+##### Chris
+<img src="https://avatars1.githubusercontent.com/u/16986875?s=460&v=4" alt="drawing" width="150"/>
 
+##### Suki
+<img src="https://avatars1.githubusercontent.com/u/42060507?s=400&v=4" alt="drawing" width="150"/>
 
->>>Tech Stack
-Front-end: HTML, ERB, CSS, Sass
-Back-end: Ruby, Ruby on Rails
-Database: PostgreSQL Database
-Deployment: Heroku
+##### Selly
+<img src="https://avatars2.githubusercontent.com/u/49693577?s=400&v=4" alt="drawing" width="150"/>
 
->>>Configuration / Installation Instructions
 
-In your local directory run 'https://github.com/chrisstaudinger/home-grown-local'
+## Contents
+<!-- links  -->
+**[Section 1: Description](#Section-1:-Description)**
 
-Open the directory you clone the repositories to, 
+**[About](#About-Home-Grown-Local)**\
+**[Tech Stack](#Tech-Stack)**\
+**[Configuration](#Configuration-/-Installation-Instructions)**\
+**[Screenshots](#Screenshots)**\
+**[Version Note](#Version-Note)**
 
-We are using Visual Code, so make sure you open the directory where the files been unzipped to:
 
-code/run - 'bundle install' to install the dependencies
 
-code/run 'rails db:reset' to reset the database (db:reset will drop the database, seed data)
+**[Section 2: Planning](#Section-2:-Planning)**
 
-code/run rails s to run the server in development mode
+**[Idea Conception](#Idea-Conception)**\
+**[Project Management And Agile Development](#Project-Management-And-Agile-Development)**\
+**[Version / Source-Control](#Version-/-Source-Control)**\
+**[Team Communication](#Team-Communication)**
 
-In your browser, navigate to 'http://localhost:3000/' to view the website
 
-You can browse without login or create new account. Only if you want to 'Post and Item' or 'Buy Item' that you need to login/create account. We provide link to login (if you have already created account) or to create account (if you have not had an account)
+**[Section 3: Short Answer Questions](#Section-3:-Short-Answer-Questions)**
 
->>>>Sitemap
+**[Section 4: Reflection](#Section-4:-Reflection)**
+**[Challenges](#Challenges)**\
+**[Take Aways](#Take-Aways)**\
+**[Future Enhancements](#Future-Enhancements)**
 
->>>Features
-. Create user account and modify profile
-. Secure login, authorisation and authentician.
-. View items - free browsing for non registered user
-- For future enhancement, user can review trees                    
 
 
+# Section 1: Description
 
-. 
+## __About Home Grown Local__
+ Home Grown Local is an open source two-sided marketplace helping to put money back into the pockets of everyday Australians rather than corporate conglomerates. The goal of the application is to bring Australian communities greater ability to buy fresh, local and organic produce, bringing people towards a healthy lifestyle. 
 
+## Tech Stack
 
+* Front-end: HTML, ERB, CSS, Sass, Javascript
+* Back-end: Ruby, Ruby on Rails
+* Database: PostgreSQL Database with ActiveRecord
+* Deployment: Heroku
 
+## Configuration / Installation Instructions
 
-Screenshots
+This application is running:
+* Ruby v2.6.3
+* Rails v5.2.3
+* PSQL v11.4
+* Java v12.0.1
 
-Our Inspiration & The Idea
+Within your computer terminal, navigate to the directory where you want to install the application files, and run the following commands:
+1. Run git clone to install the application files
+``` ruby
+git clone git@github.com:chrisstaudinger/home-grown-local.git
+```
 
-=> Section 2: PLANNING
+2. (If you haven't got homebrew installed, run the command below, otherwise skip this step and go to step 3.)
+``` ruby
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+3. Install & Run Elasticsearch
+```ruby
+brew update
+```
+```ruby
+install elasticsearch
+```
+```ruby
+elasticsearch
+```
 
-Project Plan
-@Trello
+3. (If you haven't got bundler installed, run the command below, otherwise skip this step and go to step 4.)
 
-Wireframes
+``` ruby
+gem install bundler
+```
 
+4. Run 'bundle install' to install the dependencies
 
-Color scheme
-ERD
-User Journey Diagram
+``` ruby
+bundle install
+```
 
+5. Run rails s to run the server in development mode
+``` ruby
+rails s
+```
 
-Team Communication
+6. Run 'rails db:reset' to reset the database
+``` ruby
+rails db:reset
+```
 
-Task Management
+7. In your browser, navigate to 'http://localhost:3000/' to view the website
 
-Version / Source-Control
+## Screenshots
 
-=> Section 3: Short Answer Questions
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/site-screenshot/root-screenshots/whole-site-screenshot.png?raw=true "Home Grown Local Home Page")
 
-=> Section 4: Reflection
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/site-screenshot/item-showpage-screenshot/item-show-complete-screenshot.png?raw=true "Item Page")
 
-Challenges
-Take-Aways
-Extending-Coding-Tutor
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/stripe-1.png?raw=true "Stripe Integration Image")
 
-=> Section 4: Section 5: Appendix Single Page Scrolling
-Search & Filtering
-# Design & Documentation
-#### User Stories
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/watchlist-1.png?raw=true "User Watchlist Image")
 
-As a garden enthusiast, I would like to check what’s growing in my locale, so I search on my postcode and find out 
 
-As a vegan, I love trying various plant tastes, and homegrown plants produce, especially from my locale, would love to purchase them 
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/login-1.png?raw=true "Login Image")
 
-As a pot plants hobbyist, I grow various herbs in my small garden patch in the balcony and I love to share my knowledge with the world 
 
-As a mom who loves to teach my kids to grown our own food supplies, I love to share my experience with the world 
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/new-item-1.png?raw=true "Post An Ad Image")
 
-As a tomato backyard hobbyist, I ended up with 27 trees, can’t eat them all, so need to sell them, if there are surplus, which are many times in a year. 
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/site-screenshot/about-us-screenshots/about-us-complete-screenshot.png?raw=true "About Us Image")
 
-As an organic enthusiast, I spend a fortune buying from local supermarket or other organic suppliers, love to support local community rather than big corporation  
+### Version Note
+Currently the version of this application is version 1.0. This application was built in the space of 3 weeks and some of the content such as the sitemap and userflow were built having future versions in mind. Therefore, some aspects of version 1.0 may differ from the resources listed in the this document.
 
-As a café owner, love to be able to try out different various home- made sauces or oils, I will check interesting produces and ship them if necessary. 
 
-As a cook enthusiast, I love to share experiences and findings with another similar hobbyist 
+# Section 2: Planning
 
-As a bored pensioner, I love to have a hobby that will make me money to supply my pension 
+## Idea Conception
 
-As a stay home made, I love to make money using resources I have 
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/idea-brainstorming.jpg?raw=true "Brainstorming Idea Image")
 
-As a regular columnist, I love to review interesting new thing, and new ideas or new business ideas worth written on 
+Coming up with the idea was a very collaborative process. We all brainstormed ideas on individually for a set period of time and listed them all together. From here we individually analysed the ideas, shared our evaluations, shortlisted the best ones, re-evaluated them and reached consensus on the idea.
 
-As an administrator, I love to review how many new users signed up in a week 
+A lot of our initial inspiration was drawn from Airbnb and Uber; their ability to create an product/service from utilising dormant resources. Once we settled on Home Grown Local, a lot of inspiration was drawn from Gumtree.
 
-As an administrator, I love to have a summary of users per post code 
+## Project Management And Agile Development
 
-As an administrator, I love to have logs to show users movement in my website 
+### Project Spec Sheet
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/project-spec-sheet.png?raw=true "Project Spec Sheet")
 
-As an administrator, I love to have logs to show conversion rate between new IPs and sign up 
+Afrer we settled on our application idea, we created a project spec sheet. The project spec sheet was the overview compass of our application.
 
-As an administrator, I love to have a summary of new purchase order per day compared to number of searches in that day grouped by area and also grouped by unique users 
+### Kanban Board
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/kanban-board-1.png?raw=true "Kanban Board")
 
-As an administrator, I love to summary revenue per month grouped by user ID and group by area 
-
-As a young person, I can’t cook so I buy anything that is new trend and has been reviewed as a good stuff. 
-
-As I have to sit in a train for two hours each day, I will read anything, my emails including, so anything happening in my locale I would read the messages or news 
-
-As a collector, I collect new tastes and experiences, if anyone selling anything sounds original, certainly will try them 
-
-As a restauranteur, I love to include unique pieces on my plate decoration, so an over small potatoes growing locale, or super-hot- chilies, would try them, or even ship them if grown a bit further out. 
-
-As a backyard columnist I love to write about locale gardeners 
-
-As a kid I love to see if anyone can grow anything in a balcony 
-
-As a traveler, I love to be able to buy fruits that taste local 
-
-As a foodist I love to incorporate a new homegrown food item 
-
-As I have tasted NZ apples and Tasmania grapes, I love to be able to buy direct from growers and got them shipped! 
-
-As a food blogger, I like to search new food items, local market normally where I shop but if I can search anything new or unique plant or food produce in my locale or as I travel within where I am staying, I would love to visit them and take pictures for my blo 
-
-As a keen biologist, I like to see the nature of soil and discussion around certain area, so local homegrown seller would be ideal to have a chat. Various areas in Victoria have very distinct soil.  
-
-As an overseas foreigner, as part of the day trip, I would not mind to see if I can visit locale growers within certain areas without going to mainstream wineries.  
-
-If user buys item, messages will contain discussion about pick up time etc 
-
-If user buys item and cash on pick up, and he fails to pick up, seller will manually have to put back the quantity reserved back to the quantity available to purchase 
-
-As a user, to sign in, a user should be able to specify the postcode, or not to specify, the default is null. 
-
-#### User Flow
-As a GUEST(standard user - a user who is not signed in), I should be able to:
--View the homepage, browse through the list of organic produce within my area
-- Navigate through the front page to find out price and quantity of the produce on the list
-- Navigate through the front page to find search of a particular item
-- Click on a particular listing to view further about the produce 
-(description, and exact address)
-- View the lister and make contact (email, direct message, or phone number)
-- Navigate on the detail product page to go back to homepage
-- Search other areas or other produce within further reach geographical areas
-- Create a new account easily if I want to list my garden produce or to purchase
-- Able to add a produce into my basket
-- Able to change the quantity of the produce ordered in my basket
- 
-As a signed in user, I should be able to:
-
- 
-guest (unsigned user) wants to be able to:
-1. navigate through the website to search produce within his area
-2. navigate through the website to find out how much charges to list produce
-3. navigate through the website to find out whether produce can be delivered
-4. find out payment methods
-5. read blogs or comments from other users on a produce
- 
-user alias seller wants to be able to:
-1. create a new account
-2. login and create new garden/listing
-3. login and update listing (quantity or price)
-4. login and check and reply to messages
-5. login and check total orders to date 
-6. login and search particular order (to get detail of purchaser, quantity, or address of buyer in case drop off order)
-7. login and search related produce within the area
-8. check payment history
-9. view ratings or reviews
- 
-user alias buyer wants to be able to:
-1. create a new account
-2. login and create purchase order (basket)
-3. login and review basket (update quantity or delete) or review detail of items on the order
-4. login and pay purchase order
-5. login and check payment history
-6. login and communicate with seller
-7. login and communicate with administrator (queries or complaints)
-8. create reviews
- 
-administrator wants to be able to:
-1. view all users profiles and orders
-2. view complaints or messages
-3. build KPIs - total order by number per week, total order by quantity per week, or per month, total new users per month
-4. moderate content (reviews/profiles)
-a. flag users/content>notify admin
-b. softban (1 day)
-5. edit/delete content, including orders and listings
-6. view financial data
- 
-UI Flow
-1 — “typically used for one of two purposes. First, they are used to model the interactions that users have with your software, as defined in a single use case. [. . .] Second, [. . .] they enable you to gain a high-level overview of the user interface for your application.”
-2 — “show graphically how a user will navigate a solution’s user interface”
- 
-high fidelity User Interface Flow - 
-single task flows Task Flows
-
- 
-not signed in users
-User goal (goal/story level)
-1. navigate through the website to browse items within geographical area
-2. search based on postcode
-3. drill down to description of the produce (show page)
-4. click on purchase button on the show page
-5. view basket (and delete or update quantity)
- 
-Task flow - action level
-1. user need to go to home page
-2. popup message to ask user to put their postcode 
-3. index page will display all produce within that postcode
-4. if user click on a particular item, show page to detail that produce will appear
-5. user may click on purchase button, if purchase button click, pop up message to show the basket with that produce item and user need to put quantity, the basket sub total will be recalculated each time user change the quantity in the basket
-6. before the basket appear, another pop up message will appear to prompt user to create account, 
-7. once account detail entered, user automatically log in and basket appear with that item on it and prompt user to put quantity
-8. user may want to go back and forth between index and show pages via navigation bar
-9. user will want to review basket and check out
-10. if user check out, payment system page will appear, upon successful payment, detail of the seller address and phone number will be emailed to the buyer
- 
-Wire flow - component level
-1. home page
-2. index
-3. show page
-4. account set up page
-5. index page
-6.  show page
-7. basket
-8. payment system 
-9. basket 
-10. index page
- 
-User flow - interaction level
-
-
-
-
- 
- 
-#### Workflow
-Figma, mockflow, lucychart
-#### Wireframes
-
-#### Database Entity Relationship Diagram
-
----
-#Project Plan
-#### Timeline
-#### Trello board
-
-
-
----
-#Short Answer Questions
+From the outset we utilised a kanban board through Trello. Tasks were throughly broken down, planned out and labelled to acheive our MVP, then future versions. Tasks were assigned to an individual team member to take responsibility for getting the tasks completed. Moreover, comments were used on the cards for progress or blocker updates. Cards were assigned due dates.
+
+### Sprint Meetings & Stand Ups
+
+With a project timeline of 3 weeks we conducted sprint meetings at the start of each week. The sprint meetings were used as a tool to ensure team members were all on the same page, and from an overview perspective we were heading in the right direction and on track. The following is what was covered in the sprint meetings:
+
+* Evaluation of what needs to be done
+* Evaluation of how we are going
+* Discuss any pivoting that needs to be done or any blocker we had or may come up in the following week
+
+Stand ups were done a on a daily basis first thing in the morning as a tool for communication between the team. The below is what was covered in the stand ups:
+
+* Rating ourselves from 0-5 of how we are tracking for the task we set ourselves in the sprint meeting
+* Stating what we acheived in the last 24 hours
+* Discussing any blockers we had
+* Stating what we plan to acheive in the next 24 hours
+
+
+## Application Achitechture And Design
+
+Most of the first week of the project was spent on designing the achitecture of our application.
+
+* Database Design (ERD)
+* Sitemap
+* Userflow (User-journey)
+* User Stories
+
+
+### Database Design (ERD)
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/HomeGrownLocal-erd.png?raw=true "Database Design ERD")
+
+### Sitemap
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/Home%20Grown%20Local%20Site%20Map%20(2).png?raw=true "Sitemap")
+
+### Userflow (User-journey)
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/Userflow_diagram.png?raw=true "Userflow")
+
+### Wireframes
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/Wireframe.png?raw=true "Wireframes")
+
+### Mockup
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/mockup-1.png?raw=true  "Mockup")
+
+### User Stories
+
+* As a user, I want to be able to search a product by the name, so that I can find what I need/want
+* As a user, I want to be able to search a product by the location, so that I can find what is available in my area
+* As a user, I want to be able to search a product by the category of the product, so I can narrow down the type of produce I am looking for
+* As a user, I want to be able to post ads for my own items, so that I can sell my own produce
+* As a user, I want to be able to login, so that I have an account storing what I do on the site
+* As a user, I want to be able to watch items, so that I can come back to it later
+* As a user, I want to be able to message a seller, so that I can organise buying the item from them
+* As a user, I want to be able to see all my messages, so that I know if someone has messaged me
+* As a user, I want to be able to delete my ad, so that I remove it when required
+* As a user, I want to be able to edit my ad, so that I can update it when required
+
+
+## Version / Source-Control
+
+We used Git CLI, Git GUI's, GitHub and Heroku CLI for source control / version control. Each new feature was a new branch. Once the feature was completed and tested locally, the branch was pushed to github and a pull request was submitted for another team member to review. Once the code review was completed, if it was approved, the team member would pull origin master to the local version of that 'feature' branch and test it locally (this was done to ensure if there were any bugs or merge conflicts from other commits to master, they would show locally and testing could be done locally rather than on production). If testing worked properly, the team member would merge that local feature branch to their local master and push their master branch to origin master.
+
+Origin master was pulled at least once daily (usually several times) by team members to ensure build ups of merge conflicts did not occur.
+
+Every day we would push the origin repository to a Heroku repository created on only one computer to confirm our build.
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-3.png?raw=true "Version Control Image")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-2.png?raw=true "Version Control Image")
+
+
+## Team Communication
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/team_slack.png?raw=true  "Slack Communication")
+
+As mentioned in **[Project Management](#Project-Management-And-Agile-Development)** section, a lot of project management communication was conducted in sprint meetings and stand ups. For most other communication, slack was used. 
+
+
+# Section 3: Short Answer Questions
+
 
 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-@HOMEGROWN-LOCAL promotes diversity, quality and uniqueness. We are giving consumer ability to choose to have their fruits and vegetable demand being met by their local growers. The supply hopefully will bring back the quality of our fruits and vegetable supplies because products are being harvested while ripe and time travel to consumer plate is reduced being local. Unlike fruits from a commercial food distributor, our fruits and vegetable will focus on quality not looks, apples might not look perfect but they taste good and super fresh. @HOMEGROWN-LOCAL will also be bringing the profits back to the grower by cut short the distribution chain. 
-
+The need of this project that is being addressed is the challenge of reducing the amount of power and/or the monopoly corporate conglomorates have over Australia. Moreover, the challenge of increasing society's health and/or reducing disease in Australia's population.
 
 2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
 
-At the moment, our commercial food chain fruits being harvested while firm in order for them to still stay edible when reaching the consumer. The fruits and vegetable taste bland because they were not let to ripe on the tree. 
-Homegrown local will also try to promote edible urban landscape. In the old days. it is common for each household to grow some of their produce in their backyard. Apart from local Sunday market, we enable network of direct fresh produce to be sold whenever they are ready without waiting for Sunday market to happen. 
+The justification for a service that allows communities to buy fresh, local produce is well established. The problem for Australian communities is a lack of options that are utilising the expansive reach of current day technology. We know this because:
 
-The demand of organic food is increasing throughout the years. Organic food is known to be healthier because of the absence of chemicals that are normally used in the cultivation process, but because of the complication that came without using the chemicals, which means higher cultivation risk for the farmer and higher returns are expected out of organic food. On top of that, involvement of middle party between farmer and consumer increases the price of the food even further.
+a) We asked around - through networking and speaking to our peers, we found that the great majory of people are unaware of major service that provides an 'online farmers market'.
+
+b) Everyone knows what a farmers market is, everyone has been to a farmers market, and significant minority go to farmers markets regularly. However, this industry does not have a massive online prescence as of yet. It's reach and accessibility is no where near its potential, therefore, Australians are relying on corporate conglomerates and sub-optimal produce more than they otherwise would. 
+
+c) It is common knowledge of the health problems in Australian society. Enough said...
+
 
 3. Describe the project will you be conducting and how. your App will address the needs.
 
-HomeGrownLocal is an web application that directly connects farmer with consumer. Our application also happens to be a two sided marketplace, therefore the consumer are allowed to participate as a seller if the consumer happened to have a small garden or a vacant field.
+Home Grown Local is an localised online farmers market. The application is for the Australian societ. Anyone that owns/rents a
+dwelling that they can grow fresh produce, and has access to the internet can use the service. 
+
+Home Grown Local increases access to fresh local produce. By doing so, society will inevitably consume more vegatables, fruits and other micro-nutrient dense food, therefore, reducing the amount of processed, GMO, and micro-nutrient poor food that assist in the production of disease and illness.  
 
 4. Describe the network infrastructure the App may be based on.
 
-
->>>>>>>>>>>>>>>>>>>>>
-Our application is deployed through the Platform as a Service (PAAS) Heroku, a popular software product that allows developers to push code directly from GitHub to the internet via Heroku's deployment platfrom and network infrastructure.
+Home Grown Local is deployed through the PAAS Heroku, a popular software product that allows developers to push code directly from GitHub to the internet via Heroku's deployment platfrom and network infrastructure.
 
 Heroku can be accessed either directly from GitHub or through the Heroku Command Line Interface (CLI), and allows developers to spin up an application quickly and for free without needing to purchase their own servers or deploy their own database / network infrastructure.
 
 Our app is deployed through the following process:
 
-DEVELOPMENT PHASE
-Ruby on Rails is a popular web framework written in Ruby.
-Codes are written using Ruby on Rails application and deployment for local testing enabled using with inbuilt Rails Server hosting it at a localhost port). For Version Control we manage our source code using Github repositories. Each programmer needs to download a version from origin each time before starting daily coding. Pull request generated and merge with a local master. 
-Our database is using PostgreSQL.
+APPLICATION DEVELOPMENT PHASE
 
+Software is developed on our local computers and deployed for local testing by using our local machine as a server via a rails  server, which hosts the application on a localhost port (3000 by default). We write the source code, configure dependencies, configure the database and store the code in local git repositories.
 
-DEPLOYMENT / EXECUTION PHASE
+APPLICATION BUILD PHASE
 
-Heroku integrates with GitHub to make it easy to deploy code living on GitHub to apps running on Heroku. When GitHub integration is configured for a Heroku app, Heroku can automatically build and release (if the build is successful) pushes to the specified GitHub repo.
+Once there was enough software that is was worth testing in production we created a new app on Heroku and pushed the code in our GitHub repository directly to Heroku so that Heroku could prepare it for deployment.
+Heroku receives the code and initiates the build process.
+Heroku runs through a number of processes to create a slug, which describes the compressed bundled file that's optimised for the dyno manager to run.
 
-We integrate our Github repositories with Heroku application deployment (To configure GitHub integration, you have to authenticate with GitHub. You only have to do this once per Heroku account). We use the Heroku dashboard to configure Github integration.
+APPLICATION DEPLOYMENT / EXECUTION PHASE
 
-Heroku is is a free Cloud-based platform to build and deploy internet application. 
-Deployment is performed directly from GitHub via Heroku's deployment platform. Heroku can be accessed either directly from GitHub or through the Heroku Command Line Interface (CLI). 
-
-The Heroku Command Line Interface (CLI) makes it easy to create and manage your Heroku apps directly from the terminal
+Heroku executes the slug using a mini-operating system called a Dyno, an isolated Unix container that provides an environment for the app to run in. Dynos are the resources that are needed to run and manage apps when they are deployed on Heroku. If our app were to scale in the future we would need to add more Dynos, and this is all executed in the background.
+Heroku then applies to the slug environment variables from our config vars file that describe things like user credentials or other environment specifications, and finally any add-ons or third party services that extend the functionality of the application. Heroku delivers the final product containing the slug, config, and any add-ons, as a 'version' of your code. Any new release will be considered a new version of the application, and saved by Heroku.
 
 5. Identify and describe the software to be used in your App.
 
 Software Languages:
 
 Front-end:
-HTML: HyperText Markup Language. A language used to constract web pages. Used mostly for structure, capable of basic styling for elements.
-ERB: Embedded Ruby. ERB enables ruby logic to be implemented directly in an HTML page and read by the browser as HTML. 
-CSS: Cascading Style Sheets. CSS sheets are attached to an HTML page to style the web-page. Mostly styles are static elements, though can be used to create minimal animations.
-Sass: Syntactically Awesome Style Sheets. Adds some additional features to CSS while also able to be written as standard CSS. Additional features include, variables, nested elements (for cleaner organisation and grouping of elements), mixins (methods)
+* HTML: HyperText Markup Language. A language used to construct web pages. Used mostly for structure and text rendering, capable of basic styling for elements.
+* ERB: Embedded Ruby. Used to display ruby in a HTML page that compiles and is read by the browser as HTML.
+* CSS: Cascading Style Sheets. Language used to 'style' a web-page. Mostly styles static elements, however, it can be used to create minimal animations.
+* Sass: Syntactically Awesome Style Sheets. Adds some additional features to CSS while also able to be written as standard CSS. Additional features include, variables, nested elements (for cleaner organisation and grouping of elements), mixins (methods for css).
+* JavaScript: A flexible Object-Oriented-Language. The most popular language for writing front-end code in web development. Most advantageous use-case is for manipulating elements upon some event or paramete such as; responding to an onClick, and dynamically transforming the data on a web-page without querying the database.
 
 Back-end:
-Ruby: 
-Ruby on Rails: Web application framework written in Ruby. Used to create full-stack web applications. MVC (Model Controller View) framework using separation of concerns. Emphasises CoC 'Convention Over Configuration', in other words is meant to be able to be used out of the box with conventions specific to RoR, and a large degree of abstraction to automate many technical or time-consuming aspects of building a web application, like spawning databases and writing database migrations, creating controllers, views, routes, and handling different types of HTTP requests.
+* Ruby: Another flexible Object-Oriented-Language. Cannot be used to write front-end code without requiring a compiler, but is very commonly used to write other back-end logic in web applications.
+* Java: A high level, object-oriented, platform independent language. Function programming language used predominantely for back-end development.
+
+Software Frameworks:
+* Ruby on Rails: Web application framework written in Ruby. Used to create full-stack web applications. MVC - Model Controller View framework using separation of concerns. Emphasises CoC 'Convention Over Configuration', in other words, it is meant to be able to be used out of the box with conventions specific to RoR, and a large degree of abstraction to automate many technical or time-consuming aspects of building a web application, like spawning databases and writing database migrations, creating controllers, views, routes, and handling different types of HTTP requests.
 
 Database Software:
-
-PostgreSQL Database: A popular Relational Database Management System based on the SQL Database Language. Data is strutured in a way that allows for queries based on data objects and their relationships with each other, written natively or through an ORM.
-ActiveRecord: An ORM 'Object Relational Mapping' tool. Abstracts SQL query language so that code can be written in another language like Ruby, and used to speak to the database and request information.
-Rake: Software Task Management and Build Automation tool written in Ruby. Can be used to define various tasks used in configuring software build, file compilation, database creation and management.
+* PostgreSQL Database: A popular Relational Database Management System based on the SQL Database Language. Data is strutured in a way that allows for queries based on data objects and their relationships with each other, written natively or through an ORM.
+* ActiveRecord: An ORM 'Object Relational Mapping' tool. Abstracts SQL query language so that code can be written in another language like Ruby, and used to speak to the database and request information.
+* Rake: Software Task Management and Build Automation tool written in Ruby. Can be used to define various tasks used in configuring software build, file compilation, database creation and management.
 
 Version Control:
-
-Git and GitHub: Source Control software. Open-sourced popular software development tool that allows for either single programmerse to work on their local machine, or remote teams to work together on a project using the GitHub Web Application connected to a local CLI Command Line Interface. Most popular features are the ability to 'commit', or save a piece of software at a certain 'state', which can be returned to at a later date. Also allows asynchronous development of applications and features using 'branches' of software that are written concorrently but don't affect the core branch unless merged at a later time.
+* Git and GitHub: Version Control Management System/Software. An open-sourced popular software development tool that allows developers to work on their local machines, and work together on a project using the GitHub Web Application connected to a local CLI Command Line Interface (or git gui). The foundational feature of git is the ability to control versions locally and remote. It  allows asynchronous development of applications and features using 'branches' of software that are written concurrently but don't affect the core branch unless merged at a later time.
 
 Deployment:
+* Heroku: A popular Platform as a Service (PAAS) product that allows for deployment of web applications without owning your own database or server infrastructure. Users can push code in many different languages directly from GitHub to the internet via Heroku's deployment platfrom where it handles building and deployment of the application.
 
-Heroku
+Elasticsearch:
+For other third party software, please see Third Party Services.
 
-<<< popular Platform as a Service (PAAS) product that allows for deployment of web applications without owning your own database or server infrastructure. Users can push code in many different languages directly from GitHub to the internet via Heroku's deployment platfrom where it handles building and deployment of the application>>.
+
 
 6. Identify the database to be used in your App and provide a justification for your choice.
 
-Heroku works smoothly with Postgresql and Ruby on Rails.
+We used PostgreSQL for our application, for a few different reasons:
 
-PostgreSQL is a relational database, making it easy to manipulate and access data.
+* The cirriculum of the project stated to use a relational database. 
+* We knew that we would be deploying to Heroku and PostgreSQL is the recommended database for Heroku with Rails.
+* SQL databases are the most popular form of database which means they have significant documentation available for troubleshooting and PostgreSQL is among the most popular of relational databases.
 
-Postgresql syntax is based on SQL and popular hence plenty of documentation available on the internet. 
-
-- PostgreSQL, because we are using Heroku as our deployment option and Heroku has a dependency on PostgreSQL
 
 7. Identify and describe the production database setup (i.e. postgres instance).
 
-rails new -d postgresql
-It will create a local instance of PostgreSQL database on rails using Ruby on Rails. 
+* We initially created a local instance of a PostgreSQL database by specifying it as an optional argument when creating a new rails application. Rails then generated our application with the configuration settings of postgreSQL as our database as opposed to the default SQLite3. We then created the database followed generating our tables. This database then was our development and testing database which we seed with dummy data using the seeds.rb file.
 
-rails db:create
-It will create our database
-
-rails g scaffold (Model) or rails g model (Model)
-It will create schema for our tables
-
-rails db migrate 
-It will create relevant tables from our schema
-
-This postgresSQL database will become our Development and Testing database 
-
-rails db:seed
-It will seed our database with fake data we put on seeds.rb file
- 
-####### Chris - can you comment on these answers as I did not actually do this part ######
-<We initially created an local instance of a PostgreSQL database using Ruby on Rails by calling the flag -d postgresql when creating the Rails app. We then call 'rails db:create' and set up our tables and columns using migrations: eg 'rails g model user' & 'rails g migration AddNameToUser'. This database then becomes our Development and testing database which we seed with fake data using the seeds.rb file.>
-
-<For Production, the Migrations and Schema of our Development Database are pushed to Heroku from the GitHub repository, then set up within Heroku. To do this we run the same commands to create the database and run migrations, only we put 'heroku run' before the command.
-
-Because the schema and migrations are the same, the structure of our database on Heroku is exactly the same and can be seeded using the same seeds.rb file.
-
-Therefore our production database is an instance of a postgres database, hosted on Heroku, because the schema and migrations are the same, the structure of database on Heroku is exactly the same and can be seeded using the same seed.rb file
-#######################
+* For Production, the Migrations and Schema of our Development Database are pushed to Heroku from the GitHub repository. We set up the database in Heroku by running the same commands to create the database and run migrations, only we put 'heroku run' before the command. Because the schema and migrations are the same, the structure of our database on Heroku is exactly the same and can be seeded using the same seeds.rb file. Therefore our production database is an instance of a postgres database, hosted on Heroku.
 
 
 8. Describe the architecture of your App.
 
+#### The client
+* Displays the web page in a web browser
+* Handles User Interface and user interactions with the web page.
+* Sends and receives HTTP requests to and from the web server by interacting with the web page.
 
+#### Web Server
 
-CLIENT/WEB
-Displays the web page in a web browser
-Handles User Interface and user interactions with the web page.
-Sends and receives HTTP requests to and from the web server by interacting with the web page.
+* Processes HTTP requests and directs the request to the requested Route.
 
-WEB SERVER
-Processes HTTP requests and directs the request to the requested Route.
+#### Routes
 
-ROUTES
-A map of pathways defined by the application that define which functions are called in the controller depending on different requests from the server
+* A map of paths defined by our application that define which actions are called in our controllers depending on different HTTP requests from the server.
+* Most common HTTP requests are:
+    * GET (request information from the database)
+    * DELETE (delete information in the database)
+    * POST (send new information to the database)
+    * PATCH / UPDATE (update existing information in the database)
 
-Most common HTTP requests are:
-GET (request information from the database)
-DELETE (delete information in the database)
-POST (send new information to the database)
-PATCH / UPDATE (update / change existing information in the database)
+#### Controller
 
-CONTROLLER
-The location of the logic of the application. Contains functions that are called by requests from the web server
-Functions either:
-query information from the database
+* The location of the logic of the application. Contains functions/actions that are called by requests from the web server
+
+* Functions/Actions either:
+    * Query information from the database
 request files required to load a certain web page, or 'view'
-call information from external APIs or other web services
-parses or formats ready to be used in some following function or view
-run other types of logic specific to the application
-Tells the web server how to display web pages with information received from the Database or
+    * Call information from external APIs or other web services
+    * parses or formats data, ready to be used in some following function or view
+    * run other types of logic specific to the application
+    * Tells the web server how to display web pages with information received from the Database or
 
-VIEWS
-The final representation of the initial request from the client.
-Tells the browser what to display to the user. Can be in many different formats, including HTML & CSS, JSON, Images, Pdf etc
+#### Views
 
-ORM
-Parses code from the controller to native SQL language.
-Allows the appliation to set and retrieve properties and relationships of database models (data)
+* The final representation of the initial request from the client.
+* Tells the browser what to display to the user. Can be in many different formats, including HTML & CSS, JSON, Images, Pdf etc
 
-DATABASE
-PostgreSQL relational database that stores persistent information used by the application.
+#### Model (ActiveRecord)
 
+* Parses code from the controller to native SQL language.
+* Allows the application to set and retrieve properties and relationships of database data
+
+#### Database
+
+* PostgreSQL relational database that stores persistent information used by the application
 
 9. Explain the different high-level components (abstractions) in your App.
 
-Ruby on Rails as our web application framework 
-Ruby on Rails is a MVC framework.
+The components of our application adopted the Rails conventions of an MVC model
 
-Model (M)
-Model represents shape of the data and business logic. It maintains the data of the application. Model objects retrieve and store model state in a database.
+* Model (M) Defines the structure of the data held in our database, including attributes of objects, logic (functions - via active record) used to manipulate that data at the database level, dependencies / validations, and the relationships between different objects. Files are located in app/models directory
 
-Model (M) Defines the structure of the data held in our database, including attributes of objects, logic (functions) used to manipulate that data at the database level, dependencies / validations, and the relationships between different objects. Files are located in app/models directory
+* View (V) Uses HTML and Embedded Ruby to describe how the pages of the application appear within a browser. Files are located in app/views. Views are styled by SASS files found in the assets/stylesheets directory. Views are the are the recipent of the data from the database through logic from the controller.
 
-View (V) Uses HTML and Embedded Ruby to describe how the pages of the application appear within a browser. Files are located in app/views, and styled with Sass CSS files located in app/assets directories.
+* Controller (C) Sits between the Models, Views, and any APIs and controls their function. Controller methods can be called via RESTful API routes, which are in turn triggered by HTTP requests from the Client, or in some cases can be called by changes in the state of the data in the databse. Controller files are located in app/controllers directory.
 
-Controller (C) Sits between the Models, Views, and any APIs and controls their function. Controller methods can be called via RESTful API routes, which are in turn triggered by HTTP requests from the Client, or in some cases can be called by changes in the state of the data in the databse. Controller files are located in app/controllers directory.
-
-Browser sends request to the MVC application
-Incoming request directed to controller
-Controller processes request and forms a data model
-This model is passed to the appropriate view
-The views renders the output
-
-
-
-
-Active Record
-
-A layer of abstraction that sits between our application and the database. Active record abstracts SQL code so that we can talk to the database using Ruby, and allows us to tread the data in the Model as Ruby objects.
-
-Other
+* Active Record: a layer of abstraction that sits between our application and the database. Active record abstracts SQL code so that we can talk to the database using Ruby, and allows us to treat the data in the Model as Ruby objects.
 
 Some additional abstractions provided by Rails commonly used in our application:
 
-Active Storage: Allows us to upload images through forms, and forms a helpful layer we can use to speak to the AWS S3 API for image hosting
-Form helpers: For easy forms that abstract the HTML
-link_to / redirect_to: For easy access and alias calling of RESTful routes
+* Active Storage: Allows us to upload images through forms, and forms a helpful layer we can use to speak to the AWS 
+* Form helpers: For easy forms that abstract the HTML
+* link_to / redirect_to: For easy access and alias calling of routes
+
+Other Abstractions: 
+
+* S3 API: image hosting
+* Stripe API: facilitating payment processing
+* Elasticsearch: search engine
+* Google Places Auto Complete: Autocompletion of locations 
+
 
 10. Detail any third party services that your App will use.
 
-- Stripe
+#### Services
 
-- AWS S3
+* S3 Module: Image Storage from Amazon Web Services
+* Stripe: Payment processing Software as a Service (SASS) from Stripe. Allows users to pay for products or services within the app using credit card.
+* Mailgun: Creates and sends email from a specified account to registered users, triggered by certain actions defined within the application. (Not yet completed implementing, will be implemented for future versions)
+* Google Places Auto Complete: Autocompletion of locations
 
-- Geolocator
+* Key Gems / Modules:
+
+Google Fonts: Font Library
+Simple Icons: Icon Library
+Devise: User Authentication module used to manage user registration, sign-in, passwords, confirmation etc
+Pundit: User Authorisation module used to manage which paths a user can go to
+Elasticsearch: Search Engine
+Searchkick: Intellignet searching utilising Elasticsearch
+
+#### Full List Of Dependencies
+
+* gem 'stripe'
+* gem 'devise'
+* gem 'pundit'
+* gem "aws-sdk-s3", require: false
+* gem 'searchkick'
+* gem 'rails', '~> 5.2.3'
+* gem 'pg'
+* gem 'puma', '~> 3.11'
+* gem 'sass-rails', '~> 5.0'
+* gem 'uglifier', '>= 1.3.0'
+* gem 'coffee-rails', '~> 4.2'
+* gem 'turbolinks', '~> 5'
+* gem 'jbuilder', '~> 2.5'
+* gem 'bootsnap', '>= 1.1.0', require: false
+* group :development, :test do
+  ~~# Call 'byebug' anywhere in the code to stop execution and get a debugger console~~
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+<br> end
+* group :development do
+  ~~# Access an interactive console on exception pages or by calling 'console' anywhere in the code.~~
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  ~~# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring~~
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+<br> end
+* group :test do
+  ~~# Adds support for Capybara system testing and selenium driver~~
+  gem 'capybara', '>= 2.15'
+  gem 'selenium-webdriver'
+  ~~# Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'chromedriver-helper'~~
+<br>end
+* gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
 
 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
 
-GUMTREE
-Users will have many items
-Each user can be both seller and buyer
-Items can have zero to many reviews
-
-HOMEGROWN MARKET PLACE 
+Gumtree: This platform is not a compettitor, but is similar in concept of the application architecture. For this application it is reasonable to expect their general data structure consists something along the lines of a user, admin, item, profile, message, watchlist, view and an order model.
 
 
 12. Discuss the database relations to be implemented.
 
-- answer
+We used a range of database relations. Users have a single profile, have a single role, has a single watchlist and many watch_items through watchlist. Moreover, users have many items, many messages and many conversations. Additionally, Items have a single item_category, items have a user, items have a measurement, items have many watchlist through watch_items.
+
+
 
 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 
- City 
-  belongs_to :state
-  has_many :locations
 
+#### User
+* belongs_to :profile
+* has_one :watchlist
+* has_many :items
+* belongs_to :role
+* has_many :watch_items, through: :watchlist
+* has_many :messages
+* has_many :conversations_as_buyer, :class_name => 'Conversation', :foreign_key => 'buyer_id'
+* has_many :conversations_as_seller, :class_name => 'Conversation', :foreign_key => 'seller_id'
 
- ItemCategory 
-    has_many :items
+#### Conversation
+* belongs_to :buyer, :class_name => 'User'
+* belongs_to :seller, :class_name => 'User'
+* has_many :messages
 
- ItemReview
-  belongs_to :item
-  belongs_to :reviewer, :class_name => 'User'
+#### Message
+* belongs_to :coversation
+* belongs_to :user
 
-Item
-  belongs_to :item_category
-  belongs_to :user
-  belongs_to :measurement
-  has_many :watchitems
-  has_many :watchlists, :through => :watchitems
-  has_many :requests
-  has_many :orders, :through => :requests
-  has_many :item_reviews
+#### Item
 
-  has_one_attached :image
+* belongs_to :item_category
+* belongs_to :user
+* belongs_to :measurement
+* has_many :watchitems
+* has_many :watchlists, :through => :watchitems
 
-Location 
-  belongs_to :city
+#### ItemCategory
+* has_many :items
 
-Measurement 
-    has_many :items
+#### Measurement
+* has_many :items
 
-Order 
-  belongs_to :user
-  has_many :requests
-  has_many :items, :through => :requests
+#### Profile
+* has_one :user
 
-Profile 
-  has_one :user
+#### Role
+* has_many :users
 
-Request 
-  belongs_to :item
-  belongs_to :order
+#### WatchItem
+* belongs_to :item
+* belongs_to :watchlist
 
-Role 
-  has_many :users
+#### Watchlist
+* belongs_to :user
+* has_many :watchitems
+* has_many :items, :through => :watchitems
 
-State 
-    has_many :cities
-
-UserRating 
-  belongs_to :reviewee, :class_name => 'User'
-  belongs_to :reviewer, :class_name => 'User'
-
-User 
-
-  belongs_to :location, optional: :true
-        
-  has_many :received_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewee_id'
-  has_many :sent_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewer_id'
-
-  belongs_to :profile
-  has_one :watchlist
-  has_many :items
-  has_many :orders
-  belongs_to :role
-
-  has_many :sent_item_reviews, :class_name => 'ItemReview', :foreign_key => 'reviewer_id'
-
-WatchItem
-  belongs_to :item
-  belongs_to :watchlist
-
-
-Watchlist 
-  belongs_to :user
-  has_many :watchitems
-  has_many :items, :through => :watchitems
 
 
 14. Provide your database schema design.
 
-- answer
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/HomeGrownLocal-erd.png?raw=true "Database Design ERD")
 
+This ERD was of our initial design. We have pivoted a couple of times whilst building out the current version of the application. A new ERD will be coming soon.
 
 15. Provide User stories for your App.
 
-https://trello.com/c/ohZYZYz9/25-user-stories
+* As a user, I want to be able to search a product by the name, so that I can find what I need/want
+* As a user, I want to be able to search a product by the location, so that I can find what is available in my area
+* As a user, I want to be able to search a product by the category of the product, so I can narrow down the type of produce I am looking for
+* As a user, I want to be able to post ads for my own items, so that I can sell my own produce
+* As a user, I want to be able to login, so that I have an account storing what I do on the site
+* As a user, I want to be able to watch items, so that I can come back to it later
+* As a user, I want to be able to message a seller, so that I can organise buying the item from them
+* As a user, I want to be able to see all my messages, so that I know if someone has messaged me
+* As a user, I want to be able to delete my ad, so that I remove it when required
+* As a user, I want to be able to edit my ad, so that I can update it when required
+
 
 16. Provide Wireframes for your App.
 
-!(C:\Users\a\OneDrive\coderacademy\RailsProject\New folder)
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/Wireframe.png?raw=true "Wireframes")
 
-17. Describe the way tasks are allocated and tracked in your project.
+17. Describe the way tasks are allocated and tracked in 
+your project.
 
-- Both tasks allocation and tracking are achieved through Kanban board, there are few layers of stages in our Kanban board.
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/kanban-board-1.png?raw=true "Kanban Board")
+
+Please refer to the **[Project Management](#Project-Management-And-Agile-Development)** section for details
 
 18. Discuss how Agile methodology is being implemented in your project.
 
-- We conducted a daily stand-up meeting on daily basis to promote open communication between team members.
-
-- We initially prioritize on our MVP (Minimum Viable Product) rather than having sophisticated unfinished product.
-
-- We constantly communicate with our instructor to ensure that our product doesn't get sidetracked and properly fulfilled our requirements.
-
-- We are using Kanban board via Trello. Tasks assignment and re-prioritization is achievable because of this tool.
+Please refer to the **[Project Management](#Project-Management-And-Agile-Development)** section for details
 
 19. Provide an overview and description of your Source control process.
 
-- answer
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-3.png?raw=true "Version Control Image")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-2.png?raw=true "Version Control Image")
+
+Please refer to the **[Version / Source-Control](#Version-/-Source-Control)** section for details
 
 20. Provide an overview and description of your Testing process.
 
-- answer
+Manual testing was apparent throughout the entire application build. Please refer to the **[Version / Source-Control](#Version-/-Source-Control)** section, as it explains how some of the testing process and how abundant testing was in building this application.
+
+Furthermore, the features we pushed, whether it be a CRUD feature or a custom feature, we tested it locally, tested it again on deployment and tested it again on production. All models, controllers, api integrations, views were tested as they were built. Everything was consistently tested. 
+
+Lastly, we tested our application on multiple browsers (Chrome, Safari and Firefox), and on mobile, viewing the Heroku site directly through a phone web browser.
+
 
 21. Discuss and analyse requirements related to information system security.
 
-- answer
+The three main requirements related to information systems security are confidentially, integrity, and availability (CIA). The basis of an organization's security depends on a properly developed, well designed and well implementation of information systems' security policy in order to balance security goals with the needs of an organization.
+
+Confidentially is the main goal of information system security. It refers to preventing confidential information from falling into the hands of unintended and unauthorized users. There are a lot of different types of threats that might directly, or indirectly affect the users such as theft of intellectual property, identity theft, theft of equipment or information, sabotage etc.
+
+Next is Integrity. It refers to preventing unauthorized alteration and modification of data and programs that were made either by unintended users such as hackers, or by authorized users making unauthorized, illegal modifications.
+
+Lastly is Availability. It refers to the preservation of data and resources available for authorized use, especially during emergencies, disasters or equipment failures.
 
 22. Discuss methods you will use to protect information and data.
 
-- answer
+In order to prevent the exploitation of confidential information from users, the best way to do this is to implement encryption processes for passwords, as well as develop access controls such as antivirus software, firewall and so on.
+
+We have implemented encryptions for passwords, api keys. Moreover, we have implemented authentication and authorisation modules (Devise & Pundit) alongside ruby and active record logic to prevent unintended information from falling into the hands of unauthorized or unintended users.
+
 
 23. Research what your legal obligations are in relation to handling user data.
 
-- answer
+The Privacy Act 1988 dictates the legal obligations that regulates the collection, storing, provisioning of access and the management of personal information of all individuals. In regards to our handling of user data we have to consider the safety of personal information about our users from threats such as hackers, cyber thefts and so on. Transparency is key with regards to user data and privacy. One of the things that should be implemented from an early stage if our app was to expand is to provide an in-app disclosure of the data collection and privacy agreement. This agreement would outline how their data will be used. Moreover, further encryption, authentication, authorisation and firewalls should be implemented as the application grows. Lastly, backing up user data is highly advisable to avoid negligence in case of a disaster/attack.
+
+
+# Section 4: Reflection
+
+## Challenges
+TBD... Coming Soon...
+
+## Take Aways
+TBD... Coming Soon...
+
+## Future Enhancements
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/future-enhancements-1.png?raw=true "Future Enhancements Tasks Image")
+

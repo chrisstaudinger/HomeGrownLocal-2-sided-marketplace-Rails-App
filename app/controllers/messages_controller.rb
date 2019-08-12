@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
+  protect_from_forgery with: :exception
+  before_action :authenticate_user!
 
   # GET /messages
   # GET /messages.json

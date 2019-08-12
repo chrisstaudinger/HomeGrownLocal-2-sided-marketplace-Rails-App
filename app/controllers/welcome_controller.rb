@@ -14,4 +14,8 @@ class WelcomeController < ApplicationController
 
   def about_us
   end
+
+  def disclaimer
+  end
+  
 end

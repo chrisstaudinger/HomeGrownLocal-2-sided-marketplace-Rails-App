@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./stylesheets/grid_item">
+<link rel="stylesheet" href="./stylesheets/message_form">
 
 <%= form_with(model: @conversation, local: true) do |form| %>
   <% if @conversation.errors.any? %>
@@ -24,11 +24,11 @@
   </div>
 
   <div class="field">
-    <%= form.text_area :message  %>
+    <%= form.text_area :message, placeholder: "Hi! Can i pick this up tomorrow?"  %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="send_message">
+    <%= form.submit "Send" %>
   </div>
 
   

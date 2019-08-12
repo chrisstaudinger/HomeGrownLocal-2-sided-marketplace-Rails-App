@@ -513,6 +513,84 @@ watchitems = [
 #     order_id: 6,
 #     quantity: 1.0
 # }
+
+conversations = [
+    {
+        buyer_id: 2,
+        seller_id: 1
+    },
+    {
+        buyer_id: 3,
+        seller_id: 2
+    },
+    {
+        buyer_id: 4,
+        seller_id: 3
+    },
+    {
+        buyer_id: 5,
+        seller_id: 4
+    },
+    {
+        buyer_id: 6,
+        seller_id: 5
+    },
+    {
+        buyer_id: 6,
+        seller_id: 1
+    },
+    {
+        buyer_id: 5,
+        seller_id: 2
+    },
+    {
+        buyer_id: 3,
+        seller_id: 4
+    }
+]
+
+messages = [
+    {
+        conversation_id: 1,
+        user_id: 2,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 2,
+        user_id: 3,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 3,
+        user_id: 4,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 4,
+        user_id: 5,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 5,
+        user_id: 6,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 6,
+        user_id: 6,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 7,
+        user_id: 5,
+        message: "Hi, I was wondering if your item is still for sale?"
+    },
+    {
+        conversation_id: 8,
+        user_id: 3,
+        message: "Hi, I was wondering if your item is still for sale?"
+    }
+]
 # ]
 # states.each do |state|
 #     a = State.create(state)
@@ -574,10 +652,10 @@ end
 #     a = ItemReview.create(item_review)
 #     a.save!
 # end
-# watchlists.each do |watchlist|
-#     a = Watchlist.create(watchlist)
-#     a.save!
-# end
+watchlists.each do |watchlist|
+    a = Watchlist.create(watchlist)
+    a.save!
+end
 watchitems.each do |watchitem|
     a = WatchItem.create(watchitem)
     a.save!
@@ -590,3 +668,13 @@ end
 #     a = Request.create(request)
 #     a.save!
 # end
+
+conversations.each do |conversation|
+    conversation = Conversation.create(conversation)
+    conversation.save!
+end
+
+messages.each do |message|
+    message = Message.create(message)
+    message.save!
+end

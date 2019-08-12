@@ -18,12 +18,5 @@
       <%= @item.user.user_location %>
     </p>
   </div>
-  <form action="post" id="">
-    <textarea id="user-message" name="user-message" placeholder="Hi! Can i pick this up tomorrow?"></textarea>
-    <div id="form-wrapper">
-      <input type="text" name="user-name" id="user-name" placeholder="Name">
-      <input type="text" name="user-email" id="user-email" placeholder="Email">
-    </div>
-    <input type="submit" id="submit-message" name="submit-message" value="Send">
-  </form>
+  <%= render :partial => "./conversations/form" %>
 </div>

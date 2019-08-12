@@ -6,7 +6,7 @@
 
 #### Contributers
 ###### Chris
-![]( "Chris Profile Pic")
+![](https://avatars1.githubusercontent.com/u/16986875?s=460&v=4 "Chris Profile Pic")
 ###### Suki
 ![](https://avatars1.githubusercontent.com/u/42060507?s=400&v=4 "Suki Profile Pic")
 ###### Selly
@@ -24,7 +24,7 @@
 **[Sitemap](#Sitemap)**\
 
 
-### __About Home Grown Local__
+## __About Home Grown Local__
  Home Grown Local is an open source two-sided marketplace helping to put money back into the pockets of everyday Australians rather than corporate conglomerates. The goal of the application is to bring Australian communities greater ability to buy fresh, local and organic produce, bringing people towards a healthy lifestyle. 
 
 ## Tech Stack
@@ -65,6 +65,27 @@ rails s
 Currently the version of this application is version 1.0. This application was built in the space of 3 weeks and some of the content such as the sitemap and userflow were built having future versions in mind. Therefore, some aspects of version 1.0 may differ from the resources listed in the this document.
 
 ## Screenshots
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/hero-section-1.png?raw=true "Hero Section Image")
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/hero-section-2.png?raw=true "Hero Section Image")
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/stripe-1.png?raw=true "Stripe Integration Image")
+
+
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/watchlist-1.png?raw=true "User Watchlist Image")
+
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/login-1.png?raw=true "Login Image")
+
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/new-item-1.png?raw=true "Post An Ad Image")
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/show-item-1.png?raw=true "Show Item Image")
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/show-item-2.png?raw=true "Show Item Image")
+
 
 ## Sitemap
 

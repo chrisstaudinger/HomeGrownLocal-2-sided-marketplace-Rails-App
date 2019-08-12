@@ -8,12 +8,13 @@ class ApplicationController < ActionController::Base
         @donation_amount_dollars_display = "$#{sprintf('%.2f', @donation_amount_dollars)}"
     end
 
+   
+
     
     include Pundit
     protect_from_forgery prepend:true
 
     before_action :configure_permitted_parameters, if: :devise_controller?
-
     rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
     protected
 
@@ -24,11 +25,15 @@ class ApplicationController < ActionController::Base
         end
 
     private
-    def user_not_authorized(exception)
-        flash[:alert] = "You are not authorized to perform this action."
-        redirect_to(request.referrer || root_path)
-        
-        flash[:error] = t "#{policy_name}.#{exception.query}", scope: "pundit", default: :default
-        redirect_to(request.referrer || root_path)
+    def user_not_authorized
+        redirect_to('/welcome/oops')
     end
+
+    # def user_not_authorized(exception)
+    #     flash[:alert] = "You are not authorized to perform this action."
+    #     redirect_to(request.referrer || root_path)
+        
+    #     flash[:error] = t "#{policy_name}.#{exception.query}", scope: "pundit", default: :default
+    #     redirect_to(request.referrer || root_path)
+    # end
 end

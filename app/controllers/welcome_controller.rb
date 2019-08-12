@@ -12,6 +12,9 @@ class WelcomeController < ApplicationController
     end
   end
 
+  def oops
+  end
+
   def about_us
   end
 

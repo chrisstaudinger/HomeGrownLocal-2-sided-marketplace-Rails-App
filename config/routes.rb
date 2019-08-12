@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
   get '/welcome/about_us', to: 'welcome#about_us'
   get '/welcome/disclaimer',to: 'welcome#disclaimer'
+  get '/welcome/oops', to: 'welcome#oops'
 end

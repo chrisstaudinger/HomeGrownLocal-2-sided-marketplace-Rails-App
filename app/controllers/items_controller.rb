@@ -12,6 +12,10 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
+  def my_items
+    @results = Item.where(user_id: current_user.id)
+  end
+
   def search
     params.permit(:location_field, :item_name, :item_category_id)
     item_length = params[:item_name].length

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :watch_items
   get '/items/search', to: 'items#search'
   get '/items/fresh', to: 'items#fresh'
+  get '/items/my_items', to: 'items#my_items'
   resources :items
   resources :watchlists
   devise_for :users

@@ -30,8 +30,10 @@
 **[Idea Conception](#Idea-Conception)**\
 **[Project Management](#Project-Management)**\
 **[Version / Source-Control](#Version-/-Source-Control)**\
+**[Team Communication](#Team-Communication)**
 
 
+**[Section 3: Short Answer Questions](#Section-3:-Short-Answer-Questions)**
 
 # Section 1: Description
 
@@ -122,7 +124,7 @@ Currently the version of this application is version 1.0. This application was b
 
 ## Idea Conception
 
-![]( "Brainstorming Idea Image")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/idea-brainstorming.jpg?raw=true "Brainstorming Idea Image")
 
 Coming up with the idea was a very collaborative process. We all brainstormed ideas on individually for a set period of time and listed them all together. From here we individually analysed the ideas, shared our evaluations, shortlisted the best ones, re-evaluated them and reached consensus on the idea.
 
@@ -131,12 +133,12 @@ A lot of our initial inspiration was drawn from Airbnb and Uber; their ability t
 ## Project Management
 
 ### Project Spec Sheet
-![]( "Project Spec Sheet")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/project-spec-sheet.png?raw=true "Project Spec Sheet")
 
 Afrer we settled on our application idea, we created a project spec sheet. The project spec sheet was the overview compass of our application.
 
 ### Kanban Board
-![]( "Kanban Board")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/kanban-board-1.png?raw=true "Kanban Board")
 
 From the outset we utilised a kanban board through Trello. Tasks were throughly broken down, planned out and labelled to acheive our MVP, then future versions. Tasks were assigned to an individual team member to take responsibility for getting the tasks completed. Moreover, comments were used on the cards for progress or blocker updates. Cards were assigned due dates.
 
@@ -168,7 +170,7 @@ Most of the first week of the project was spent on designing the achitecture of 
 
 ### Database Design (ERD)
 
-![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/Home%20Grown%20Local%20Site%20Map%20(2).png?raw=true "Database Design (ERD")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/HomeGrownLocal-erd.png?raw=true "Database Design ERD")
 
 ### Sitemap
 
@@ -176,19 +178,20 @@ Most of the first week of the project was spent on designing the achitecture of 
 
 ### Userflow (User-journey)
 
-![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/Home%20Grown%20Local%20Site%20Map%20(2).png?raw=true "Userflow")
-
-### User Stories
-
-![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/Home%20Grown%20Local%20Site%20Map%20(2).png?raw=true "User Stories")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/Userflow_diagram.png?raw=true "Userflow")
 
 ### Wireframes
 
-![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/Home%20Grown%20Local%20Site%20Map%20(2).png?raw=true "User Stories")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/Wireframe.png?raw=true "User Stories")
 
 ### Mockup
 
-![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/Home%20Grown%20Local%20Site%20Map%20(2).png?raw=true "User Stories")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/mockup-1.png?raw=true  "Mockup")
+
+### User Stories
+
+As a < type of user >, I want < some goal > so that < some reason >.
+https://www.mountaingoatsoftware.com/agile/user-stories
 
 
 ## Version / Source-Control
@@ -199,4 +202,117 @@ Origin master was pulled at least once daily by team members to ensure build ups
 
 Every day we would push the origin repository to a Heroku repository created on only one computer to confirm our build.
 
+![](  "Version Control Image")
+![](  "Version Control Image")
+![](  "Version Control Image")
 
+## Team Communication
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/team_slack.png?raw=true  "Slack Communication")
+
+As mentioned in **[Project Management](#Project-Management)** section, a lot of project management communication was conducted in sprint meetings and stand ups. For most other communication, slack was used. 
+
+
+# Section 3: Short Answer Questions
+
+
+1. What is the need (i.e. challenge) that you will be addressing in your project?
+
+The need of this project that is being addressed is the challenge of reducing the amount of power and/or the monopoly corporate conglomorates have over Australia. Moreover, the challenge of increasing society's health and/or reducing disease in Australia's population.
+
+2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
+
+The justification for a service that allows communities to buy and sell fresh local produce is well established. The problem for Australian communities is a lack of options that are utilising current day technology. We know this because:
+
+a) We asked around - through networking and speaking to our peers, we found that the great majory of people are unaware of major service that provides an 'online farmers market'.
+
+b) Everyone knows what a farmers market is, everyone has been to a farmers market, and significant minority go to farmers markets regularly. However, this industry does not have a massive online prescence as of yet. It's reach and accessibility is no where near its potential, therefore, Australians are relying on corporate conglomerates and sub-optimal produce more than they otherwise would. 
+
+c) It is common knowledge of the health problems in Australian society. Enough said...
+
+
+3. Describe the project will you be conducting and how. your App will address the needs.
+
+Home Grown Local is an localised online farmers market. The application is for the Australian societ. Anyone that owns/rents a
+dwelling that they can grow fresh produce, and has access to the internet can use the service. 
+
+Home Grown Local increases access to fresh local produce. By doing so, society will inevitably consume more vegatables, fruits and other micro-nutrient dense food, therefore, reducing the amount of processed, GMO, and micro-nutrient poor food that assist in the production of disease and illness.  
+
+4. Describe the network infrastructure the App may be based on.
+
+
+
+5. Identify and describe the software to be used in your App.
+
+
+
+6. Identify the database to be used in your App and provide a justification for your choice.
+
+
+
+7. Identify and describe the production database setup (i.e. postgres instance).
+
+
+
+8. Describe the architecture of your App.
+
+
+
+9. Explain the different high-level components (abstractions) in your App.
+
+
+
+10. Detail any third party services that your App will use.
+
+
+
+11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
+
+
+
+12. Discuss the database relations to be implemented.
+
+
+
+13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+
+
+
+14. Provide your database schema design.
+
+
+
+15. Provide User stories for your App.
+
+
+
+16. Provide Wireframes for your App.
+
+
+
+17. Describe the way tasks are allocated and tracked in 
+your project.
+
+
+
+18. Discuss how Agile methodology is being implemented in your project.
+
+
+
+19. Provide an overview and description of your Source control process.
+
+
+
+20. Provide an overview and description of your Testing process.
+
+
+
+21. Discuss and analyse requirements related to information system security.
+
+
+
+22. Discuss methods you will use to protect information and data.
+
+
+
+23. Research what your legal obligations are in relation to handling user data.

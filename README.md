@@ -236,11 +236,11 @@ As mentioned in **[Project Management](#Project-Management-And-Agile-Development
 # Section 3: Short Answer Questions
 
 
-1. What is the need (i.e. challenge) that you will be addressing in your project?
+**1. What is the need (i.e. challenge) that you will be addressing in your project?**
 
 The need of this project that is being addressed is the challenge of reducing the amount of power and/or the monopoly corporate conglomorates have over Australia. Moreover, the challenge of increasing society's health and/or reducing disease in Australia's population.
 
-2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
+**2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?**
 
 The justification for a service that allows communities to buy fresh, local produce is well established. The problem for Australian communities is a lack of options that are utilising the expansive reach of current day technology. We know this because:
 
@@ -251,14 +251,14 @@ b) Everyone knows what a farmers market is, everyone has been to a farmers marke
 c) It is common knowledge of the health problems in Australian society. Enough said...
 
 
-3. Describe the project will you be conducting and how. your App will address the needs.
+**3. Describe the project will you be conducting and how. your App will address the needs.**
 
 Home Grown Local is an localised online farmers market. The application is for the Australian societ. Anyone that owns/rents a
 dwelling that they can grow fresh produce, and has access to the internet can use the service. 
 
 Home Grown Local increases access to fresh local produce. By doing so, society will inevitably consume more vegatables, fruits and other micro-nutrient dense food, therefore, reducing the amount of processed, GMO, and micro-nutrient poor food that assist in the production of disease and illness.  
 
-4. Describe the network infrastructure the App may be based on.
+**4. Describe the network infrastructure the App may be based on.**
 
 Home Grown Local is deployed through the PAAS Heroku, a popular software product that allows developers to push code directly from GitHub to the internet via Heroku's deployment platfrom and network infrastructure.
 
@@ -281,7 +281,7 @@ APPLICATION DEPLOYMENT / EXECUTION PHASE
 Heroku executes the slug using a mini-operating system called a Dyno, an isolated Unix container that provides an environment for the app to run in. Dynos are the resources that are needed to run and manage apps when they are deployed on Heroku. If our app were to scale in the future we would need to add more Dynos, and this is all executed in the background.
 Heroku then applies to the slug environment variables from our config vars file that describe things like user credentials or other environment specifications, and finally any add-ons or third party services that extend the functionality of the application. Heroku delivers the final product containing the slug, config, and any add-ons, as a 'version' of your code. Any new release will be considered a new version of the application, and saved by Heroku.
 
-5. Identify and describe the software to be used in your App.
+**5. Identify and describe the software to be used in your App.**
 
 Software Languages:
 
@@ -315,7 +315,7 @@ For other third party software, please see Third Party Services.
 
 
 
-6. Identify the database to be used in your App and provide a justification for your choice.
+**6. Identify the database to be used in your App and provide a justification for your choice.**
 
 We used PostgreSQL for our application, for a few different reasons:
 
@@ -324,14 +324,14 @@ We used PostgreSQL for our application, for a few different reasons:
 * SQL databases are the most popular form of database which means they have significant documentation available for troubleshooting and PostgreSQL is among the most popular of relational databases.
 
 
-7. Identify and describe the production database setup (i.e. postgres instance).
+**7. Identify and describe the production database setup (i.e. postgres instance).**
 
 * We initially created a local instance of a PostgreSQL database by specifying it as an optional argument when creating a new rails application. Rails then generated our application with the configuration settings of postgreSQL as our database as opposed to the default SQLite3. We then created the database followed generating our tables. This database then was our development and testing database which we seed with dummy data using the seeds.rb file.
 
 * For Production, the Migrations and Schema of our Development Database are pushed to Heroku from the GitHub repository. We set up the database in Heroku by running the same commands to create the database and run migrations, only we put 'heroku run' before the command. Because the schema and migrations are the same, the structure of our database on Heroku is exactly the same and can be seeded using the same seeds.rb file. Therefore our production database is an instance of a postgres database, hosted on Heroku.
 
 
-8. Describe the architecture of your App.
+**8. Describe the architecture of your App.**
 
 #### The client
 * Displays the web page in a web browser
@@ -377,7 +377,7 @@ request files required to load a certain web page, or 'view'
 
 * PostgreSQL relational database that stores persistent information used by the application
 
-9. Explain the different high-level components (abstractions) in your App.
+**9. Explain the different high-level components (abstractions) in your App**.
 
 The components of our application adopted the Rails conventions of an MVC model
 
@@ -403,7 +403,7 @@ Other Abstractions:
 * Google Places Auto Complete: Autocompletion of locations 
 
 
-10. Detail any third party services that your App will use.
+**10. Detail any third party services that your App will use.**
 
 #### Services
 
@@ -460,18 +460,18 @@ Searchkick: Intellignet searching utilising Elasticsearch
 
 
 
-11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
+**11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).**
 
 Gumtree: This platform is not a compettitor, but is similar in concept of the application architecture. For this application it is reasonable to expect their general data structure consists something along the lines of a user, admin, item, profile, message, watchlist, view and an order model.
 
 
-12. Discuss the database relations to be implemented.
+**12. Discuss the database relations to be implemented.**
 
 We used a range of database relations. Users have a single profile, have a single role, has a single watchlist and many watch_items through watchlist. Moreover, users have many items, many messages and many conversations. Additionally, Items have a single item_category, items have a user, items have a measurement, items have many watchlist through watch_items.
 
 
 
-13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+**13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.**
 
 
 #### User
@@ -524,13 +524,13 @@ We used a range of database relations. Users have a single profile, have a singl
 
 
 
-14. Provide your database schema design.
+**14. Provide your database schema design.**
 
 ![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/HomeGrownLocal-erd.png?raw=true "Database Design ERD")
 
 This ERD was of our initial design. We have pivoted a couple of times whilst building out the current version of the application. A new ERD will be coming soon.
 
-15. Provide User stories for your App.
+**15. Provide User stories for your App.**
 
 * As a user, I want to be able to search a product by the name, so that I can find what I need/want
 * As a user, I want to be able to search a product by the location, so that I can find what is available in my area
@@ -544,29 +544,29 @@ This ERD was of our initial design. We have pivoted a couple of times whilst bui
 * As a user, I want to be able to edit my ad, so that I can update it when required
 
 
-16. Provide Wireframes for your App.
+**16. Provide Wireframes for your App.**
 
 ![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/Wireframe.png?raw=true "Wireframes")
 
-17. Describe the way tasks are allocated and tracked in 
-your project.
+**17. Describe the way tasks are allocated and tracked in 
+your project.**
 
 ![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/kanban-board-1.png?raw=true "Kanban Board")
 
 Please refer to the **[Project Management](#Project-Management-And-Agile-Development)** section for details
 
-18. Discuss how Agile methodology is being implemented in your project.
+**18. Discuss how Agile methodology is being implemented in your project.**
 
 Please refer to the **[Project Management](#Project-Management-And-Agile-Development)** section for details
 
-19. Provide an overview and description of your Source control process.
+**19. Provide an overview and description of your Source control process.**
 
 ![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-3.png?raw=true "Version Control Image")
 ![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-2.png?raw=true "Version Control Image")
 
 Please refer to the **[Version / Source-Control](#Version-/-Source-Control)** section for details
 
-20. Provide an overview and description of your Testing process.
+**20. Provide an overview and description of your Testing process.**
 
 Manual testing was apparent throughout the entire application build. Please refer to the **[Version / Source-Control](#Version-/-Source-Control)** section, as it explains how some of the testing process and how abundant testing was in building this application.
 
@@ -575,7 +575,7 @@ Furthermore, the features we pushed, whether it be a CRUD feature or a custom fe
 Lastly, we tested our application on multiple browsers (Chrome, Safari and Firefox), and on mobile, viewing the Heroku site directly through a phone web browser.
 
 
-21. Discuss and analyse requirements related to information system security.
+**21. Discuss and analyse requirements related to information system security.**
 
 The three main requirements related to information systems security are confidentially, integrity, and availability (CIA). The basis of an organization's security depends on a properly developed, well designed and well implementation of information systems' security policy in order to balance security goals with the needs of an organization.
 
@@ -585,14 +585,14 @@ Next is Integrity. It refers to preventing unauthorized alteration and modificat
 
 Lastly is Availability. It refers to the preservation of data and resources available for authorized use, especially during emergencies, disasters or equipment failures.
 
-22. Discuss methods you will use to protect information and data.
+**22. Discuss methods you will use to protect information and data.**
 
 In order to prevent the exploitation of confidential information from users, the best way to do this is to implement encryption processes for passwords, as well as develop access controls such as antivirus software, firewall and so on.
 
 We have implemented encryptions for passwords, api keys. Moreover, we have implemented authentication and authorisation modules (Devise & Pundit) alongside ruby and active record logic to prevent unintended information from falling into the hands of unauthorized or unintended users.
 
 
-23. Research what your legal obligations are in relation to handling user data.
+**23. Research what your legal obligations are in relation to handling user data.**
 
 The Privacy Act 1988 dictates the legal obligations that regulates the collection, storing, provisioning of access and the management of personal information of all individuals. In regards to our handling of user data we have to consider the safety of personal information about our users from threats such as hackers, cyber thefts and so on. Transparency is key with regards to user data and privacy. One of the things that should be implemented from an early stage if our app was to expand is to provide an in-app disclosure of the data collection and privacy agreement. This agreement would outline how their data will be used. Moreover, further encryption, authentication, authorisation and firewalls should be implemented as the application grows. Lastly, backing up user data is highly advisable to avoid negligence in case of a disaster/attack.
 

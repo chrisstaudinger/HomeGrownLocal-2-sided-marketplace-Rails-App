@@ -34,6 +34,13 @@
 
 **[Section 3: Short Answer Questions](#Section-3:-Short-Answer-Questions)**
 
+**[Section 4: Reflection](#Section-4:-Reflection)**
+**[Challenges](#Challenges)**\
+**[Take Aways](#Take-Aways)**\
+**[Future Enhancements](#Future-Enhancements)**
+
+
+
 # Section 1: Description
 
 ## __About Home Grown Local__
@@ -114,6 +121,8 @@ rails db:reset
 
 
 ![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/new-item-1.png?raw=true "Post An Ad Image")
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/site-screenshot/about-us-screenshots/about-us-complete-screenshot.png?raw=true "About Us Image")
 
 ### Version Note
 Currently the version of this application is version 1.0. This application was built in the space of 3 weeks and some of the content such as the sitemap and userflow were built having future versions in mind. Therefore, some aspects of version 1.0 may differ from the resources listed in the this document.
@@ -203,15 +212,15 @@ Most of the first week of the project was spent on designing the achitecture of 
 
 ## Version / Source-Control
 
-We used Git CLI, Git GUI's, GitHub and Heroku CLI for source control / version control. Each new feature was a new branch. Once was the feature was completed locally, the branch was pushed to github and a pull request was submitted for another team member to review. Once the code review was completed, if it was approved, the team member would pull origin master to the local version of that 'feature' branch and test it locally (this was done to ensure if there were any merge conflicts from other commits to master, they would should locally and testing could be done locally rather than production). If testing worked properly, the team member would merge that local feature branch to their local master and push their master branch to origin master.
+We used Git CLI, Git GUI's, GitHub and Heroku CLI for source control / version control. Each new feature was a new branch. Once the feature was completed and tested locally, the branch was pushed to github and a pull request was submitted for another team member to review. Once the code review was completed, if it was approved, the team member would pull origin master to the local version of that 'feature' branch and test it locally (this was done to ensure if there were any bugs or merge conflicts from other commits to master, they would show locally and testing could be done locally rather than on production). If testing worked properly, the team member would merge that local feature branch to their local master and push their master branch to origin master.
 
-Origin master was pulled at least once daily by team members to ensure build ups of merge conflicts did not occur.
+Origin master was pulled at least once daily (usually several times) by team members to ensure build ups of merge conflicts did not occur.
 
 Every day we would push the origin repository to a Heroku repository created on only one computer to confirm our build.
 
-![](  "Version Control Image")
-![](  "Version Control Image")
-![](  "Version Control Image")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-3.png?raw=true "Version Control Image")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-2.png?raw=true "Version Control Image")
+
 
 ## Team Communication
 
@@ -548,18 +557,58 @@ Please refer to the **[Project Management](#Project-Management-And-Agile-Develop
 
 19. Provide an overview and description of your Source control process.
 
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-3.png?raw=true "Version Control Image")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-2.png?raw=true "Version Control Image")
 
+Please refer to the **[Version / Source-Control](#Version-/-Source-Control)** section for details
 
 20. Provide an overview and description of your Testing process.
 
+Manual testing was apparent throughout the entire application build. Please refer to the **[Version / Source-Control](#Version-/-Source-Control)** section, as it explains how some of the testing process and how abundant testing was in building this application.
+
+Furthermore, the features we pushed, whether it be a CRUD feature or a custom feature, we tested it locally, tested it again on deployment and tested it again on production. All models, controllers, api integrations, views were tested as they were built. Everything was consistently tested. 
+
+Lastly, we tested our application on multiple browsers (Chrome, Safari and Firefox), and on mobile, viewing the Heroku site directly through a phone web browser.
 
 
 21. Discuss and analyse requirements related to information system security.
 
+The three main requirements related to information systems security are confidentially, integrity, and availability (CIA). The basis of an organization's security depends on a properly developed, well designed and well implementation of information systems' security policy in order to balance security goals with the needs of an organization.
 
+Confidentially is the main goal of information system security. It refers to preventing confidential information from falling into the hands of unintended and unauthorized users. There are a lot of different types of threats that might directly, or indirectly affect the users such as theft of intellectual property, identity theft, theft of equipment or information, sabotage etc.
+
+Next is Integrity. It refers to preventing unauthorized alteration and modification of data and programs that were made either by unintended users such as hackers, or by authorized users making unauthorized, illegal modifications.
+
+Lastly is Availability. It refers to the preservation of data and resources available for authorized use, especially during emergencies, disasters or equipment failures.
 
 22. Discuss methods you will use to protect information and data.
 
+In order to prevent the exploitation of confidential information from users, the best way to do this is to implement encryption processes for passwords, as well as develop access controls such as antivirus software, firewall and so on.
+
+We have implemented encryptions for passwords, api keys. Moreover, we have implemented authentication and authorisation modules (Devise & Pundit) alongside ruby and active record logic to prevent unintended information from falling into the hands of unauthorized or unintended users.
 
 
 23. Research what your legal obligations are in relation to handling user data.
+
+The Privacy law involves the legal obligations that regulates the collection, storing, provision of access and the management of personal information on all individuals. While handling user data, the legal obligations are that we have to consider the safety of personal information about our users from threats such as hackers, cyber thefts and so on. One of the things we should consider for our app is to provide an in-app disclosure of the data collection and use.
+
+Moreover, we also have to be transparent in how we handle user data, for example the collection of information about a user. That means disclosing the collection, use, and sharing of the data, and limiting the use of the data to the purposes disclosed, and the consent provided by the user.
+
+Furthermore, we are also obligated to protect systems’ and individual files with authorization and authentication. This can be done using can can in order to implement an ID and password in order to use our app. We are also required to manage access rights, for example unauthorized user cannot modify any of the details in our app. Encryption og passwords, files, and important datas at all times, especially when wireless devices are used, and keep track of wireless connectivity to prevent accidental file sharing. Another thing we could do is also to keep a record of the timestamp (date and time) when a piece of electronic data was originally recorded to prevent any unintentional modifications, alteration or manipulation at a future date.
+
+It is also a must to update virus protection on a regular basis to prevent vulnerability of data, as well as limiting the physical access to booking details (location, date.. etc) which could potentially be dangerous if unintended users have access to all these info.
+
+In addition, it is also important to develop a back up plan or a disaster recovery plan to ensure data recoverability in case of emergencies. This can be done by creating backups of multiple copies in secured multiple locations.
+
+# Section 4: Reflection
+
+## Challenges
+TBD... Coming Soon...
+
+## Take Aways
+TBD... Coming Soon...
+
+## Future Enhancements
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/login-1.png?raw=true "Future Enhancements Tasks Image")
+

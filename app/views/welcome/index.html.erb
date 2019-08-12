@@ -32,7 +32,7 @@
   <div id="featured-items">
     <ul id="filter-list">
       <li><%= link_to "Fresh", "/items/fresh" %></li>
-      <li><%= link_to "Popular", "/" %></li>
+      <li><%= link_to "My listing", "/items/my_items" %></li>
       <% if user_signed_in? && current_user.watchlist == nil %>
         <li><%= link_to "Watchlist", "/watchlists" ,action: "create", method: :post %></li>
       <% elsif user_signed_in?  %>

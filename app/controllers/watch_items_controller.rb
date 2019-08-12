@@ -29,7 +29,7 @@ class WatchItemsController < ApplicationController
     @watch_item = WatchItem.new(watch_item_params)
     @watch_item.watchlist = current_user.watchlist
     respond_to do |format|
-      if @watch_item.save
+      if @watch_item.save!
         format.html { redirect_to "/watchlists/#{current_user.watchlist.id}", notice: 'Watch item was successfully created.' }
         format.json { render :show, status: :created, location: @watch_item }
       else

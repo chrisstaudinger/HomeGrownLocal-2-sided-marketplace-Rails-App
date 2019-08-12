@@ -31,11 +31,11 @@ class WatchlistsController < ApplicationController
   # POST /watchlists
   # POST /watchlists.json
   def create
-    @watchlist = Watchlist.new(watchlist_params)
-
+    @watchlist = Watchlist.new
+    @watchlist.user = current_user
     respond_to do |format|
-      if @watchlist.save
-        format.html { redirect_to @watchlist, notice: 'Watchlist was successfully created.' }
+      if @watchlist.save!
+        format.html { redirect_to "/watchlists/#{@watchlist.id}"}
         format.json { render :show, status: :created, location: @watchlist }
       else
         format.html { render :new }

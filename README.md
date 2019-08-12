@@ -200,7 +200,7 @@ Most of the first week of the project was spent on designing the achitecture of 
 
 ![](https://github.com/chrisstaudinger/home-grown-local/blob/master/app/assets/resources/readme%20screenshot%20attachments/moodboard-color-palette-font-1.png?raw=true  "Logo Design, Colour Palette Testing & Design Inspiration")
 
-![](https://github.com/chrisstaudinger/home-grown-local/blob/master/app/assets/resources/readme%20screenshot%20attachments/moodboard-color-palette-font-1.png?raw=true  "Logo Design, Colour Palette Testing & Design Inspiration")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/master/app/assets/resources/readme%20screenshot%20attachments/figma-1.png?raw=true  "Logo Design, Colour Palette Testing & Design Inspiration")
 
 ### Mockup
 

@@ -5,12 +5,16 @@
 ### [View Live application](https://homegrownlocal.herokuapp.com/)
 
 #### Contributers
+
 ##### Chris
-![](https://avatars1.githubusercontent.com/u/16986875?s=460&v=4 "Chris Profile Pic")
+<img src="https://avatars1.githubusercontent.com/u/16986875?s=460&v=4" alt="drawing" width="150"/>
+
 ##### Suki
-![](https://avatars1.githubusercontent.com/u/42060507?s=400&v=4 "Suki Profile Pic")
+<img src="https://avatars1.githubusercontent.com/u/42060507?s=400&v=4" alt="drawing" width="150"/>
+
 ##### Selly
-![](https://avatars2.githubusercontent.com/u/49693577?s=400&v=4 "Selly Profile Pic")
+<img src="https://avatars2.githubusercontent.com/u/49693577?s=400&v=4" alt="drawing" width="150"/>
+
 
 ## Contents
 <!-- links  -->
@@ -590,15 +594,8 @@ We have implemented encryptions for passwords, api keys. Moreover, we have imple
 
 23. Research what your legal obligations are in relation to handling user data.
 
-The Privacy law involves the legal obligations that regulates the collection, storing, provision of access and the management of personal information on all individuals. While handling user data, the legal obligations are that we have to consider the safety of personal information about our users from threats such as hackers, cyber thefts and so on. One of the things we should consider for our app is to provide an in-app disclosure of the data collection and use.
+The Privacy Act 1988 dictates the legal obligations that regulates the collection, storing, provisioning of access and the management of personal information of all individuals. In regards to our handling of user data we have to consider the safety of personal information about our users from threats such as hackers, cyber thefts and so on. Transparency is key with regards to user data and privacy. One of the things that should be implemented from an early stage if our app was to expand is to provide an in-app disclosure of the data collection and privacy agreement. This agreement would outline how their data will be used. Moreover, further encryption, authentication, authorisation and firewalls should be implemented as the application grows. Lastly, backing up user data is highly advisable to avoid negligence in case of a disaster/attack.
 
-Moreover, we also have to be transparent in how we handle user data, for example the collection of information about a user. That means disclosing the collection, use, and sharing of the data, and limiting the use of the data to the purposes disclosed, and the consent provided by the user.
-
-Furthermore, we are also obligated to protect systems’ and individual files with authorization and authentication. This can be done using can can in order to implement an ID and password in order to use our app. We are also required to manage access rights, for example unauthorized user cannot modify any of the details in our app. Encryption og passwords, files, and important datas at all times, especially when wireless devices are used, and keep track of wireless connectivity to prevent accidental file sharing. Another thing we could do is also to keep a record of the timestamp (date and time) when a piece of electronic data was originally recorded to prevent any unintentional modifications, alteration or manipulation at a future date.
-
-It is also a must to update virus protection on a regular basis to prevent vulnerability of data, as well as limiting the physical access to booking details (location, date.. etc) which could potentially be dangerous if unintended users have access to all these info.
-
-In addition, it is also important to develop a back up plan or a disaster recovery plan to ensure data recoverability in case of emergencies. This can be done by creating backups of multiple copies in secured multiple locations.
 
 # Section 4: Reflection
 
@@ -610,5 +607,5 @@ TBD... Coming Soon...
 
 ## Future Enhancements
 
-![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/login-1.png?raw=true "Future Enhancements Tasks Image")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/future-enhancements-1.png?raw=true "Future Enhancements Tasks Image")
 

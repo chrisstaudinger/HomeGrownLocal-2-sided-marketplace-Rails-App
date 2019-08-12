@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'mixins';
+
+h3 {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #12A068;
+  font-size: 64px;
+}
+.disclaimer-text {
+  @include leftrightmargin();
+  background-color: $darkgreen;
+  padding: 3vw;
+  height: 20vh;
+  border-radius: 5px;
+  margin-top: 10vh;
+  p {
+    line-height: 4vh;
+    @include overpass();
+    font-size: 1.5vw;
+    color: $offwhite1;
+  }
+}

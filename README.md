@@ -1,4 +1,4 @@
-![](https://github.com/chrisstaudinger/home-grown-local/blob/master/app/assets/images/logo2v2.png "Home Grown Local Logo")
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/images/logo2v2.png?raw=true "Home Grown Local Logo")
 
 # Home Grown Local
 
@@ -12,9 +12,19 @@
 ###### Selly
 ![](https://avatars2.githubusercontent.com/u/49693577?s=400&v=4 "Selly Profile Pic")
 
-# Description
+## Contents
+<!-- links  -->
+**[Section 1: Description](#Section-1:-Description)**
 
-## About Home Grown Local
+**[About](#About-Home-Grown-Local)**\
+**[Tech Stack](#Tech-Stack)**\
+**[Configuration](#Configuration-/-Installation-Instructions)**\
+**[Version Note](#Version-Note)**\
+**[Screenshots](#Screenshots)**\
+**[Sitemap](#Sitemap)**\
+
+
+### __About Home Grown Local__
  Home Grown Local is an open source two-sided marketplace helping to put money back into the pockets of everyday Australians rather than corporate conglomerates. The goal of the application is to bring Australian communities greater ability to buy fresh, local and organic produce, bringing people towards a healthy lifestyle. 
 
 ## Tech Stack
@@ -54,3 +64,10 @@ rails s
 ## Version Note
 Currently the version of this application is version 1.0. This application was built in the space of 3 weeks and some of the content such as the sitemap and userflow were built having future versions in mind. Therefore, some aspects of version 1.0 may differ from the resources listed in the this document.
 
+## Screenshots
+
+## Sitemap
+
+![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/Home%20Grown%20Local%20Site%20Map%20(2).png?raw=true "Sitemap")
+
+## 

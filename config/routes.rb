@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'messages/reply', to: "messages#reply"
   resources :messages
   get 'conversations/my_conversations', to: 'conversations#my_conversations'
   resources :conversations

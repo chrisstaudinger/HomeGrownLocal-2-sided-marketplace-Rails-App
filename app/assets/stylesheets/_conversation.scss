@@ -10,17 +10,23 @@
   flex-direction: column;
   align-items: flex-start;
   p {
-    font-size: 2vw;
+    font-size: 1vw;
     @include overpass();
-    margin: 2vw;
+    margin: 1.5vw;
   }
   .my-message {
+    border-radius: 20px;
+    align-self: flex-end;
     background-color: $darkgreen;
     color: $offwhite2;
+    margin-bottom: 1vh;
   }
   .buyer-message {
+    border-radius: 20px;
     background-color: $formblack;
     color: $offwhite2;
+    align-self: flex-start;
+    margin-bottom: 1vh;
   }
 }
 .user-information-wrapper {

@@ -88,10 +88,11 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @conversation = Conversation.new
     @item = Item.find(params[:id])
     @watch_item = WatchItem.new
     @watch_item.item = @item
-    if user_signed_in?
+    if user_signed_in? && current_user.watchlist != nil
       watchlist = WatchItem.search( where: {item_id: @item.id, watchlist_id: current_user.watchlist.id})
       @watchlisted = watchlist.length
       @watchlist_item = watchlist[0]
@@ -128,8 +129,6 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        # Tell the UserMailer to send a welcome email after save
-        UserMailer.with(email: "siapnostaudinger@gmail.com").welcome_email.deliver_now
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
         format.json { render :show, status: :created, location: @item }
       else

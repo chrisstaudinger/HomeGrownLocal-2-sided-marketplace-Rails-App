@@ -26,6 +26,11 @@ class WatchItemsController < ApplicationController
   # POST /watch_items
   # POST /watch_items.json
   def create
+    if current_user.watchlist == nil
+      watchlist = Watchlist.new
+      watchlist.user = current_user
+      watchlist.save!
+    end
     @watch_item = WatchItem.new(watch_item_params)
     @watch_item.watchlist = current_user.watchlist
     respond_to do |format|

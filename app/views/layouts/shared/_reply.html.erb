@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="./stylesheets/reply">
+
+<%= form_with(model: @message, url: "/messages/reply", method: :reply, local: true) do |form| %>
+<% if @conversation.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@conversation.errors.count, "error") %> prohibited this @conversation from being saved:</h2>
+
+  <ul>
+    <% @conversation.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <% if user_signed_in? %>
+  <%= form.hidden_field :conversation_id, value: @conversation.id %>
+  <% end %>
+</div>
+
+<div class="field">
+  <%= form.hidden_field :user_id, value: current_user.id %>
+</div>
+
+<div class="field">
+  <div class="reply">
+  <%= form.text_field :message, placeholder: "Hi! Can i pick this up tomorrow?"  %>
+    <div class="send_reply">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= form.submit "Send" %>
+    </div>
+  </div>
+</div>
+
+
+<% end %>

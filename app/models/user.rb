@@ -9,6 +9,10 @@ class User < ApplicationRecord
   has_many :received_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewee_id'
   has_many :sent_user_ratings, :class_name => 'UserRating', :foreign_key => 'reviewer_id'
 
+  has_many :conversations_as_buyer, :class_name => 'Conversation', :foreign_key => 'buyer_id'
+  has_many :conversations_as_seller, :class_name => 'Conversation', :foreign_key => 'seller_id'
+  has_many :messages
+
   belongs_to :profile
   has_one :watchlist
   has_many :items
@@ -21,7 +25,6 @@ class User < ApplicationRecord
 
   after_initialize :set_default_role, :if => :new_record?
   before_save :assign_profile
-  after_save :watchlist_init ,:if => :new_record?
 
   def set_default_role
     self.role = Role.find(1)
@@ -33,11 +36,5 @@ class User < ApplicationRecord
     new_profile.name = nil
     new_profile.save!
     return new_profile
-  end
-
-  def watchlist_init
-    new_watchlist = Watchlist.new
-    new_watchlist.user = self
-    new_watchlist.save!
   end
 end

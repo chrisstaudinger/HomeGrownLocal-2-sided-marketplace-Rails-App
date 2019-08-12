@@ -29,7 +29,7 @@
     </div>
     <div class="simple-navbar">
       <ul>
-        <li> <a id="customButton"> Donate</a> </li>
+        <li> <a id="customButton"> Donate </a> </li>
         <script src="https://checkout.stripe.com/checkout.js"></script>
         <script>
           var handler = StripeCheckout.configure({
@@ -64,8 +64,8 @@
         <li><%= link_to "Log In", new_user_session_path %></li>
         <li><%= link_to "Sign up", new_user_registration_path %></li>
         <% else %>
+        <li> <%= link_to "Messages", conversations_my_conversations_path %></li>
         <li><%= link_to "Sign Out", destroy_user_session_path, {method: :delete} %></li>
-        <li><%= link_to "Account", "/profiles/#{current_user.id}" %></li>
         <% end %>
       </ul>
     </div>
@@ -85,7 +85,7 @@
       <%= image_tag("youtube.png", alt: "youtube-icon") %>
     </div>
     <div class="legal">
-      <%= link_to("Disclaimer","welcome/disclaimer") %>
+      <%= link_to("Disclaimer","/welcome/disclaimer") %>
     </div>
   </div>
 </footer>

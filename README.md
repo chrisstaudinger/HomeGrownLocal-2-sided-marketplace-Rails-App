@@ -229,7 +229,7 @@ Origin master was pulled at least once daily (usually several times) by team mem
 Every day we would push the origin repository to a Heroku repository created on only one computer to confirm our build.
 
 ![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-3.png?raw=true "Version Control Image")
-![](https://github.com/chrisstaudinger/home-grown-local/blob/readme/app/assets/resources/readme%20screenshot%20attachments/github-2.png?raw=true "Version Control Image")
+
 
 
 ## Team Communication

@@ -32,10 +32,14 @@
   </div>
   <div class="second-section">
     <%= render :partial => "layouts/shared/item_meta" %>
-    <% if @item.user.id != current_user.id %>
-      <%= render :partial => "layouts/shared/seller_mailer" %>
+    <% if user_signed_in? %>
+      <% if @item.user.id != current_user.id %>
+        <%= render :partial => "layouts/shared/seller_mailer" %>
+      <% end %>
     <% end %>
   </div>
 </div>
 </div>
 <link rel="stylesheet" href="./stylesheets/form">
+
+    

@@ -1,1 +1,187 @@
-/* No CSS *//*# sourceMappingURL=items.css.map */
+.background-section1 {
+  position: relative;
+  bottom: 0;
+  padding-top: 5vh;
+  background-color: #F5F5F5;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-block;
+}
+
+.sub-body {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sub-body .item-highlight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sub-body .item-highlight .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 22vw;
+  width: 44vw;
+  height: 55vh;
+  z-index: 4;
+  background-color: #3D403D;
+}
+
+.sub-body .item-highlight .image-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: inherit;
+  width: inherit;
+  border-radius: 3px;
+}
+
+.sub-body .item-highlight .item-information-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: 3;
+  position: relative;
+  top: 7.5vh;
+  left: 15vw;
+  height: 80vh;
+  width: 35vw;
+  background-color: #3D403D;
+  margin-bottom: 10vh;
+  padding: 2vw;
+  border-radius: 3px;
+}
+
+.sub-body .item-highlight .item-information-container .watchlist {
+  position: relative;
+  left: 9.5vw;
+  bottom: 50vh;
+}
+
+.sub-body .item-highlight .item-information-container .watchlist img {
+  width: 3vw;
+  height: 3vw;
+}
+
+.sub-body .item-highlight .item-information-container .information-box {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.sub-body .item-highlight .item-information-container .information-box a {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5vw;
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.sub-body .item-highlight .item-information-container .information-box a:hover {
+  background-color: #3D403D;
+  color: #F0FF51;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2vw;
+  font-weight: 600;
+  letter-spacing: 0.2vw;
+  color: #F0FF51;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-location {
+  margin-top: 3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-location p {
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: italic;
+  font-size: 1vw;
+  font-weight: lighter;
+  color: #F0FF51;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-location img {
+  position: relative;
+  left: 0;
+  width: 2.5vw;
+  height: 3vw;
+}
+
+.sub-body .item-highlight .item-information-container .information-box .item-description {
+  font-family: 'Overpass', sans-serif;
+  margin-top: 2vh;
+  height: 30vh;
+  font-size: 1vw;
+  color: #F5F5F5;
+  line-height: 1.3em;
+}
+
+.second-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+/*# sourceMappingURL=items.css.map */

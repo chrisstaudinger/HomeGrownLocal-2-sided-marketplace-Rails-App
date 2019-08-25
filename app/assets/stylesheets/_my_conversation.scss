@@ -1,0 +1,72 @@
+@import 'variables';
+@import 'mixins';
+
+.conversation-wrapper {
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.sell-conversations {
+  border-radius: 5px;
+  @include montserrat();
+  background-color: $formblack;
+  display: flex;
+  flex-direction: column;
+  color: $offwhite1;
+  padding: 2vw;
+  margin-bottom: 5vh;
+  a {
+    border-radius: 5px;
+    border: solid;
+    border-color: $offwhite1;
+    border-width: 2px;
+    margin: 1vw;
+    @include montserrat();
+    font-size: 1.5vw;
+    color: $offwhite2;
+    text-decoration: none;
+    padding: 1vh;
+    &:hover{
+      background-color: $formblack;
+      color: $accentyellow;
+    }
+    &:visited{
+      color: $offwhite2;
+    }
+    &:visited:hover{
+      color: $accentyellow;
+    }
+  }
+}
+.buy-conversations {
+  border-radius: 5px;
+  @include montserrat();
+  color: $offwhite1;
+  display: flex;
+  flex-direction: column;
+  background-color: $darkgreen;
+  padding: 2vw;
+  a {
+    border-radius: 5px;
+    border: solid;
+    border-color: $offwhite1;
+    border-width: 2px;
+    margin: 1vw;
+    padding: 2vw;
+    @include montserrat();
+    font-size: 1.5vw;
+    color: $offwhite2;
+    text-decoration: none;
+    padding: 1vh;
+    &:hover{
+      background-color: $darkgreen;
+      color: $accentyellow;
+    }
+    &:visited{
+      color: $offwhite2;
+    }
+    &:visited:hover{
+      color: $accentyellow;
+    }
+  }
+}

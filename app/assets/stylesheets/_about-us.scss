@@ -1,0 +1,124 @@
+@import 'variables';
+@import 'mixins';
+
+.about-us-landing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .left-section{
+    position: relative;
+    left: 10vw;
+    width: 30vw;
+    bottom: 5vh;
+    @include topdownmarginvar(10vh);
+
+    #header{
+      text-align: center;
+      @include montserrat();
+      font-size: 3vw;
+      color: $formblack;
+      margin-bottom: 10vh;
+    }
+    #about-us-text {
+      position: relative;
+      right: 2.5vw;
+      width: 35vw;
+      text-align: center;
+      line-height: 4vh;
+      @include overpass();
+      font-size: 1.3vw;
+      color: $formblack;
+    }
+  }
+  .right-section {
+    z-index :-1;
+    position: relative;
+    right: 10vw;
+    width: 40vw;
+    margin-right: 10vw;
+    @include topdownmarginvar(15vh);
+    img {
+      width: 53vw;
+      height: 80vh;
+    }
+  }
+}
+
+.faqs{
+  @include leftrightmargin();
+  border-radius: 100%;
+  background-color: $faqs;
+  width: 60vw;
+  height: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  #q4{
+    background-color: $primarygreen;
+  }
+  #q1{
+    background-color: $primarygreen;
+  }
+  p {
+    font-size: 6vw;
+    font-weight: 700;
+    @include montserrat();
+    color: $darkgreen
+  }
+  .left-q {
+    align-self: flex-start;
+    position: relative;
+    margin-top: -5vh;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+    background-color: $formblack;
+    right: 5vw;
+    .q-heading {
+      font-size: 2vw;
+      color: $offwhite2;
+      text-align: center;
+      margin-top: 4vh;
+      margin-bottom: 3vh;
+      line-height: 5vh;
+    }
+    .q-answer {
+      font-size: 1vw;
+      color: $offwhite2;
+      text-align: center;
+      line-height: 3vh;
+      @include leftrightpaddingvar(2vw);
+    }
+  }
+  .right-q {
+    position: relative;
+    align-self: flex-end;
+    margin-top: -15vh;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+    background-color: $formblack;
+    left: 5vw;
+    .q-heading {
+      font-size: 2vw;
+      color: $offwhite2;
+      text-align: center;
+      margin-top: 6vh;
+      margin-bottom: 3vh;
+      line-height: 5vh;
+    }
+    .q-answer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 8vw;
+      font-size: 1vw;
+      color: $offwhite2;
+      text-align: center;
+      line-height: 3vh;
+      @include leftrightpaddingvar(2vw);
+    }
+  }
+}

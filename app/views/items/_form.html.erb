@@ -1,14 +1,16 @@
-<%= form_with(model: item, local: true) do |form| %>
+<link rel="stylesheet" href="./stylesheets/forms">
+<div class="form">
+  <%= form_with(model: item, local: true) do |form| %>
   <% if item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
 
-      <ul>
+    <ul>
       <% item.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
 
   <div class="field">
@@ -27,7 +29,7 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_field :description %>
   </div>
 
   <div class="field">
@@ -53,4 +55,6 @@
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
+  <% end %>
+
+</div>

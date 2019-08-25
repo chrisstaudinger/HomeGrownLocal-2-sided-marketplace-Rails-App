@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./stylesheets/grid_item">
+
+<div class="item-seller-info">
+  <div class="user-information-wrapper">
+    <%= image_tag("account", alt: "account-icon") %>
+    <div class="user-information">
+      <p>
+        <%= @item.user.name %>
+      </p>
+      <p id="user-email">
+        <%= @item.user.email %>
+      </p>
+    </div>
+  </div>
+  <div class="user-location">
+    <%= image_tag("logo2v2", alt: "location-pin") %>
+    <p>
+      <%= @item.user.user_location %>
+    </p>
+  </div>
+  <%= render :partial => "./conversations/form" %>
+</div>

@@ -1,0 +1,109 @@
+@import 'variables';
+@import 'mixins';
+
+.item-seller-info {
+  background-color: $offwhite2;
+  width: 25vw;
+  height: 50vh;
+  margin-left: 5vw;
+  padding: 1.5vw;
+
+  .user-information-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    img {
+      height: 4vw;
+      width: 4vw;
+    }
+
+    .user-information {
+      display: flex;
+      height: 4vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 1vh;
+      p {
+        @include montserrat();
+        font-size: 2vw;
+        color: $formblack;
+        font-weight: 600;
+        margin-bottom: 0.5vh;
+      }
+      #user-email {
+        position: relative;
+        top: 1vh;
+        font-size: 1vw;
+        color: $primarygreen;
+      }
+    }
+  }
+  .user-location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5vh;
+    img {
+      height: 3vw;
+      width: 2.5vw;
+    }
+    p {
+      margin-left: 1vw;
+      width: 100%;
+      @include montserrat();
+      color: $formblack;
+      font-size: 1.5vw;
+      font-weight: 600;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1vh;
+    #user-message {
+      padding: 1vh;
+      text-align: left;
+      resize: none;
+      height: 20vh;
+      margin-bottom: 2vh;
+      outline: none;
+      justify-content: flex-start;
+      font-size: 1vw;
+      box-shadow: 0px 0px 15px 0px #8f948f;
+      @include overpass();
+    }
+    #form-wrapper{
+      display: flex;
+      flex-direction: row;
+      input {
+        width: 35%;
+        height: 5vh;
+        padding: 1vh;
+        @include leftrightmarginvar(1vw);
+        box-shadow: 0px 0px 15px 0px #8f948f;
+        margin-bottom: 2vh;
+        font-size: 1vw;
+        outline: none;
+        @include overpass();
+      }
+      #user-email {
+        width: 75%;
+      }
+    }
+
+    #submit-message {
+      align-self: center;
+      height: 7vh;
+      font-size: 2.5vw;
+      @include montserrat();
+      background-color: $darkgreen;
+      color: $offwhite1;
+      border-radius: 100px;
+      width: 10vw;
+      border: none;
+    }
+  }
+}

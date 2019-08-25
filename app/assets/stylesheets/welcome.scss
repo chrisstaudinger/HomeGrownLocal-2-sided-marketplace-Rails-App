@@ -9,22 +9,23 @@ body {
   overflow-x: hidden;
 }
 .welcome {
-  height: 70vh;
+  height: 260vh;
   width: 100vw;
   .booke-image {
     background-position-y: 70%;
-    background-image: url("brusselspout");
+    background-image: url("https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/hero-image1-edited-opacity.png");
     background-size: cover;
-    height: 100%;
+    height: 70vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     #searchbar-container {
-      position: absolute;
-      background-color: #F5F5F5;
-      opacity: 0.20;
+      position: relative;
+      background-color: $formblack;
+      left: 0;
+      opacity: 0.30;
       height: 12vh;
       width: 65vw;
       border-radius: 5px;
@@ -51,6 +52,7 @@ body {
           border: none;
           box-shadow: inset 0px 0px 0px 0.1vw $primarygreen;
           background-color: #E9E9E9;
+          word-wrap: break-word;
           &:hover {
             background-color: $offwhite1;
             transition: all 0.5s;
@@ -76,6 +78,7 @@ body {
           @include leftrightpaddingvar(1vw);
           box-shadow: inset 0px 0px 0px 0.1vw $primarygreen;
           z-index: 9;
+          border-radius: 0;
           width: 15vw;
           height: 8vh;
           font-size: 1vw;
@@ -90,7 +93,7 @@ body {
           }
         }
       }
-      #item-search {
+      #item_name {
         width: 25vw;
         box-shadow: none;
       }
@@ -98,6 +101,7 @@ body {
   }
 
   #featured-items {
+    position: relative;
     width: 100vw;
     height: 80vh;
     display: flex;
@@ -113,9 +117,9 @@ body {
       li {
         margin-top: 5vh;
         @include montserrat();
-        font-size: 36px;
+        font-size: 2vw;
         a{
-          color: $primarygreen;
+          color: $formblack;
           text-decoration: none;
           &:hover {
             background-color: $offwhite1;
@@ -124,73 +128,10 @@ body {
         }
       }
     }
-    #item-grid {
-      margin-top: 5vh;
-      width: 60vw;
-      height: 70vh;
-      @include leftrightmargin();
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 40% 40%;
-      .item {
-        border-radius: 5px;
-        height: 25vh;
-        width: 18vw;
-        margin: 1vw;
-        background-color: $offwhite2;
-        p {
-          @include overpass();
-          margin-top: 1vh;
-          margin-left: 0.3vw;
-          margin-right: 0.3vw;
-          color: $primarygreen;
-          font-size: 22px;
-        }
-        .item-image {
-          display: flex;
-          flex-direction: row;
-          img {
-            width: 100%;
-            height: 60%;
-          }
-          .item-price{
-            position: absolute;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-            margin-left: 9vw;
-            width: 10vw;
-            height: 40px;
-            background-color: $pricetag;
-            opacity: 0.5;
-            p{
-              font-size: 36px;
-              color: $accentyellow;
-            }
-            .price-notation {
-              font-size: 24px;
-            }
-          }
-        }
-        .item-location {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          align-content: center;
-          align-items: center;
-          img {
-            width: 19px;
-            height: 23px;
-          }
-        }
-      }
-    }
   }
 
   #featured-categories {
+    position: relative;
     padding-top: 10vh;
     height: 110vh;
     @include leftrightmargin();
@@ -198,9 +139,9 @@ body {
       @include montserrat;
       display: flex;
       justify-content: center;
-      letter-spacing: 4px;
-      color: $darkgreen;
-      font-size: 64px;
+      letter-spacing: 1vw;
+      color: $formblack;
+      font-size: 4vw;
       font-weight: 600;
       margin-bottom: 3vh;
     }
@@ -214,11 +155,22 @@ body {
       grid-row-gap: 3vh;
       .category {
         margin: 2vh;
+        height: inherit;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: flex-start;
         @include montserrat-alt();
         color: $offwhite1;
+        a {
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          &:hover{
+            background-color: white;
+            transform: scale(1.1);
+            transition: all 0.5s;
+          }
+        }
         p {
           padding: 1vh;
           letter-spacing: 0;
@@ -227,15 +179,15 @@ body {
           justify-content: flex-start;
           line-height: 3vw;
           color: $offwhite2;
-          text-shadow: 2px 2px rgb(187, 187, 187);
+          text-shadow: 2px 2px rgb(141, 141, 141);
         }
         img {
           position: absolute;
-          height: auto;
-          width: auto;
+          height: 41vh;
+          width: 16vw;
+          object-fit: cover;
           opacity: 0.7;
           z-index: -1;
-          filter: grayscale(20%);
         }
       }
     }

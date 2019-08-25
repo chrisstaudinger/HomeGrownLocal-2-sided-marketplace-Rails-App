@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'mixins';
+
+footer{
+  margin-top: 23vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.upper-section{
+  background-color: $darkgreen;
+  width: 100vw;
+  height: 10vh;
+}
+.bottom-section {
+  @include leftrightpaddingvar(20vw);
+  background-color: $formblack;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  img {
+    padding-left: 2vw;
+    height: 4vh;
+    width: 4vh;
+  }
+  .legal{
+    a {
+      @include overpass();
+      font-size: 1vw;
+      color: $offwhite1;
+      text-decoration: none;
+      &:hover{
+        background-color: $formblack;
+        color: $accentyellow;
+        transition: all 0.5s;
+      }
+    }
+  }
+}

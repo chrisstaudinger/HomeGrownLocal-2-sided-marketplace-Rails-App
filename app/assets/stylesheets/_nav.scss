@@ -7,7 +7,7 @@
 }
 
 header {
-  background-color: $primarygreen;
+  background-color: $formblack;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -15,12 +15,67 @@ header {
   justify-items: center;
   width: 100vw;
   height: 8vh;
+  a {
+    cursor: pointer;
+    &:hover{
+      background-color: $formblack;
+    }
+  }
+  .ads {
+    width: 100vw;
+    height: 8vh;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    top: 8vh;
+    a {
+      @include leftrightmargin();
+      @include librefranklin();
+      font-size: 1vw;
+      font-weight: 600;
+      width: 10vw;
+      height:6vh;
+      border-radius: 0.2vw;
+      background-color: $formblack;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: $offwhite1;
+      border-color: $formblack;
+      border-style: solid;
+      border-width: 0.2vw;
+      z-index: 99;
+      &:hover{
+        background-color: $offwhite1;
+        border-color: $primarygreen;
+        color: $darkgreen;
+        transition: all 0.5s;
+      }
+    }
+  }
 }
 
 .logo {
   margin-left: 3.5vw;
-  img {
-    height: 6.5vh;
+  width: max-content;
+  a {
+    img {
+      height: 6.5vh;
+    }
+    .mobile-logo {
+      display: none;
+    }
+    @media screen and (max-width: 880px){
+      .mobile-logo {
+        padding-top: 1vh;
+        display: block;
+      }
+      .desktop-logo {
+        display: none;
+      }
+    }
   }
 }
 
@@ -30,7 +85,6 @@ header {
   justify-content: center;
   justify-items: center;
   width: 50vw;
-  margin-left: 35vw;
   ul{
     width: 100%;
     display: flex;
@@ -45,14 +99,14 @@ header {
       list-style: none;
       color: $primarygreen;
       a{
+        @include opensans();
         white-space: nowrap;
         color: $offwhite1;
         font-size: 1vw;
         text-decoration: none;
         &:hover {
-          @include underlinehover($accentyellow);
-          color: $accentyellow;
-          background-color: $primarygreen;
+          @include underlinehover($offwhite1);
+          background-color: $formblack;
         }
       }
     }

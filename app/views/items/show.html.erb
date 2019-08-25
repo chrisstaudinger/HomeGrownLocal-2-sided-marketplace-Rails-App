@@ -1,35 +1,45 @@
-<p id="notice"><%= notice %></p>
+<%= render :partial => "layouts/shared/search_form" %>
+<div class="sub-body">
+  <div class="item-highlight">
+    <div class="image-container">
+      <% if @item.image.attached? %>
+      <%= image_tag(@item.image.attachment, :alt => "attached-image") %>
+      <% else %>
+      <%= image_tag("large-no-image.png",:alt=> "no-attachment") %>
+      <% end %>
+    </div>
+    <div class="item-information-container">
+      <div class="watchlist">
+        <%= image_tag("watchlist.png" ,:alt=> "watchlist-icon") %>
+      </div>
+      <div class="information-box">
+        <p class="item-name"> <%= @item.name %></p>
+        <div class="item-location">
+          <%= image_tag("logo2v2outlinewhite.png" ,:alt=> "location-pin") %>
+          <p><%= @item.user.user_location %></p>
+        </div>
+        <p class="item-description">
+          <%= @item.description %>
+        </p>
+        <%= link_to 'Edit', edit_item_path(@item) %>
+        <% if @watchlisted == 0 %>
+          <%= render :partial => "layouts/shared/watchlist" %>
+        <% else %>
+          <%= link_to 'Unlist', "/watch_items/#{@watchlist_item.id}}", method: "delete"  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="second-section">
+    <%= render :partial => "layouts/shared/item_meta" %>
+    <% if user_signed_in? %>
+      <% if @item.user.id != current_user.id %>
+        <%= render :partial => "layouts/shared/seller_mailer" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+</div>
+<link rel="stylesheet" href="./stylesheets/form">
 
-<p>
-  <strong>Item category:</strong>
-  <%= @item.item_category %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @item.user %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
-
-<% if @item.image.attached? %>
-  <%= image_tag @item.image.service_url, class: 'image-size' %>
-<% else %>
-  <p>No image for this item</p>
-<% end %>
-
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+    

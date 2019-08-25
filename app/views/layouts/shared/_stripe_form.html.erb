@@ -5,14 +5,17 @@
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
+    <div class="field">
+    <% hidden_field_tag :donation_amount, value: @donation_amount_cents %>
+    </div>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="Purchase Book"
-          data-amount="500"
+          data-description= "Donate <%= @donation_amount_dollars_display %>"
+          data-amount= <%= @donation_amount_cents %>
+          data-currency="aud"
+          data-label="Donate <%= @donation_amount_dollars_display %>"
+          data-panel-label="Donate {{amount}}"
           data-locale="auto"></script>
 <% end %>

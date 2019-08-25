@@ -5,6 +5,7 @@ gem 'stripe'
 gem 'devise'
 gem 'pundit'
 gem "aws-sdk-s3", require: false
+gem 'searchkick'
 
 ruby '2.6.3'
 

@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'mixins';
+
+
+.conversation-wrapper {
+  @include leftrightmargin();
+  background-color: $offwhite2;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  p {
+    font-size: 1vw;
+    @include overpass();
+    margin: 1.5vw;
+  }
+  .my-message {
+    border-radius: 20px;
+    align-self: flex-end;
+    background-color: $darkgreen;
+    color: $offwhite2;
+    margin-bottom: 1vh;
+  }
+  .buyer-message {
+    border-radius: 20px;
+    background-color: $formblack;
+    color: $offwhite2;
+    align-self: flex-start;
+    margin-bottom: 1vh;
+  }
+}
+.user-information-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  img {
+    height: 4vw;
+    width: 4vw;
+  }
+  .user-information {
+    display: flex;
+    height: 4vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1vh;
+    p {
+      @include montserrat();
+      font-size: 2vw;
+      color: $formblack;
+      font-weight: 600;
+      margin-bottom: 0.5vh;
+    }
+    #user-email {
+      position: relative;
+      top: 1vh;
+      font-size: 1vw;
+      color: $primarygreen;
+    }
+  }
+}
+.user-location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5vh;
+  img {
+    height: 3vw;
+    width: 2.5vw;
+  }
+  p {
+    margin-left: 1vw;
+    width: 100%;
+    @include montserrat();
+    color: $formblack;
+    font-size: 1.5vw;
+    font-weight: 600;
+  }
+}

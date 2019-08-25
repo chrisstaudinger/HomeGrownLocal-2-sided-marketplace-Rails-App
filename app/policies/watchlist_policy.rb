@@ -1,9 +1,9 @@
 class WatchlistsPolicy < ApplicationPolicy
     attr_reader :user, :item_id
   
-    before_action :authenticate_user!
-      include Pundit
-      protect_from_forgery
+    # before_action :authenticate_user!
+    #   include Pundit
+    #   protect_from_forgery
   
     def initialize(user, item_id)
       @user = user

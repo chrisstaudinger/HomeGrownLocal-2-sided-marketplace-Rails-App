@@ -1,0 +1,35 @@
+@import 'variables';
+@import 'mixins';
+
+.reply {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+  .send_reply {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 8vh;
+    input {
+      @include leftrightpaddingvar(2vw);
+      border-radius: 10px;
+      border: none;
+      height: 5vh;
+      background-color: $darkgreen;
+      font-size: 2vw;
+      @include montserrat();
+      color: $offwhite1;
+    }
+  }
+  #message_message {
+    width: 35vw;
+    padding: 1vw;
+    font-size: 1vw;
+    @include overpass();
+    outline: none;
+  }
+}
+

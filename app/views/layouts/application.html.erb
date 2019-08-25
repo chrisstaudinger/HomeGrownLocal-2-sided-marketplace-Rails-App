@@ -5,6 +5,7 @@
   <title>Home Grown Local</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -18,26 +19,75 @@
   <header>
     <link rel="stylesheet" href="./stylesheets/nav">
     <div class="logo">
-      <%= image_tag("typefacelogo.png", :alt => "logo") %>
+      <a href="/">
+        <img class="desktop-logo"src="https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/typeface-v2-light.png" alt="typeface-logo">
+        <img class="mobile-logo" src="https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/logov2-clean.png" alt="pin-logo">
+      </a>
+    </div>
+    <div class="ads">
+      <a href="/items/new">Post an Ad</a>
     </div>
     <div class="simple-navbar">
       <ul>
-        <li><a href="">Category</a></li>
-        <li><a href="">About us</a></li>
-                  <% if !current_user %>
-          <li><%= link_to "Log In", new_user_session_path %></li>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <li> <a id="customButton"> Donate </a> </li>
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+        <script>
+          var handler = StripeCheckout.configure({
+            key: 'pk_test_TYooMQauvdEDq54NiTphI7jx',
+            image: 'https://home-grown-local-chris-suki-selly-rails.s3-ap-southeast-2.amazonaws.com/logov2-128-128.png',
+            locale: 'auto',
+            token: function (token) {
+              // You can access the token ID with `token.id`.
+              // Get the token ID to your server-side code for use.
+            }
+          });
+
+          document.getElementById('customButton').addEventListener('click', function (e) {
+            // Open Checkout with further options:
+            handler.open({
+              name: 'Home Grown Local',
+              description: 'AUD $5 Donation',
+              currency: 'aud',
+              zipCode: true,
+              amount: 500
+            });
+            e.preventDefault();
+          });
+
+          // Close Checkout on page navigation:
+          window.addEventListener('popstate', function () {
+            handler.close();
+          });
+        </script>
+        <li><a href="/welcome/about_us">About us</a></li>
+        <% if !current_user %>
+        <li><%= link_to "Log In", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
         <% else %>
-          <li><%= link_to "Sign Out", destroy_user_session_path, {method: :delete} %></li>
-          <li><%= link_to "Account", "/profiles/#{current_user.id}" %></li>
+        <li> <%= link_to "Messages", conversations_my_conversations_path %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, {method: :delete} %></li>
         <% end %>
       </ul>
     </div>
-    <div class="navbar-wrapper">
-</div>
   </header>
   <link rel="stylesheet" href="./stylesheets/body">
   <%= yield %>
 </body>
+
+<footer>
+  <div class="upper-section">
+  </div>
+  <div class="bottom-section">
+    <div class="social-media">
+      <%= image_tag("facebook.png", alt: "facebook-icon") %>
+      <%= image_tag("instagram.png", alt: "instagram-icon") %>
+      <%= image_tag("twitter.png", alt: "twitter-icon") %>
+      <%= image_tag("youtube.png", alt: "youtube-icon") %>
+    </div>
+    <div class="legal">
+      <%= link_to("Disclaimer","/welcome/disclaimer") %>
+    </div>
+  </div>
+</footer>
 
 </html>

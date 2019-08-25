@@ -1,0 +1,5 @@
+<div class="background-section1">
+  <h2>My Items</h2>
+  <%= render :partial => "layouts/shared/search_form" %>
+</div>
+<%= render :partial => "layouts/shared/grid_item" ,locals: {result: @results} %>
